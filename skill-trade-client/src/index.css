@@ -3,5 +3,8 @@
   padding: 0;
   box-sizing: border-box; }
 
-#homepage__textContainer {
-  background: red; }
+#homepage {
+  background: green;
+  height: 100vh; }
+  #homepage__textContainer {
+    background: red; }
