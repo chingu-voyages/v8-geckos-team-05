@@ -2,8 +2,8 @@ import React from "react";
 
 const Homepage = () => {
   return (
-    <div id="homepage-main">
-      <div id="homepage-text-container">
+    <div id="homepage">
+      <div id="homepage__textContainer">
         <div id="large-text-container">
           <h1 id="homepage-main-text">Talent Trade</h1>
           <h2 id="homepage-sub-text">Practice makes perfect.</h2>
