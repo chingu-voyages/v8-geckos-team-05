@@ -3,8 +3,27 @@
   padding: 0;
   box-sizing: border-box; }
 
-#homepage {
-  background: green;
+.homepage {
+  display: flex;
   height: 100vh; }
-  #homepage__textContainer {
-    background: red; }
+  .homepage__textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50vw;
+    height: 100vh; }
+    .homepage__textContainer--large {
+      color: black; }
+    .homepage__textContainer--small {
+      display: flex;
+      flex-direction: column;
+      color: black; }
+  .homepage__signUp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    background: #ababab;
+    border: 1px solid black; }
+    .homepage__signUp--form {
+      background: green; }
