@@ -1,12 +1,14 @@
-import React, { Component } from 'react';
-import TeachProfile from './components/Teacher/teacherProfile'
+import React, { Component } from "react";
+import TeachProfile from "./components/Teacher/teacherProfile";
+import ContactsPg from "./components/Contacts/contactsMain";
 class App extends Component {
   render() {
-      return (
-          <div className="App">
-            <TeachProfile/>
-          </div>
-      );
+    return (
+      <div className="App">
+        <TeachProfile />
+        <ContactsPg />
+      </div>
+    );
   }
 }
 
