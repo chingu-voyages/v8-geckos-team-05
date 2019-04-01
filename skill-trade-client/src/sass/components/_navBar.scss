@@ -1,8 +1,54 @@
+$primary-color: #ff3f00;
+$secondary-color: #beb7a4;
+$terciary-color: #fffffc;
+$font-family-main: Roboto;
+
+button {
+  all: unset;
+}
 .navbar {
+  height: 64px;
   &__banner {
-    color: red;
+    color: black;
+    font-family: $font-family-main;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: normal;
+    text-transform: uppercase;
   }
-  &__collapse {
-    height: 200px;
+  &__btn-logout {
+    font-family: $font-family-main;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: $terciary-color;
+    background: $primary-color;
+    width: 140px;
+    height: 40px;
+    border-radius: 5px;
+  }
+}
+
+.listedItems {
+  margin: 0;
+  display: inline;
+  &__item {
+    display: inline;
+    margin: 16px;
+    &__link {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: normal;
+      color: $primary-color;
+      &:hover {
+        color: $primary-color;
+        text-decoration: none;
+      }
+    }
   }
 }

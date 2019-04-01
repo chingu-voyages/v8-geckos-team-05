@@ -19,21 +19,20 @@ class NavBar extends Component {
           >
             <span className="navbar-toggler-icon" />
           </button> */}
-
           <div className="navbar__collapse">
             <ul className="listedItems">
               <li className="listedItems__item">
-                <a className="listedItems__link" href="#">
+                <a className="listedItems__item__link" href="#">
                   Home
                 </a>
               </li>
               <li className="listedItems__item">
-                <a className="listedItems__link" href="#">
+                <a className="listedItems__item__link" href="#">
                   Teachers
                 </a>
               </li>
               <li className="listedItems__item">
-                <a className="listedItems__link" href="#">
+                <a className="listedItems__item__link" href="#">
                   Search
                 </a>
               </li>

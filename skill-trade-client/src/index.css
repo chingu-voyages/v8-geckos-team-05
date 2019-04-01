@@ -1,10 +1,48 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
-.navbar__banner {
-  color: red; }
+button {
+  all: unset; }
 
-.navbar__collapse {
-  height: 200px; }
+.navbar {
+  height: 64px; }
+  .navbar__banner {
+    color: black;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: normal;
+    text-transform: uppercase; }
+  .navbar__btn-logout {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #fffffc;
+    background: #ff3f00;
+    width: 140px;
+    height: 40px;
+    border-radius: 5px; }
+
+.listedItems {
+  margin: 0;
+  display: inline; }
+  .listedItems__item {
+    display: inline;
+    margin: 16px; }
+    .listedItems__item__link {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: normal;
+      color: #ff3f00; }
+      .listedItems__item__link:hover {
+        color: #ff3f00;
+        text-decoration: none; }
