@@ -1,7 +1,4 @@
-$primary-color: #ff3f00;
-$secondary-color: #beb7a4;
-$terciary-color: #fffffc;
-$font-family-main: Roboto;
+@import "../abstracts/color";
 
 button {
   all: unset;
