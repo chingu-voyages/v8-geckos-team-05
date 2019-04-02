@@ -7,8 +7,21 @@
 button {
   all: unset; }
 
+button:hover {
+  cursor: pointer; }
+
+a {
+  color: unset;
+  text-decoration: unset; }
+
 .navbar {
-  height: 64px; }
+  height: 64px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem; }
   .navbar__banner {
     color: black;
     font-family: Roboto;
@@ -43,34 +56,41 @@ button {
       font-size: 18px;
       line-height: normal;
       color: #ff3f00; }
-      .listedItems__item__link:hover {
-        color: #ff3f00;
-        text-decoration: none; }
+
+h6 {
+  all: unset; }
 
 .mainContainerContacts {
   padding: 50px 137px 115px 137px;
-  background: linear-gradient(180deg, #fffffc 0%, rgba(255, 255, 255, 0) 100%), #beb7a4; }
+  background: linear-gradient(180deg, #fbfaf9 0%, #beb7a4 100%), #beb7a4; }
   .mainContainerContacts__title {
     color: #ff3f00;
-    margin: 0; }
+    margin: 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: normal; }
 
 .contentBox {
   background: #fafaf6;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-  padding-top: 16px; }
+  padding-bottom: 2.5rem; }
   .contentBox__topBar {
+    box-sizing: border-box;
     display: flex;
-    text-align: center;
-    height: 37px;
+    height: 68px;
     align-items: center;
-    margin-bottom: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
     line-height: normal;
+    font-size: 1rem;
     text-align: center;
-    color: #51504e; }
+    color: #51504e;
+    border-bottom: 1px solid #beb7a4; }
     .contentBox__topBar__myMentors {
       width: 181px;
       border-right: 1px solid #beb7a4; }
@@ -82,3 +102,55 @@ button {
       border-right: 1px solid #beb7a4; }
     .contentBox__topBar__showAll {
       width: 181px; }
+  .contentBox__searchBar {
+    margin-left: 40px;
+    margin-right: 40px;
+    height: 70px;
+    display: flex;
+    align-items: center; }
+    .contentBox__searchBar__search {
+      all: unset;
+      border: 1px solid #beb7a4;
+      background: #fffffc;
+      border-radius: 3px;
+      width: 233px;
+      height: 36px;
+      padding-left: 18px;
+      line-height: 100px; }
+  .contentBox__resultsGrid {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem; }
+
+.mainContainerCard {
+  display: inline-flex;
+  justify-content: start;
+  padding: 1rem;
+  height: 118px;
+  border: 1px solid #beb7a4;
+  border-radius: 15px; }
+  .mainContainerCard__imgContainer {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 1px #beb7a4 dotted;
+    margin-right: 1rem; }
+  .mainContainerCard__textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Roboto;
+    font-style: normal;
+    line-height: normal; }
+    .mainContainerCard__textContainer__name {
+      margin-bottom: 0.125rem;
+      color: #ff3f00;
+      font-weight: bold;
+      font-size: 1rem; }
+    .mainContainerCard__textContainer__teachingProgram {
+      margin-top: 0.125rem;
+      font-weight: normal;
+      color: #51504e;
+      font-size: 0.8rem; }

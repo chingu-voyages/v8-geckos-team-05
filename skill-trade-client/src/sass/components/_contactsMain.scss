@@ -1,36 +1,43 @@
 @import "../abstracts/color";
 
+h6 {
+  all: unset;
+}
+
 .mainContainerContacts {
   padding: 50px 137px 115px 137px;
-  background: linear-gradient(
-      180deg,
-      $terciary-color 0%,
-      rgba(255, 255, 255, 0) 100%
-    ),
+  background: linear-gradient(180deg, #fbfaf9 0%, $secondary-color 100%),
     $secondary-color;
   &__title {
     color: $primary-color;
     margin: 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: normal;
   }
 }
 
 .contentBox {
   background: #fafaf6;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-  padding-top: 16px;
+  padding-bottom: 2.5rem;
   &__topBar {
+    box-sizing: border-box;
     display: flex;
-    text-align: center;
-    height: 37px;
+    height: 68px;
     align-items: center;
-    margin-bottom: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
     line-height: normal;
+    font-size: 1rem;
     text-align: center;
-    color: #51504e;
+    color: $text-color;
+    border-bottom: 1px solid $secondary-color;
     &__myMentors {
       width: 181px;
       border-right: 1px solid $secondary-color;
@@ -46,5 +53,29 @@
     &__showAll {
       width: 181px;
     }
+  }
+  &__searchBar {
+    margin-left: 40px;
+    margin-right: 40px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    &__search {
+      all: unset;
+      border: 1px solid $secondary-color;
+      background: $tertiary-color;
+      border-radius: 3px;
+      width: 233px;
+      height: 36px;
+      padding-left: 18px;
+      line-height: 100px;
+    }
+  }
+  &__resultsGrid {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
   }
 }

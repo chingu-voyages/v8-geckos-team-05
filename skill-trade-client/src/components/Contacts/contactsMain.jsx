@@ -35,6 +35,15 @@ class ContactsMain extends Component {
             </div>
             <div className="contentBox__resultsGrid">
               <FriendCard />
+              <FriendCard />
+              <FriendCard />
+              <FriendCard />
+              <FriendCard />
+              <FriendCard />
+              <FriendCard />
+              <FriendCard />
+              <FriendCard />
+              <FriendCard />
             </div>
           </div>
         </div>

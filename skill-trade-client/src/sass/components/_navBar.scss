@@ -3,8 +3,21 @@
 button {
   all: unset;
 }
+button:hover {
+  cursor: pointer;
+}
+a {
+  color: unset;
+  text-decoration: unset;
+}
 .navbar {
   height: 64px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
   &__banner {
     color: black;
     font-family: $font-family-main;
@@ -21,7 +34,7 @@ button {
     font-size: 18px;
     line-height: 24px;
     text-align: center;
-    color: $terciary-color;
+    color: $tertiary-color;
     background: $primary-color;
     width: 140px;
     height: 40px;
@@ -42,10 +55,6 @@ button {
       font-size: 18px;
       line-height: normal;
       color: $primary-color;
-      &:hover {
-        color: $primary-color;
-        text-decoration: none;
-      }
     }
   }
 }
