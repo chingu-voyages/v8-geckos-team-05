@@ -1,12 +1,10 @@
 import React, { Component } from "react";
-import TeachProfile from "./components/Teacher/teacherProfile";
-import ContactsPg from "./components/Contacts/contactsMain";
+import Index from './components/Utils/routes'
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <TeachProfile />
-        <ContactsPg />
+          <Index/>
       </div>
     );
   }
