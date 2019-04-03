@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "concurrently": "^4.1.0",
     "node-sass": "^4.11.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
@@ -13,7 +14,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sass": "node-sass --watch src/sass/main.scss src/index.css --recursive"
+    "sass": "node-sass --watch src/sass/main.scss src/index.css --recursive",
+    "start-client": "concurrently \"npm run sass\" \"npm run start\""
   },
   "eslintConfig": {
     "extends": "react-app"
