@@ -8,6 +8,7 @@ $secondary-color: #BEB7A4;
     display: block;
     width: 100vw;
     height: 100vh;
+    margin-bottom: -60px;
     &__intro {
         display: flex;
         flex-direction: column;
@@ -33,14 +34,21 @@ $secondary-color: #BEB7A4;
             // font-weight: 400;
         }
         &--button {
+            font-family: $intro-font;
+            padding: 10px;
+            border: 1px solid black;
+            width: 200px;
+            margin: 20px 0px 0px 5px;
+            transition: 0.3s;
             &--container {
                 display: flex;
                 justify-content: center;
                 align-items: center;
             }
-            font-family: $intro-font;
-            width: 200px;
-            margin: 20px 0px 0px 5px;
+            &:hover {
+                background: $primary-color;
+                color: white;
+            }
         }
     }
     &__info {
@@ -58,9 +66,17 @@ $secondary-color: #BEB7A4;
                 margin: 20px 0px 0px 0px;
             }
         }
-        & > div:first-child {
-            border-right: 1px solid black;
-        }
+    }
+    &__footer {
+        display: flex;
+        margin-top: 600px;
+        justify-content: center;
+        height: 60px;
+        width: 100%;
+        font-family: $intro-font;
+        padding: 20px;
+        color: $secondary-color;
+        background: #2d2d2d;
     }
     @media (max-width: 768px) {
         &__info {
@@ -70,9 +86,6 @@ $secondary-color: #BEB7A4;
             grid-template-areas: "column1"
                                  "column2"
                                  "column3";
-            & > div:first-child {
-             border-right: none;
-            }
         }
         &__intro {
             border-bottom: 1px solid black;

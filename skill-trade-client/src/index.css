@@ -7,7 +7,8 @@
 .homepage {
   display: block;
   width: 100vw;
-  height: 100vh; }
+  height: 100vh;
+  margin-bottom: -60px; }
   .homepage__intro {
     display: flex;
     flex-direction: column;
@@ -28,12 +29,18 @@
       text-align: center; }
     .homepage__intro--button {
       font-family: "Karla", sans-serif;
+      padding: 10px;
+      border: 1px solid black;
       width: 200px;
-      margin: 20px 0px 0px 5px; }
+      margin: 20px 0px 0px 5px;
+      transition: 0.3s; }
       .homepage__intro--button--container {
         display: flex;
         justify-content: center;
         align-items: center; }
+      .homepage__intro--button:hover {
+        background: #FF3F00;
+        color: white; }
   .homepage__info {
     display: grid;
     height: 400px;
@@ -47,16 +54,22 @@
         font-family: "Karla", sans-serif;
         text-align: center;
         margin: 20px 0px 0px 0px; }
-    .homepage__info > div:first-child {
-      border-right: 1px solid black; }
+  .homepage__footer {
+    display: flex;
+    margin-top: 600px;
+    justify-content: center;
+    height: 60px;
+    width: 100%;
+    font-family: "Karla", sans-serif;
+    padding: 20px;
+    color: #BEB7A4;
+    background: #2d2d2d; }
   @media (max-width: 768px) {
     .homepage__info {
       height: 400px;
       grid-template-columns: 100vw;
       grid-template-rows: 75vh 75vh;
       grid-template-areas: "column1" "column2" "column3"; }
-      .homepage__info > div:first-child {
-        border-right: none; }
     .homepage__intro {
       border-bottom: 1px solid black; } }
 
