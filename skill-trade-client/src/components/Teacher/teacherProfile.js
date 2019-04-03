@@ -29,15 +29,15 @@ export default class componentName extends Component {
           <div className="teacher__profileBox">
               <img className="teacher__profileImg" src="https://dummyimage.com/600x400/000/fff" alt='user-img' />
               <h1 className="teacher__profileName">Professor Foo </h1>
-          </div>
-              <div className="teacher__infoBox">
-                  <h1 className="teacher__bannerName"> About Us </h1>
-                    <p className="teacher__infoBox--name">{this.state.name}</p>
-                    <p className="teacher__infoBox--desc">{this.state.description}</p>
-                    <button
-                    onClick={this.toggleExpandBox}
-                    className="teacher__infoBox--btn"> more Info
-                    </button>
+                <div className="teacher__infoBox">
+                    <h1 className="teacher__bannerName"> About Us </h1>
+                      <p className="teacher__infoBox--name">{this.state.name}</p>
+                      <p className="teacher__infoBox--desc">{this.state.description}</p>
+                      <button
+                      onClick={this.toggleExpandBox}
+                      className="teacher__infoBox--btn"> more Info
+                      </button>
+                </div>
               </div>
                 <div className="teacher__priceInfo">
                     <p className="teacher__price--title">
