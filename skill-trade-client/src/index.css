@@ -5,28 +5,39 @@
 
 .homepage {
   display: block;
-  width: 100%; }
+  width: 100vw;
+  height: 100vh; }
   .homepage__intro {
     display: flex;
+    background-image: url("clark-young-143623-unsplash.jpg");
+    background-size: cover;
     justify-content: center;
-    background: green;
     width: 100%;
-    height: 300px; }
+    height: 100%; }
     .homepage__intro--textContainer {
+      color: white;
       display: flex;
       flex-direction: column;
       justify-content: center; }
     .homepage__intro--mainText {
       text-align: center; }
+    .homepage__intro--button {
+      margin: 20px 0px 0px 5px; }
   .homepage__info {
     display: grid;
-    height: 300px;
-    width: 100%;
-    grid-template-columns: 1fr 1fr 1fr;
+    height: 400px;
+    width: 100vw;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     grid-template-areas: "column1 column2 column3"; }
     .homepage__info--column {
       display: grid; }
+  @media (max-width: 768px) {
+    .homepage__info {
+      height: 400px;
+      grid-template-columns: 100vw;
+      grid-template-rows: 75vh 75vh 75vh;
+      grid-template-areas: "column1" "column2" "column3"; } }
 
 #homepage__info--column1 {
   background: red;
