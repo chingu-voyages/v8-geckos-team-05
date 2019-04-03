@@ -3,59 +3,49 @@
 export default class componentName extends Component {
     constructor(){
         super()
-            this.state={
-                name:"Professor ",
-                description:
-                "Working In the field of Science for about 10 years ",
-                priceTitle:"Mentor Lesson",
-                priceCost:"7.00",
-                class:{
-                  title:"Javascript",
-                  desc:"focus on await"
-                },
-                show:false
-            }
+    }
 
-    }
-    toggleExpandBox= ()=>{
-      this.setState({
-        show:!this.state.show
-      })
-    }
   render() {
-    console.log(this.state.show)
+  
     return (
       <div className="teacher">
-          <div className="teacher__profileBox">
-              <img className="teacher__profileImg" src="https://dummyimage.com/600x400/000/fff" alt='user-img' />
-              <h1 className="teacher__profileName">Professor Foo </h1>
-                <div className="teacher__infoBox">
-                    <h1 className="teacher__bannerName"> About Us </h1>
-                      <p className="teacher__infoBox--name">{this.state.name}</p>
-                      <p className="teacher__infoBox--desc">{this.state.description}</p>
-                      <button
-                      onClick={this.toggleExpandBox}
-                      className="teacher__infoBox--btn"> more Info
-                      </button>
-                </div>
-              </div>
-                <div className="teacher__priceInfo">
-                    <p className="teacher__price--title">
-                    {this.state.priceTitle}
-                    </p>
-                    <p className="teacher__price--cost">
-                    ${this.state.priceCost}
-                    </p>
-                    <button className="teacher__price-btn">Book Now</button>
-                </div>
-              <div className="teacher__classes">
-                  <p className="teacher__classes--title">
-                    {this.state.class.title}
-                  </p>
-                  <p className="teacher__classes--desc">
-                    {this.state.class.desc}
-                  </p>
-              </div>
+         <div className="profile">
+           <img className="profile__img" src="https://www.directlink.coop/img/icons/avatars/145841-avatar-set/png/girl-1.png" alt="user-profile"/>
+           <div className="profile__nameContainer">
+             <h1 className="nameContainer--bannerName">Caroline Smith</h1>
+           </div>
+            <div className="profile__info">
+              <p className="info--work">Full Stack Developer Mentor</p>
+              <p className="info--location">Los Angeles</p>
+            </div>
+         </div>
+         <div className="priceInfo">
+           <p className="priceInfo__type">
+             Mentor Lesson
+           </p>
+           <p className="priceInfo__description">
+            Javascript 30 min session
+           </p>
+           <p className="priceInfo__price">
+            $7.00
+           </p>
+           <button className="priceInfo__btn">
+             Book Now
+           </button>
+         </div>
+         <div className="intro">
+           <h1 className="intro__banner">Introduction</h1>
+           <p className="intro__descripition">
+           Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+           when an unknown printer took a galley of type and scrambled it to make a type 
+           specimen book. It has survived not only five centuries, but also the leap into 
+           electronic typesetting, remaining essentially unchanged. It was popularised in 
+           the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+           and more recently with desktop publishing software like Aldus PageMaker including
+            versions of Lorem Ipsum.
+           </p>
+         </div>
       </div>
     )
   }
