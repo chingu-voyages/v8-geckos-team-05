@@ -1,0 +1,60 @@
+@import "../abstracts/color";
+
+button {
+  all: unset;
+}
+button:hover {
+  cursor: pointer;
+}
+a {
+  color: unset;
+  text-decoration: unset;
+}
+.navbar {
+  height: 64px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  &__banner {
+    color: black;
+    font-family: $font-family-main;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+  &__btn-logout {
+    font-family: $font-family-main;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: $tertiary-color;
+    background: $primary-color;
+    width: 140px;
+    height: 40px;
+    border-radius: 5px;
+  }
+}
+
+.listedItems {
+  margin: 0;
+  display: inline;
+  &__item {
+    display: inline;
+    margin: 16px;
+    &__link {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: normal;
+      color: $primary-color;
+    }
+  }
+}
