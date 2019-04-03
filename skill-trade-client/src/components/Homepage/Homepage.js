@@ -31,12 +31,12 @@ const Homepage = () => {
           </div>
         </div>
       </div>
-      <div className="homepage__footer">
+      {/* <div className="homepage__footer">
         <p className="homepage__footer--text">
           Created by <strong>Jeff</strong>, <strong>Eliezer</strong>, and{" "}
           <strong>Chris</strong> for the Chingu Voyage-08
         </p>
-      </div>
+      </div> */}
     </>
   );
 };
