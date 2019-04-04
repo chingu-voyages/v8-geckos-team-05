@@ -59,7 +59,7 @@ $secondary-color: #BEB7A4;
         width: 100vw;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
-        grid-template-areas: "column1 column2 column3";
+        grid-template-areas: "column1 column2";
         &--column {
             margin-top: 10px;
             &--header {
@@ -87,8 +87,7 @@ $secondary-color: #BEB7A4;
             grid-template-columns: 100vw;
             grid-template-rows: 75vh 75vh;
             grid-template-areas: "column1"
-                                 "column2"
-                                 "column3";
+                                 "column2";
         }
         &__intro {
             border-bottom: 1px solid black;
@@ -106,8 +105,5 @@ $secondary-color: #BEB7A4;
     }
     &__info--column2 {
         grid-area: column2;
-    }
-    &__info--column3 {
-        grid-area: column3;
     }
 }

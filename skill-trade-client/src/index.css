@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Karla:400,700");
 @import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Karla:400,700");
 * {
   margin: 0;
   padding: 0;
@@ -50,7 +50,7 @@
     width: 100vw;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-    grid-template-areas: "column1 column2 column3"; }
+    grid-template-areas: "column1 column2"; }
     .homepage__info--column {
       margin-top: 10px; }
       .homepage__info--column--header {
@@ -62,7 +62,7 @@
       height: 400px;
       grid-template-columns: 100vw;
       grid-template-rows: 75vh 75vh;
-      grid-template-areas: "column1" "column2" "column3"; }
+      grid-template-areas: "column1" "column2"; }
     .homepage__intro {
       border-bottom: 1px solid black; } }
 
@@ -71,9 +71,6 @@
 
 #homepage__info--column2 {
   grid-area: column2; }
-
-#homepage__info--column3 {
-  grid-area: column3; }
 
 .teacher {
   height: 100vh;
