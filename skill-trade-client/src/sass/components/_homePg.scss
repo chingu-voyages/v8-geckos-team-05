@@ -5,6 +5,7 @@ $primary-color: #FF3F00;
 $secondary-color: #BEB7A4;
 
 .homepage {
+    position: relative;
     display: block;
     width: 100vw;
     height: 100vh;
@@ -67,17 +68,18 @@ $secondary-color: #BEB7A4;
             }
         }
     }
-    &__footer {
-        display: flex;
-        margin-top: 600px;
-        justify-content: center;
-        height: 60px;
-        width: 100%;
-        font-family: $intro-font;
-        padding: 20px;
-        color: $secondary-color;
-        background: #2d2d2d;
-    }
+    // &__footer {
+    //     position: absolute;
+    //     margin-bottom: 0;
+    //     display: flex;
+    //     justify-content: center;
+    //     height: 60px;
+    //     width: 100%;
+    //     font-family: $intro-font;
+    //     padding: 20px;
+    //     color: $secondary-color;
+    //     background: #2d2d2d;
+    // }
     @media (max-width: 768px) {
         &__info {
             height: 400px;
@@ -90,6 +92,9 @@ $secondary-color: #BEB7A4;
         &__intro {
             border-bottom: 1px solid black;
         }
+        // &__footer {
+        //     bottom: 0;
+        // }
     }
 }
 
