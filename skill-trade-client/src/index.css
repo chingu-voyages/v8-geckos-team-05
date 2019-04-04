@@ -1,4 +1,74 @@
+@import url("https://fonts.googleapis.com/css?family=Karla:400,700");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
+
+.homepage {
+  position: relative;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  margin-bottom: -60px; }
+  .homepage__intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Karla", sans-serif;
+    width: 100%;
+    height: 100%; }
+    .homepage__intro--textContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+    .homepage__intro--mainText {
+      color: #FF3F00;
+      text-align: center; }
+    .homepage__intro--subtext {
+      color: #BEB7A4;
+      text-align: center; }
+    .homepage__intro--button {
+      font-family: "Karla", sans-serif;
+      padding: 10px;
+      border: 1px solid black;
+      width: 200px;
+      margin: 20px 0px 0px 5px;
+      transition: 0.3s; }
+      .homepage__intro--button--container {
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+      .homepage__intro--button:hover {
+        background: #FF3F00;
+        color: white; }
+  .homepage__info {
+    display: grid;
+    height: 400px;
+    width: 100vw;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "column1 column2 column3"; }
+    .homepage__info--column {
+      margin-top: 10px; }
+      .homepage__info--column--header {
+        font-family: "Karla", sans-serif;
+        text-align: center;
+        margin: 20px 0px 0px 0px; }
+  @media (max-width: 768px) {
+    .homepage__info {
+      height: 400px;
+      grid-template-columns: 100vw;
+      grid-template-rows: 75vh 75vh;
+      grid-template-areas: "column1" "column2" "column3"; }
+    .homepage__intro {
+      border-bottom: 1px solid black; } }
+
+#homepage__info--column1 {
+  grid-area: column1; }
+
+#homepage__info--column2 {
+  grid-area: column2; }
+
+#homepage__info--column3 {
+  grid-area: column3; }

@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700');
+
+$intro-font: 'Karla', sans-serif;
+$primary-color: #FF3F00;
+$secondary-color: #BEB7A4;
+
+.homepage {
+    position: relative;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    margin-bottom: -60px;
+    &__intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // background-image: url("clark-young-143623-unsplash.jpg");
+        // background-size: cover;
+        font-family: $intro-font;
+        width: 100%;
+        height: 100%;
+        &--textContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        &--mainText {
+            color: $primary-color;
+            text-align: center;
+        }
+        &--subtext {
+            color: $secondary-color;
+            text-align: center;
+            // font-weight: 400;
+        }
+        &--button {
+            font-family: $intro-font;
+            padding: 10px;
+            border: 1px solid black;
+            width: 200px;
+            margin: 20px 0px 0px 5px;
+            transition: 0.3s;
+            &--container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            &:hover {
+                background: $primary-color;
+                color: white;
+            }
+        }
+    }
+    &__info {
+        display: grid;
+        height: 400px;
+        width: 100vw;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: "column1 column2 column3";
+        &--column {
+            margin-top: 10px;
+            &--header {
+                font-family: $intro-font;
+                text-align: center;
+                margin: 20px 0px 0px 0px;
+            }
+        }
+    }
+    // &__footer {
+    //     position: absolute;
+    //     margin-bottom: 0;
+    //     display: flex;
+    //     justify-content: center;
+    //     height: 60px;
+    //     width: 100%;
+    //     font-family: $intro-font;
+    //     padding: 20px;
+    //     color: $secondary-color;
+    //     background: #2d2d2d;
+    // }
+    @media (max-width: 768px) {
+        &__info {
+            height: 400px;
+            grid-template-columns: 100vw;
+            grid-template-rows: 75vh 75vh;
+            grid-template-areas: "column1"
+                                 "column2"
+                                 "column3";
+        }
+        &__intro {
+            border-bottom: 1px solid black;
+        }
+        // &__footer {
+        //     bottom: 0;
+        // }
+    }
+}
+
+#homepage {
+   
+    &__info--column1 {
+        grid-area: column1;
+    }
+    &__info--column2 {
+        grid-area: column2;
+    }
+    &__info--column3 {
+        grid-area: column3;
+    }
+}
