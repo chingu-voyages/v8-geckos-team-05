@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import TeachProfile from "./components/Teacher/teacherProfile";
-import MeetupMain from "./components/Meetup/meetupMain";
+import Index from "./components/Utils/routes";
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <MeetupMain />
+        <Index />
       </div>
     );
   }
