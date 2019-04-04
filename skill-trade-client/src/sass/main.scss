@@ -1,8 +1,15 @@
-@import "base/base";
-@import "components/homePg";
-@import "abstracts/color";
-@import "components/teacher";
 @import url("https://fonts.googleapis.com/css?family=Roboto");
+
+@import "base/base";
+@import "base/responsive";
+
+
+@import "abstracts/color";
+
+@import "components/homePg";
+@import "components/teacher";
 @import "components/navBar";
 @import "components/contactsMain";
 @import "components/friendCard";
+
+
