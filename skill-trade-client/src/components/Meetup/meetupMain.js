@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import NavBar from "../navBar";
+import NavBar from "../Navbar/navBar";
 
 class MeetupMain extends Component {
   state = {};
