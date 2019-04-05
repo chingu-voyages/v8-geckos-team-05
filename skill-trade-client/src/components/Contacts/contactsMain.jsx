@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import NavBar from "../navBar";
+import NavBar from "../Navbar/navBar";
 import FriendCard from "./friendCard";
 
 class ContactsMain extends Component {
