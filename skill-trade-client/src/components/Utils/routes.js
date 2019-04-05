@@ -5,10 +5,10 @@ import {
   Redirect,
   Switch
 } from "react-router-dom";
-import contactsMain from "../Contacts/contactsMain.jsx";
+import contactsMain from "../Contacts/contactsMain";
 import teacherProfile from "../Teacher/teacherProfile";
 import teacherSearch from "../Teacher/teacherSch";
-import Homepage from '../Homepage/Homepage';
+import Homepage from "../Homepage/Homepage";
 export default function Index() {
   return (
     <Router>
