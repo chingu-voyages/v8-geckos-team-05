@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import NavBar from "../Navbar/navBar";
-
+import MainContainer from "../MainContainer/mainContainer";
 class MeetupMain extends Component {
   state = {};
   render() {
     return (
       <>
         <NavBar />
-        <div className="mainContainer">
+        <MainContainer>
           <div className="contactBox">
             <div className="contactBox__imgContainer" />
             <div className="contactBox__textContainer">
@@ -60,7 +60,7 @@ class MeetupMain extends Component {
               </div>
             </div>
           </div>
-        </div>
+        </MainContainer>
       </>
     );
   }
