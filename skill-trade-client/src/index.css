@@ -276,3 +276,7 @@ h6 {
       font-weight: normal;
       color: #51504e;
       font-size: 0.8rem; }
+
+.mainContainer {
+  padding: 50px 137px 115px 137px;
+  background: linear-gradient(180deg, #fbfaf9 0%, #beb7a4 100%), #beb7a4; }
