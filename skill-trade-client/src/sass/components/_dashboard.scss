@@ -23,7 +23,23 @@
         }
 
         &--username {
-            
+
+        }
+    }
+    &__balanceComponent {
+        display: flex;
+        justify-content: flex-start;
+
+        &__text {
+            display: flex;
+            justify-content: space-around;
+
+            &--number {
+                font-weight: bold;
+            }
+            &--remaining {
+                font-weight: 400;
+            }
         }
     }
 }

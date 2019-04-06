@@ -283,6 +283,16 @@ h6 {
   .dashboard__userComponent {
     display: flex;
     justify-content: space-between; }
+  .dashboard__balanceComponent {
+    display: flex;
+    justify-content: flex-start; }
+    .dashboard__balanceComponent__text {
+      display: flex;
+      justify-content: space-around; }
+      .dashboard__balanceComponent__text--number {
+        font-weight: bold; }
+      .dashboard__balanceComponent__text--remaining {
+        font-weight: 400; }
 
 .mainContainer {
   padding: 50px 137px 115px 137px;

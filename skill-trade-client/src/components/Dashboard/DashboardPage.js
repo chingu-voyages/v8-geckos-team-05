@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import DashUserComponent from './DashUserComponent';
+import DashBalanceComponent from './DashBalanceComponent';
 
 import Navbar from "../Navbar/navBar";
 
@@ -12,6 +13,7 @@ class Dashboard extends Component {
         <Navbar/>
         <div className="dashboard">
           <DashUserComponent/>
+          <DashBalanceComponent/>
         </div>
       </>
     );
