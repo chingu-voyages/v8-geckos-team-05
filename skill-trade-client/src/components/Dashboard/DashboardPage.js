@@ -6,6 +6,7 @@ import DashUserComponent from "./DashUserComponent";
 import DashBalanceComponent from "./DashBalanceComponent";
 import DashFriendsComponent from "./DashFriendsComponent";
 import DashNextLessonComponent from './DashNextLessonComponent';
+import DashUpcomingComponent from './DashUpcomingComponent';
 
 import Navbar from "../Navbar/navBar";
 
@@ -21,6 +22,7 @@ class Dashboard extends Component {
             <DashBalanceComponent />
             <DashFriendsComponent friends={friends} />
             <DashNextLessonComponent/>
+            <DashUpcomingComponent/>
           </div>
         </div>
       </>

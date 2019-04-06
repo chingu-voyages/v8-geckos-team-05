@@ -320,6 +320,21 @@ h6 {
         max-width: 150px; }
       .dashboard__friendsComponent__friend--name {
         font-weight: bold; }
+  .dashboard__nextLessonComponent {
+    display: flex;
+    background: #beb7a4;
+    align-items: center;
+    grid-area: nextlesson; }
+    .dashboard__nextLessonComponent--header {
+      font-weight: bold; }
+    .dashboard__nextLessonComponent__infoContainer {
+      display: flex;
+      flex-direction: column; }
+    .dashboard__nextLessonComponent__image {
+      max-height: 150px;
+      max-width: 150px; }
+  .dashboard__upcomingLessonsComponent {
+    background: #beb7a4; }
 
 .mainContainer {
   padding: 50px 137px 115px 137px;

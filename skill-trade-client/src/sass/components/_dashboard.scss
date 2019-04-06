@@ -77,4 +77,42 @@
             }
         }
     }
+
+    &__nextLessonComponent {
+        display: flex;
+        background: $secondary-color;
+        align-items: center;
+        grid-area: nextlesson;
+        
+        &--header {
+            font-weight: bold;
+        }
+        &__infoContainer {
+            display: flex;
+            flex-direction: column;
+        }
+        &__image {
+            &Container {
+
+            }
+            max-height: 150px;
+            max-width: 150px;
+        }
+        &__textContainer {
+
+        }
+        &__teacherName {
+
+        }
+        &__lessonName {
+
+        }
+        &__lessonDateTime {
+
+        }
+    }
+
+    &__upcomingLessonsComponent {
+        background: $secondary-color;
+    }
 }
