@@ -275,17 +275,31 @@ h6 {
       font-size: 0.8rem; }
 
 .dashboard {
-  display: grid;
-  font-family: "Karla", sans-serif;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(7, 1fr);
-  grid-template-areas: "user user nextlesson nextlesson nextlesson" "user user nextlesson nextlesson nextlesson" "balance balance nextlesson nextlesson nextlesson" "friends friends upcoming upcoming upcoming" "friends friends upcoming upcoming upcoming" "friends friends upcoming upcoming upcoming" "friends friends upcoming upcoming upcoming"; }
+  display: flex;
+  justify-content: center; }
+  .dashboard__container {
+    display: grid;
+    grid-gap: 30px;
+    width: 75vw;
+    height: 60vw;
+    font-family: "Karla", sans-serif;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas: "user user nextlesson nextlesson nextlesson" "user user nextlesson nextlesson nextlesson" "balance balance nextlesson nextlesson nextlesson" "friends friends upcoming upcoming upcoming" "friends friends upcoming upcoming upcoming" "friends friends upcoming upcoming upcoming" "friends friends upcoming upcoming upcoming"; }
   .dashboard__userComponent {
     display: flex;
-    justify-content: space-between; }
+    background: #beb7a4;
+    justify-content: flex-start;
+    align-items: center;
+    grid-area: user; }
+    .dashboard__userComponent--image {
+      max-height: 150px;
+      max-width: 150px; }
   .dashboard__balanceComponent {
     display: flex;
-    justify-content: flex-start; }
+    background: #beb7a4;
+    justify-content: flex-start;
+    grid-area: balance; }
     .dashboard__balanceComponent__text {
       display: flex;
       justify-content: space-around; }
@@ -293,6 +307,19 @@ h6 {
         font-weight: bold; }
       .dashboard__balanceComponent__text--remaining {
         font-weight: 400; }
+  .dashboard__friendsComponent {
+    grid-area: friends;
+    background: #beb7a4; }
+    .dashboard__friendsComponent__friend {
+      display: flex;
+      background: red;
+      margin: 5px 5px 20px 5px;
+      justify-content: flex-start; }
+      .dashboard__friendsComponent__friend--image {
+        max-height: 150px;
+        max-width: 150px; }
+      .dashboard__friendsComponent__friend--name {
+        font-weight: bold; }
 
 .mainContainer {
   padding: 50px 137px 115px 137px;

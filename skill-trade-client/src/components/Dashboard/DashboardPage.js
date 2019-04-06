@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 
-import DashUserComponent from './DashUserComponent';
-import DashBalanceComponent from './DashBalanceComponent';
+import friends from "./friends";
+
+import DashUserComponent from "./DashUserComponent";
+import DashBalanceComponent from "./DashBalanceComponent";
+import DashFriendsComponent from "./DashFriendsComponent";
+import DashNextLessonComponent from './DashNextLessonComponent';
 
 import Navbar from "../Navbar/navBar";
 
@@ -10,10 +14,14 @@ class Dashboard extends Component {
   render() {
     return (
       <>
-        <Navbar/>
+        <Navbar />
         <div className="dashboard">
-          <DashUserComponent/>
-          <DashBalanceComponent/>
+          <div className="dashboard__container">
+            <DashUserComponent />
+            <DashBalanceComponent />
+            <DashFriendsComponent friends={friends} />
+            <DashNextLessonComponent/>
+          </div>
         </div>
       </>
     );

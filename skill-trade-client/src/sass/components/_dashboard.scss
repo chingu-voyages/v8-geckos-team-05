@@ -1,34 +1,45 @@
-.dashboard{
-    display: grid;
-    font-family: $chris-font;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(7, 1fr);
-    grid-template-areas: "user user nextlesson nextlesson nextlesson"
-                         "user user nextlesson nextlesson nextlesson"
-                         "balance balance nextlesson nextlesson nextlesson"
-                         "friends friends upcoming upcoming upcoming"
-                         "friends friends upcoming upcoming upcoming"
-                         "friends friends upcoming upcoming upcoming"
-                         "friends friends upcoming upcoming upcoming";
+.dashboard {
+    display: flex;
+    justify-content: center;
+    &__container {
+        display: grid;
+        grid-gap: 30px;
+        width: 75vw;
+        height: 60vw;
+        font-family: $chris-font;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-areas: "user user nextlesson nextlesson nextlesson"
+                             "user user nextlesson nextlesson nextlesson"
+                             "balance balance nextlesson nextlesson nextlesson"
+                             "friends friends upcoming upcoming upcoming"
+                             "friends friends upcoming upcoming upcoming"
+                             "friends friends upcoming upcoming upcoming"
+                             "friends friends upcoming upcoming upcoming";
+    }
 
     &__userComponent {
         display: flex;
-        justify-content: space-between;
-        
+        background: $secondary-color;
+        justify-content: flex-start;
+        align-items: center;
+        grid-area: user;
+
         &--image {
-            
-            &Container {
+            max-height: 150px;
+            max-width: 150px;
 
-            }
+            &Container {}
         }
 
-        &--username {
-
-        }
+        &--username {}
     }
+
     &__balanceComponent {
         display: flex;
+        background: $secondary-color;
         justify-content: flex-start;
+        grid-area: balance;
 
         &__text {
             display: flex;
@@ -37,8 +48,32 @@
             &--number {
                 font-weight: bold;
             }
+
             &--remaining {
                 font-weight: 400;
+            }
+        }
+    }
+
+    &__friendsComponent {
+        grid-area: friends;
+        background: $secondary-color;
+
+        &__friend {
+            display: flex;
+            background: red;
+            margin: 5px 5px 20px 5px;
+            justify-content: flex-start;
+
+            &--image {
+                max-height: 150px;
+                max-width: 150px;
+
+                &Container {}
+            }
+
+            &--name {
+                font-weight: bold;
             }
         }
     }
