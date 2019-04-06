@@ -24,10 +24,10 @@
       flex-direction: column;
       justify-content: center; }
     .homepage__intro--mainText {
-      color: #FF3F00;
+      color: #ff3f00;
       text-align: center; }
     .homepage__intro--subtext {
-      color: #BEB7A4;
+      color: #beb7a4;
       text-align: center; }
     .homepage__intro--button {
       font-family: "Karla", sans-serif;
@@ -42,8 +42,8 @@
         justify-content: center;
         align-items: center; }
       .homepage__intro--button:hover {
-        background: #FF3F00;
-        color: white; }
+        background: #ff3f00;
+        color: #fffffc; }
   .homepage__info {
     display: grid;
     height: 400px;
@@ -273,3 +273,17 @@ h6 {
       font-weight: normal;
       color: #51504e;
       font-size: 0.8rem; }
+
+.dashboard {
+  display: grid;
+  font-family: "Karla", sans-serif;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-areas: "user user nextlesson nextlesson nextlesson" "user user nextlesson nextlesson nextlesson" "balance balance nextlesson nextlesson nextlesson" "friends friends upcoming upcoming upcoming" "friends friends upcoming upcoming upcoming" "friends friends upcoming upcoming upcoming" "friends friends upcoming upcoming upcoming"; }
+  .dashboard__userComponent {
+    display: flex;
+    justify-content: space-between; }
+
+.mainContainer {
+  padding: 50px 137px 115px 137px;
+  background: linear-gradient(180deg, #fbfaf9 0%, #beb7a4 100%), #beb7a4; }
