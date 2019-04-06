@@ -19,6 +19,7 @@ export default class componentName extends Component {
               <p className="info--location">Los Angeles</p>
             </div>
          </div>
+         <div className="extras">
          <div className="priceInfo">
            <p className="priceInfo__type">
              Mentor Lesson
@@ -45,6 +46,7 @@ export default class componentName extends Component {
            and more recently with desktop publishing software like Aldus PageMaker including
             versions of Lorem Ipsum.
            </p>
+         </div>
          </div>
       </div>
     )

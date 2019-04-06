@@ -78,6 +78,9 @@
 .teacher {
   height: 100vh;
   background: rgba(185, 185, 185, 0.15); }
+  @media all and (max-width: 426px) {
+    .teacher {
+      height: auto; } }
   .teacher .profile {
     display: flex;
     flex-flow: row wrap;
@@ -94,11 +97,15 @@
     flex-direction: column;
     float: right;
     width: 300px;
+    max-height: 120px;
     padding: 10px;
     border: 1px solid white;
     background: white;
     border-radius: 10px;
     margin-top: 5px; }
+    @media all and (max-width: 426px) {
+      .teacher .priceInfo {
+        margin: 5px auto; } }
     .teacher .priceInfo__btn {
       background: #b5e4e6;
       border: none;
@@ -107,24 +114,38 @@
       color: white;
       width: 100px;
       margin: 0 auto;
-      transition: all 0.9s; }
+      transition: all 0.9s;
+      text-align: center; }
       .teacher .priceInfo__btn:hover {
         background: #43babf;
         cursor: pointer; }
   .teacher .intro {
     background: white;
-    text-align: right;
-    max-width: 75%;
+    text-align: left;
+    width: 75%;
     height: auto;
     margin: 30px;
     padding-bottom: 10px;
     border-radius: 5px; }
+    @media all and (max-width: 426px) {
+      .teacher .intro {
+        margin: 5px auto;
+        width: 300px; } }
     .teacher .intro__banner {
       text-align: center; }
     .teacher .intro__descripition {
       font-weight: bold;
       margin: 50px;
       height: auto; }
+
+.extras {
+  display: flex;
+  flex-basis: 20%;
+  flex-wrap: nowrap;
+  flex-direction: row-reverse; }
+  @media all and (max-width: 426px) {
+    .extras {
+      flex-direction: column; } }
 
 button {
   all: unset; }
