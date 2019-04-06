@@ -5,8 +5,8 @@ class DashFriendsComponent extends Component {
   render() {
     const { friends } = this.props;
     
-    const friendsDivs = friends.map(friend => (
-      <div className="dashboard__friendsComponent__friend">
+    const friendsDivs = friends.map((friend, i) => (
+      <div className="dashboard__friendsComponent__friend" key={i}>
         <div className="dashboard__friendsComponent__friend--imageContainer">
           <img
             src={friend.profilePic}
@@ -19,7 +19,10 @@ class DashFriendsComponent extends Component {
     ));
     
     return (
-        <div className="dashboard__friendsComponent">{friendsDivs}</div>
+        <div className="dashboard__friendsComponent">
+          <h2 className="dashboard__friendsComponent__header">Friends</h2>
+          {friendsDivs}
+        </div>
     );
   }
 }

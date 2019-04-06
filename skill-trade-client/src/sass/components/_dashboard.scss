@@ -3,15 +3,16 @@
     justify-content: center;
     &__container {
         display: grid;
-        grid-gap: 30px;
-        width: 75vw;
+        grid-gap: 15px;
+        margin: 25px 0px 15px 25px;
+        width: 60vw;
         height: 60vw;
         font-family: $chris-font;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(7, 1fr);
         grid-template-areas: "user user nextlesson nextlesson nextlesson"
-                             "user user nextlesson nextlesson nextlesson"
-                             "balance balance upcoming upcoming upcoming"
+                             "balance balance nextlesson nextlesson nextlesson"
+                             "friends friends upcoming upcoming upcoming"
                              "friends friends upcoming upcoming upcoming"
                              "friends friends upcoming upcoming upcoming"
                              "friends friends upcoming upcoming upcoming"
@@ -20,7 +21,8 @@
 
     &__userComponent {
         display: flex;
-        background: $secondary-color;
+        padding: 5px;
+        background: $dashboard-grid-color;
         justify-content: flex-start;
         align-items: center;
         grid-area: user;
@@ -37,69 +39,99 @@
 
     &__balanceComponent {
         display: flex;
-        background: $secondary-color;
-        justify-content: flex-start;
+        padding: 10px;
+        background: $dashboard-grid-color;
+        justify-content: center;
+        align-items: center;
         grid-area: balance;
 
         &__text {
             display: flex;
-            justify-content: space-around;
+            font-size: 20px;
+            justify-content: center;
 
             &--number {
                 font-weight: bold;
+                font-size: 1.5rem;
             }
 
             &--remaining {
                 font-weight: 400;
+                font-size: 1.3rem;
+                color: black;
             }
         }
     }
 
     &__friendsComponent {
+        display: flex;
+        overflow-y: auto;
+        scrollbar-width: none;
+        flex-direction: column;
+        justify-content: space-between;
         grid-area: friends;
-        background: $secondary-color;
+        background: $dashboard-grid-color;
 
         &__friend {
             display: flex;
-            background: red;
-            margin: 5px 5px 20px 5px;
+            padding: 10px;
             justify-content: flex-start;
+            align-items: center;
 
             &--image {
-                max-height: 150px;
-                max-width: 150px;
+                max-height: 100px;
+                max-width: 100px;
 
                 &Container {}
             }
 
             &--name {
                 font-weight: bold;
+                margin-left: 20px;
             }
+            &:last-child {
+                border: 0;
+            }
+        }
+        &__header {
+            text-align: center;
+            padding: 10px;
+        }
+        &::-webkit-scrollbar {
+            display: none;
         }
     }
 
     &__nextLessonComponent {
         display: flex;
-        background: $secondary-color;
+        background: $dashboard-grid-color;
+        padding: 10px;
         align-items: center;
         grid-area: nextlesson;
         
-        &--header {
+        &__header {
             font-weight: bold;
         }
         &__infoContainer {
             display: flex;
-            flex-direction: column;
+            // background: blue;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
         }
         &__image {
             &Container {
 
             }
-            max-height: 150px;
-            max-width: 150px;
+            max-height: 200px;
+            max-width: 200px;
         }
         &__textContainer {
-
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            // background: red;
         }
         &__teacherName {
 
@@ -113,7 +145,97 @@
     }
 
     &__upcomingLessonsComponent {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         grid-area: upcoming;
-        background: $secondary-color;
+        background: $dashboard-grid-color;
+        overflow-y: auto;
+        scrollbar-width: none;
+
+        &__lesson {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 10px;
+
+            &__image {
+                max-height: 125px;
+                max-width: 125px;
+
+                &Container {
+
+                }
+            }
+            &__teacherName {
+                font-weight: 700;
+            }
+            &:last-child {
+                border: 0;
+            }
+        }
+        &__header {
+            text-align: center;
+            padding: 10px;
+        }
+        
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    @media (max-width: 900px) {
+        &__container {
+            width: 95%;
+            height: 250vw;
+            grid-template-columns: auto auto;
+            grid-template-rows: repeat(9, 1fr);
+            grid-gap: 10px;
+            margin: 10px 0px 5px 0px;
+            grid-template-areas: "user balance"
+                                 "nextlesson friends"
+                                 "nextlesson friends"
+                                 "upcoming friends"
+                                 "upcoming friends"
+                                 "upcoming friends"
+                                 "upcoming friends"
+                                 "upcoming friends"
+                                 "upcoming friends";
+        }
+        &__friendsComponent {
+            &__friend {
+                text-align: center;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                &--name {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    @media (max-width: 512px) {
+        &__container {
+            padding: 0;
+            grid-template-areas: "user balance"
+                             "nextlesson nextlesson"
+                             "nextlesson nextlesson"
+                             "upcoming upcoming"
+                             "upcoming upcoming"
+                             "upcoming upcoming"
+                             "friends friends"
+                             "friends friends"
+                             "friends friends";
+        }
+        &__nextLessonComponent__image {
+            max-height: 125px;
+            max-width: 125px;
+        }
+        &__friendsComponent {
+            &__friend {
+                flex-direction: row;
+                justify-content: flex-start;
+            }
+        }
     }
 }

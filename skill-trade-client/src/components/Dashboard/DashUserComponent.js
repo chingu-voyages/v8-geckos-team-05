@@ -5,9 +5,9 @@ const DashUserComponent = () => {
   return (
     <div className="dashboard__userComponent">
         <div className="dashboard__userComponent--imageContainer">
-            <img src="./dashboardProfilePicture.png" alt="User's profile picture" srcset="" className="dashboard__userComponent--image"/>
+            <img src="./dashboardProfilePicture.png" alt="User's profile picture" srcSet="" className="dashboard__userComponent--image"/>
         </div>
-        <p className="dashboard__userComponent--username"><strong>Chris</strong></p>
+        <h2 className="dashboard__userComponent--username"><strong>Chris</strong></h2>
     </div>
   )
 }
