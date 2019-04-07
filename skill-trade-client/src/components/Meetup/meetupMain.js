@@ -11,54 +11,75 @@ class MeetupMain extends Component {
           <div className="contactBox">
             <div className="contactBox__imgContainer" />
             <div className="contactBox__textContainer">
-              <p>Mentor/mentee</p>
-              <h5>Name</h5>
+              <p className="contactBox__textContainer__mentor">Mentor/mentee</p>
+              <h5 className="contactBox__textContainer__name">Name</h5>
             </div>
           </div>
           <div className="contentBox">
-            {/* Lesson Schedule */}
-            <div className="contentBox__lessonSchedule">
-              <div className="contentBox__lessonSchedule__title">
-                <div className="contentBox__lessonSchedule__title__circle">
-                  <h5>1</h5>
+            <form>
+              {/* Lesson Schedule */}
+              <div className="contentBox__section">
+                <div className="contentBox__section__title">
+                  <div className="contentBox__section__title__circle">
+                    <h3>1</h3>
+                  </div>
+                  <h3 className="contentBox__section__title__text">
+                    Lesson Schedule
+                  </h3>
                 </div>
-                <h4>Lesson Schedule</h4>
-              </div>
-              <div className="contentBox__lessonSchedule__content">
-                <div>
-                  <p>Lesson time will appear here</p>
+                <div className="contentBox__section__content">
+                  <div className="contentBox__section__content__lessonTime">
+                    <p>Lesson time will appear here</p>
+                  </div>
+                  <button className="contentBox__section__content__btnAddTime">
+                    Add date / time
+                  </button>
                 </div>
-                <button>Add date / time</button>
               </div>
-            </div>
 
-            {/* Communication tool */}
-            <div className="contentBox__communicationTool">
-              <div className="contentBox__communicationTool__title">
-                <div className="contentBox__communicationTool__title__circle">
-                  <h5>2</h5>
+              {/* Communication tool */}
+              <div className="contentBox__section">
+                <div className="contentBox__section__title">
+                  <div className="contentBox__section__title__circle">
+                    <h3>2</h3>
+                  </div>
+                  <h3 className="contentBox__section__title__text">
+                    Communication tool
+                  </h3>
                 </div>
-                <h4>Communication tool</h4>
-              </div>
-              <div className="contentBox__lessonSchedule__content">
-                <div>
-                  <p>Lesson time will appear here</p>
+                <div className="contentBox__section__content">
+                  <select
+                    required
+                    className="contentBox__section__content__dropdown"
+                  >
+                    <option value="0">Please select an option</option>
+                    <option value="skype">Skype</option>
+                    <option value="hangouts">Hangouts</option>
+                    <option value="discord">Discord</option>
+                  </select>
                 </div>
               </div>
-            </div>
 
-            {/* Comments */}
-            <div className="contentBox__comments">
-              <div className="contentBox__comments__title">
-                <div className="contentBox__comments__title__circle">
-                  <h5>3</h5>
+              {/* Comments */}
+              <div className="contentBox__section">
+                <div className="contentBox__section__title">
+                  <div className="contentBox__section__title__circle">
+                    <h3>3</h3>
+                  </div>
+                  <h3 className="contentBox__section__title__text">Comments</h3>
                 </div>
-                <h4>Comments</h4>
+                <div className="contentBox__section__content">
+                  <textarea className="contentBox__section__content__textarea" />
+                </div>
               </div>
-              <div className="contentBox__comments__content">
-                <textarea />
+              <div className="contentBox__submit">
+                <input
+                  className="contentBox__submit__btn"
+                  type="submit"
+                  value="Submit"
+                />
               </div>
-            </div>
+            </form>
           </div>
         </MainContainer>
       </>
