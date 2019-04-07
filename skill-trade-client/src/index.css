@@ -390,7 +390,7 @@ h6 {
   @media (max-width: 900px) {
     .dashboard__container {
       width: 95%;
-      height: 250vw;
+      height: 175vw;
       grid-template-columns: auto auto;
       grid-template-rows: repeat(9, 1fr);
       grid-gap: 10px;
@@ -405,6 +405,7 @@ h6 {
         margin-left: 0; } }
   @media (max-width: 512px) {
     .dashboard__container {
+      height: 275vw;
       padding: 0;
       grid-template-areas: "user balance" "nextlesson nextlesson" "nextlesson nextlesson" "upcoming upcoming" "upcoming upcoming" "upcoming upcoming" "friends friends" "friends friends" "friends friends"; }
     .dashboard__nextLessonComponent__image {

@@ -12,7 +12,6 @@ import DashUpcomingComponent from "./DashUpcomingComponent";
 import Navbar from "../Navbar/navBar";
 
 class Dashboard extends Component {
-  // 5 columns, 8 rows
   render() {
     return (
       <>
