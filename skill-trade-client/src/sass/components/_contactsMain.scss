@@ -61,3 +61,12 @@
     grid-gap: 1rem;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .contentBox--contacts {
+    &__resultsGrid {
+      margin: 0;
+      display: block;
+    }
+  }
+}
