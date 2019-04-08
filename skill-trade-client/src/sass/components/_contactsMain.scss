@@ -1,14 +1,11 @@
-@import "../abstracts/color";
-
-h6 {
-  all: unset;
-}
-
-.contentBox {
+.contentBox--contacts {
   background: #fafaf6;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   padding-bottom: 2.5rem;
   &__topBar {
+    h6 {
+      all: unset;
+    }
     box-sizing: border-box;
     display: flex;
     height: 68px;

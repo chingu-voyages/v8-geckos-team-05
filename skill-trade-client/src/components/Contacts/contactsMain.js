@@ -11,30 +11,30 @@ class ContactsMain extends Component {
         <NavBar />
         <MainContainer>
           <h1 className="mainContainer__title">Contacts</h1>
-          <div className="contentBox">
-            <div className="contentBox__topBar">
-              <div className="contentBox__topBar__myMentors">
+          <div className="contentBox--contacts">
+            <div className="contentBox--contacts__topBar">
+              <div className="contentBox--contacts__topBar__myMentors">
                 <h6>My Mentors</h6>
               </div>
-              <div className="contentBox__topBar__myMentees">
+              <div className="contentBox--contacts__topBar__myMentees">
                 <h6>My Mentees</h6>
               </div>
-              <div className="contentBox__topBar__myClassmates">
+              <div className="contentBox--contacts__topBar__myClassmates">
                 <h6>My classmates</h6>
               </div>
-              <div className="contentBox__topBar__showAll">
+              <div className="contentBox--contacts__topBar__showAll">
                 <h6>Show all</h6>
               </div>
             </div>
-            <div className="contentBox__searchBar">
+            <div className="contentBox--contacts__searchBar">
               <input
-                className="contentBox__searchBar__search"
+                className="contentBox--contacts__searchBar__search"
                 type="search"
                 placeholder="Search by name"
                 aria-label="Search"
               />
             </div>
-            <div className="contentBox__resultsGrid">
+            <div className="contentBox--contacts__resultsGrid">
               <FriendCard />
               <FriendCard />
               <FriendCard />
