@@ -135,6 +135,7 @@
   justify-content: space-between;
   padding: 0.5rem 1rem; }
   .navbar__banner {
+    text-decoration: unset;
     color: black;
     font-family: Roboto;
     font-style: normal;
@@ -157,6 +158,8 @@
     border-radius: 5px; }
     .navbar__btn-logout:hover {
       cursor: pointer; }
+  .navbar__collapse--btn {
+    display: none; }
 
 .listedItems {
   margin: 0;
@@ -173,6 +176,14 @@
       font-size: 18px;
       line-height: normal;
       color: #FF3F00; }
+
+@media only screen and (max-width: 768px) {
+  .navbar__collapse--btn {
+    display: block;
+    font-size: 1.5rem;
+    color: #FF3F00; }
+  .navbar__collapse--items {
+    display: none; } }
 
 .contentBox--contacts {
   background: #fafaf6;

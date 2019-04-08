@@ -18,7 +18,12 @@ class NavBar extends Component {
             TALENT TRADE
           </Link>
           <Switch>
-            <div className="navbar__collapse">
+            <div className="navbar__collapse--btn">
+              <span>
+                <i class="fas fa-bars" />
+              </span>
+            </div>
+            <div className="navbar__collapse--items show">
               <ul className="listedItems">
                 <li className="listedItems__item">
                   <Link to="/home" className="listedItems__item__link" href="#">

@@ -7,6 +7,7 @@
   justify-content: space-between;
   padding: 0.5rem 1rem;
   &__banner {
+    text-decoration: unset;
     color: black;
     font-family: $font-family-main;
     font-style: normal;
@@ -32,6 +33,9 @@
       cursor: pointer;
     }
   }
+  &__collapse--btn {
+    display: none;
+  }
 }
 
 .listedItems {
@@ -50,5 +54,16 @@
       line-height: normal;
       color: $primary-color;
     }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar__collapse--btn {
+    display: block;
+    font-size: 1.5rem;
+    color: $primary-color;
+  }
+  .navbar__collapse--items {
+    display: none;
   }
 }
