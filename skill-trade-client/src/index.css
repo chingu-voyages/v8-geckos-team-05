@@ -271,6 +271,10 @@
     font-size: 48px;
     line-height: normal; }
 
+@media only screen and (max-width: 768px) {
+  .mainContainer {
+    padding: 3rem 1rem; } }
+
 body {
   font-family: Roboto; }
 
