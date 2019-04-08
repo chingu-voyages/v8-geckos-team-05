@@ -126,16 +126,6 @@
       margin: 50px;
       height: auto; }
 
-button {
-  all: unset; }
-
-button:hover {
-  cursor: pointer; }
-
-a {
-  color: unset;
-  text-decoration: unset; }
-
 .navbar {
   height: 64px;
   position: relative;
@@ -153,6 +143,7 @@ a {
     line-height: normal;
     text-transform: uppercase; }
   .navbar__btn-logout {
+    all: unset;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -160,10 +151,12 @@ a {
     line-height: 24px;
     text-align: center;
     color: #fffffc;
-    background: #ff3f00;
+    background: #FF3F00;
     width: 140px;
     height: 40px;
     border-radius: 5px; }
+    .navbar__btn-logout:hover {
+      cursor: pointer; }
 
 .listedItems {
   margin: 0;
@@ -172,12 +165,14 @@ a {
     display: inline;
     margin: 16px; }
     .listedItems__item__link {
+      color: unset;
+      text-decoration: unset;
       font-family: Roboto;
       font-style: normal;
       font-weight: normal;
       font-size: 18px;
       line-height: normal;
-      color: #ff3f00; }
+      color: #FF3F00; }
 
 .contentBox--contacts {
   background: #fafaf6;
@@ -197,18 +192,18 @@ a {
     font-size: 1rem;
     text-align: center;
     color: #51504e;
-    border-bottom: 1px solid #beb7a4; }
+    border-bottom: 1px solid #BEB7A4; }
     .contentBox--contacts__topBar h6 {
       all: unset; }
     .contentBox--contacts__topBar__myMentors {
       width: 181px;
-      border-right: 1px solid #beb7a4; }
+      border-right: 1px solid #BEB7A4; }
     .contentBox--contacts__topBar__myMentees {
       width: 181px;
-      border-right: 1px solid #beb7a4; }
+      border-right: 1px solid #BEB7A4; }
     .contentBox--contacts__topBar__myClassmates {
       width: 181px;
-      border-right: 1px solid #beb7a4; }
+      border-right: 1px solid #BEB7A4; }
     .contentBox--contacts__topBar__showAll {
       width: 181px; }
   .contentBox--contacts__searchBar {
@@ -219,7 +214,7 @@ a {
     align-items: center; }
     .contentBox--contacts__searchBar__search {
       all: unset;
-      border: 1px solid #beb7a4;
+      border: 1px solid #BEB7A4;
       background: #fffffc;
       border-radius: 3px;
       width: 233px;
