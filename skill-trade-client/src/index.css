@@ -179,18 +179,6 @@ a {
 h6 {
   all: unset; }
 
-.mainContainerContacts {
-  padding: 50px 137px 115px 137px;
-  background: linear-gradient(180deg, #fbfaf9 0%, #beb7a4 100%), #beb7a4; }
-  .mainContainerContacts__title {
-    color: #ff3f00;
-    margin: 0;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 48px;
-    line-height: normal; }
-
 .contentBox {
   background: #fafaf6;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
@@ -418,3 +406,140 @@ h6 {
 .mainContainer {
   padding: 50px 137px 115px 137px;
   background: linear-gradient(180deg, #fbfaf9 0%, #beb7a4 100%), #beb7a4; }
+  .mainContainer__title {
+    color: #ff3f00;
+    margin: 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: normal; }
+
+body {
+  font-family: Roboto; }
+
+.contactBox {
+  display: flex;
+  margin-bottom: 0.5rem; }
+  .contactBox__imgContainer {
+    width: 5rem;
+    height: 5rem;
+    border: 1px dotted #beb7a4;
+    border-radius: 50%;
+    margin-right: 1rem; }
+  .contactBox__textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-style: normal;
+    line-height: normal; }
+    .contactBox__textContainer__mentor {
+      margin-bottom: 0.125rem;
+      color: #ff3f00;
+      font-weight: bold;
+      font-size: 1rem; }
+    .contactBox__textContainer__name {
+      margin-top: 0.125rem;
+      font-weight: normal;
+      color: #51504e;
+      font-size: 0.8rem; }
+
+.contentBox {
+  padding: 2rem; }
+  .contentBox__section {
+    margin-bottom: 3rem; }
+    .contentBox__section__title {
+      display: flex; }
+      .contentBox__section__title__circle {
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(190, 183, 164, 0.3);
+        margin-right: 0.5rem; }
+      .contentBox__section__title__text {
+        color: #51504e;
+        margin-top: 0.25rem; }
+    .contentBox__section__content {
+      margin-left: 3.8rem; }
+      .contentBox__section__content__lessonTime {
+        width: 30%;
+        height: 2.25rem;
+        border: 1px solid rgba(255, 63, 0, 0.38);
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        padding-left: 1rem;
+        color: #beb7a4;
+        margin-bottom: 0.5rem; }
+      .contentBox__section__content__btnAddTime {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 24px;
+        text-align: center;
+        color: #fffffc;
+        background: #ff3f00;
+        width: 140px;
+        height: 35px;
+        border-radius: 5px; }
+      .contentBox__section__content__dropdown {
+        height: 35px;
+        border: 1px solid rgba(255, 63, 0, 0.38);
+        border-radius: 5px;
+        color: #51504e; }
+        .contentBox__section__content__dropdown:focus {
+          outline: none;
+          box-shadow: 0px 0px 11px -2px #ff3f00; }
+      .contentBox__section__content__textarea {
+        border: 1px solid rgba(255, 63, 0, 0.38);
+        border-radius: 5px; }
+  .contentBox__submit {
+    display: flex;
+    justify-content: flex-end; }
+    .contentBox__submit__btn {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1rem;
+      line-height: 24px;
+      text-align: center;
+      color: #fffffc;
+      background: #ff3f00;
+      width: 140px;
+      height: 35px;
+      border-radius: 5px;
+      border: none; }
+
+.signUp__component {
+  display: flex;
+  justify-content: center;
+  font-family: "Karla", sans-serif; }
+
+.signUp__container {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  width: 30vw;
+  background: #fffffc;
+  padding: 20px; }
+  @media (max-width: 786px) {
+    .signUp__container {
+      width: 85vw; } }
+
+.signUp__header {
+  text-align: center;
+  color: #ff3f00; }
+
+.signUp__form {
+  display: flex;
+  margin-top: 10px;
+  height: 100%;
+  flex-direction: column; }
+  .signUp__form--emailInput {
+    margin: 10px 0px 10px 0px; }
+  .signUp__form--passwordInput {
+    margin: 10px 0px 10px 0px; }

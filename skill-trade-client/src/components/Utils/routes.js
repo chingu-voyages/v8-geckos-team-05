@@ -9,8 +9,10 @@ import contactsMain from "../Contacts/contactsMain";
 import teacherProfile from "../Teacher/teacherProfile";
 import teacherSearch from "../Teacher/teacherSch";
 import Homepage from '../Homepage/Homepage';
+import SignUp from '../SignUp/SignUp';
 import DashboardPage from '../Dashboard/DashboardPage';
 import MeetupMain from "../Meetup/meetupMain";
+
 
 export default function Index() {
   return (
@@ -24,6 +26,7 @@ export default function Index() {
           <Route exact path="/teacherProfile" component={teacherProfile} />
           <Route exact path="/teacherSearch" component={teacherSearch} />
           <Route exact path="/dashboard" component={DashboardPage} />
+          <Route exact path='/signup' component={SignUp}/>
         </Switch>
       </div>
     </Router>
