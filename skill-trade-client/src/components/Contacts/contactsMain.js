@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 import NavBar from "../Navbar/navBar";
 import FriendCard from "./friendCard";
+import MainContainer from "../MainContainer/mainContainer";
 
 class ContactsMain extends Component {
   state = {};
   render() {
     return (
-      <React.Fragment>
+      <>
         <NavBar />
-        <div className="mainContainerContacts">
-          <h1 className="mainContainerContacts__title">Contacts</h1>
+        <MainContainer>
+          <h1 className="mainContainer__title">Contacts</h1>
           <div className="contentBox">
             <div className="contentBox__topBar">
               <div className="contentBox__topBar__myMentors">
@@ -46,8 +47,8 @@ class ContactsMain extends Component {
               <FriendCard />
             </div>
           </div>
-        </div>
-      </React.Fragment>
+        </MainContainer>
+      </>
     );
   }
 }
