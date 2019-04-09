@@ -160,6 +160,8 @@
       cursor: pointer; }
   .navbar__collapse--btn {
     display: none; }
+  .navbar__collapse--items {
+    display: inline; }
 
 .listedItems {
   margin: 0;

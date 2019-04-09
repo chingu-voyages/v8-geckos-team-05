@@ -14,16 +14,16 @@ class NavBar extends Component {
     return (
       <>
         <nav className="navbar">
-          <Link to="/home" className="navbar__banner" href="#">
+          <a className="navbar__banner" href="#">
             TALENT TRADE
-          </Link>
-          <Switch>
-            <div className="navbar__collapse--btn">
-              <span>
-                <i class="fas fa-bars" />
-              </span>
-            </div>
-            <div className="navbar__collapse--items show">
+          </a>
+          <div className="navbar__collapse--btn">
+            <span>
+              <i class="fas fa-bars" />
+            </span>
+          </div>
+          <div className="navbar__collapse--items show">
+            <Switch>
               <ul className="listedItems">
                 <li className="listedItems__item">
                   <Link to="/home" className="listedItems__item__link" href="#">
@@ -48,14 +48,14 @@ class NavBar extends Component {
               <button className="navbar__btn-logout" type="submit">
                 Log Out
               </button>
-            </div>
-            <Route path="/home" exact={true} component={Homepage} />
-            <Route
-              path="/teacherSearch"
-              exact={true}
-              component={teacherSearch}
-            />
-          </Switch>
+              <Route path="/home" exact={true} component={Homepage} />
+              <Route
+                path="/teacherSearch"
+                exact={true}
+                component={teacherSearch}
+              />
+            </Switch>
+          </div>
         </nav>
       </>
     );
