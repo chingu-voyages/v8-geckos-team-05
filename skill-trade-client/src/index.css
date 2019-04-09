@@ -235,16 +235,23 @@
       padding-left: 18px;
       line-height: 100px; }
   .contentBox--contacts__resultsGrid {
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
+    margin-left: 4%;
+    margin-right: 4%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1rem; }
+    grid-gap: 2%; }
+
+@media only screen and (max-width: 600px) {
+  .contentBox--contacts__resultsGrid {
+    display: block; } }
 
 @media only screen and (max-width: 768px) {
   .contentBox--contacts__resultsGrid {
-    margin: 0;
-    display: block; } }
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media only screen and (max-width: 992px) {
+  .contentBox--contacts__resultsGrid {
+    grid-template-columns: repeat(3, 1fr); } }
 
 .mainContainerCard {
   display: inline-flex;
