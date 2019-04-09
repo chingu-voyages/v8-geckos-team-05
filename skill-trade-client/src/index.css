@@ -278,7 +278,7 @@
       font-size: 0.8rem; }
 
 .mainContainer {
-  padding: 50px 137px 115px 137px;
+  padding: 2rem 10% 5rem 10%;
   background: linear-gradient(180deg, #fbfaf9 0%, #beb7a4 100%), #beb7a4; }
   .mainContainer__title {
     color: #ff3f00;
@@ -288,10 +288,6 @@
     font-weight: normal;
     font-size: 48px;
     line-height: normal; }
-
-@media only screen and (max-width: 768px) {
-  .mainContainer {
-    padding: 3rem 1rem; } }
 
 body {
   font-family: Roboto; }

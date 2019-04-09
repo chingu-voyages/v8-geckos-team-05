@@ -1,5 +1,5 @@
 .mainContainer {
-  padding: 50px 137px 115px 137px;
+  padding: 2rem 10% 5rem 10%;
   background: linear-gradient(180deg, #fbfaf9 0%, $secondary-color 100%),
     $secondary-color;
   &__title {
@@ -10,11 +10,5 @@
     font-weight: normal;
     font-size: 48px;
     line-height: normal;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .mainContainer {
-    padding: 3rem 1rem;
   }
 }
