@@ -8,6 +8,7 @@ class LoginSignup extends Component {
     this.state = {
       emailValue: "",
       passwordValue: "",
+      secondPasswordValue: "",
       tabNumber: 1
     };
   }
@@ -17,15 +18,36 @@ class LoginSignup extends Component {
       this.setState({
         emailValue: event.target.value
       });
-    } else {
+    } else if (inputName === "password") {
       this.setState({
         passwordValue: event.target.value
+      });
+    } else {
+      this.setState({
+        secondPasswordValue: event.target.value
       });
     }
   };
 
   handleTabChange = tabNumber => {
-    this.setState({ tabNumber });
+    this.setState({
+        emailValue: '',
+        passwordValue: '',
+        secondPasswordValue: '',
+        tabNumber
+    });
+
+  };
+
+  handleConfirmPassword = e => {
+    const regex = /.*\s.*/;
+    if (regex.test(this.state.passwordValue) || regex.test(this.state.secondPasswordValue)) {
+        alert('no spaces allowed');
+    }
+    e.preventDefault();
+    if (this.state.passwordValue !== this.state.secondPasswordValue) {
+      alert("passwords don't match");
+    }
   };
 
   render() {
@@ -47,9 +69,19 @@ class LoginSignup extends Component {
             </button>
           </div>
           {this.state.tabNumber === 1 ? (
-            <LoginView handleInput={this.handleInput.bind(this)} />
+            <LoginView
+              handleInput={this.handleInput.bind(this)}
+              passwordValue={this.state.passwordValue}
+              emailValue={this.state.emailValue}
+            />
           ) : (
-            <SignupView handleInput={this.handleInput.bind(this)} />
+            <SignupView
+              handleInput={this.handleInput.bind(this)}
+              passwordValue={this.state.passwordValue}
+              secondPasswordValue={this.state.secondPasswordValue}
+              emailValue={this.state.emailValue}
+              handleConfirmPassword={this.handleConfirmPassword.bind(this)}
+            />
           )}
         </div>
       </div>

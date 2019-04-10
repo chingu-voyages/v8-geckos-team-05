@@ -1,6 +1,6 @@
 import React from "react";
 
-const LoginView = ({ handleInput }) => {
+const LoginView = ({ handleInput, passwordValue, emailValue }) => {
   return (
     <div className="loginView">
       <form action="" className="loginView__form">
@@ -8,19 +8,17 @@ const LoginView = ({ handleInput }) => {
         <input
           className="loginView__form--emailInput"
           type="email"
-        //   value={this.state.emailValue}
+          value={emailValue}
           onChange={handleInput('email')}
           name="email"
-          id=""
         />
         <label htmlFor="password">Password</label>
         <input
           className="loginView__form--passwordInput"
           type="password"
-        //   value={this.state.passwordValue}
+          value={passwordValue}
           onChange={handleInput('password')}
           name="password"
-          id=""
         />
         <input type="submit" value="Submit" />
       </form>
