@@ -401,3 +401,37 @@ body {
       height: 35px;
       border-radius: 5px;
       border: none; }
+
+@media only screen and (max-width: 1200px) {
+  .contentBox--meetup__section__content__lessonTime {
+    width: 40%;
+    padding: 0;
+    justify-content: center; } }
+
+@media only screen and (max-width: 992px) {
+  .contentBox--meetup__section__content__lessonTime {
+    width: 50%;
+    padding: 0;
+    justify-content: center; } }
+
+@media only screen and (max-width: 750px) {
+  .contentBox--meetup__section__title {
+    margin-bottom: 3%; }
+  .contentBox--meetup__section__content {
+    margin: 0; }
+    .contentBox--meetup__section__content__lessonTime {
+      width: 100%;
+      padding: 0;
+      justify-content: center; } }
+
+@media only screen and (max-width: 600px) {
+  .contentBox--meetup__section__title {
+    margin-bottom: 3%; }
+  .contentBox--meetup__section__content {
+    margin: 0; }
+    .contentBox--meetup__section__content__lessonTime {
+      width: 100%;
+      padding: 0;
+      justify-content: center; }
+  .contentBox--meetup__submit {
+    justify-content: center; } }

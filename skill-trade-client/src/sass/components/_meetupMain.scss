@@ -116,3 +116,77 @@ body {
     }
   }
 }
+
+@media only screen and (max-width: 1200px) {
+  .contentBox--meetup {
+    &__section {
+      &__title {
+        // margin-bottom: 3%;
+      }
+      &__content {
+        // margin: 0;
+        &__lessonTime {
+          width: 40%;
+          padding: 0;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .contentBox--meetup {
+    &__section {
+      &__title {
+        // margin-bottom: 3%;
+      }
+      &__content {
+        // margin: 0;
+        &__lessonTime {
+          width: 50%;
+          padding: 0;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .contentBox--meetup {
+    &__section {
+      &__title {
+        margin-bottom: 3%;
+      }
+      &__content {
+        margin: 0;
+        &__lessonTime {
+          width: 100%;
+          padding: 0;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .contentBox--meetup {
+    &__section {
+      &__title {
+        margin-bottom: 3%;
+      }
+      &__content {
+        margin: 0;
+        &__lessonTime {
+          width: 100%;
+          padding: 0;
+          justify-content: center;
+        }
+      }
+    }
+    &__submit {
+      justify-content: center;
+    }
+  }
+}
