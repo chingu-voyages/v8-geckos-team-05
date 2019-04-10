@@ -10,6 +10,7 @@ import teacherProfile from "../Teacher/teacherProfile";
 import teacherSearch from "../Teacher/teacherSch";
 import Homepage from "../Homepage/Homepage";
 import MeetupMain from "../Meetup/meetupMain";
+import LoginSignup from "../LoginSignup/LoginSignup";
 
 export default function Index() {
   return (
@@ -22,6 +23,7 @@ export default function Index() {
           <Route exact path="/meetup" component={MeetupMain} />
           <Route exact path="/teacherProfile" component={teacherProfile} />
           <Route exact path="/teacherSearch" component={teacherSearch} />
+          <Route exact path="/login" component={LoginSignup} />
         </Switch>
       </div>
     </Router>
