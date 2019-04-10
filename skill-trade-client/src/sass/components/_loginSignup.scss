@@ -1,4 +1,6 @@
 .loginComponent {
+    display: flex;
+    justify-content: center;
     
     &__container {
         display: flex;
@@ -9,15 +11,21 @@
     &__button {
         
         &Container {
-
+            display: flex;
+            justify-content: space-evenly;
+            align-content: stretch;
+            background: green;
+            width: 100%;
         }
         
         &--loginTab {
-
+           flex: 1;
+            // width: 100%;
         }
         
         &--signUpTab {
-
+            flex: 1;
+            // width: 100%;
         }
     }
 }
@@ -37,6 +45,13 @@
 .signupView {
     display: flex;
     flex-direction: column;
+    
+    &__form {
+        display: flex;
+        flex-direction: column;
+        max-width: 200px;
+        border: 1px solid black;
+    }
 }
 
 .activeTab {

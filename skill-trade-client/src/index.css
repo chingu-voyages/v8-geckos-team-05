@@ -375,10 +375,23 @@ body {
       border-radius: 5px;
       border: none; }
 
-.loginComponent__container {
+.loginComponent {
   display: flex;
-  height: 100vh;
-  flex-direction: column; }
+  justify-content: center; }
+  .loginComponent__container {
+    display: flex;
+    height: 100vh;
+    flex-direction: column; }
+  .loginComponent__buttonContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: stretch;
+    background: green;
+    width: 100%; }
+  .loginComponent__button--loginTab {
+    flex: 1; }
+  .loginComponent__button--signUpTab {
+    flex: 1; }
 
 .loginView {
   display: flex;
@@ -392,6 +405,11 @@ body {
 .signupView {
   display: flex;
   flex-direction: column; }
+  .signupView__form {
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    border: 1px solid black; }
 
 .activeTab {
   background: red; }
