@@ -45,7 +45,7 @@ class NavBar extends Component {
               </li>
             </ul>
             <button className="navbar__btn-logout" type="submit">
-              Log Out
+              <Link to="/signup">Log Out</Link>
             </button>
           </div>
         </nav>
