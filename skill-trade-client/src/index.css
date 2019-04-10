@@ -374,3 +374,27 @@ body {
       height: 35px;
       border-radius: 5px;
       border: none; }
+
+.loginComponent__container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column; }
+
+.loginView {
+  display: flex;
+  flex-direction: column; }
+  .loginView__form {
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    border: 1px solid black; }
+
+.signupView {
+  display: flex;
+  flex-direction: column; }
+
+.activeTab {
+  background: red; }
+
+.inactiveTab {
+  background: blue; }

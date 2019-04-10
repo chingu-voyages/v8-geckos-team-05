@@ -29,20 +29,31 @@ class LoginSignup extends Component {
     }
   };
 
-  handleTabChange = tabNumber => {
-    this.setState({
-        emailValue: '',
-        passwordValue: '',
-        secondPasswordValue: '',
-        tabNumber
-    });
+  handleTabChange = e => {
+    const otherTabNumber = Number(e.target.id) === 1 ? 2 : 1;
+    const otherTab = document.getElementById(`${otherTabNumber}`);
+    
+    e.target.classList.add('activeTab');
+    e.target.classList.remove('inactiveTab');
 
+    otherTab.classList.add('inactiveTab');
+    otherTab.classList.remove('activeTab');
+    
+    this.setState({
+      emailValue: "",
+      passwordValue: "",
+      secondPasswordValue: "",
+      tabNumber: Number(e.target.id)
+    });
   };
 
   handleConfirmPassword = e => {
     const regex = /.*\s.*/;
-    if (regex.test(this.state.passwordValue) || regex.test(this.state.secondPasswordValue)) {
-        alert('no spaces allowed');
+    if (
+      regex.test(this.state.passwordValue) ||
+      regex.test(this.state.secondPasswordValue)
+    ) {
+      alert("no spaces allowed");
     }
     e.preventDefault();
     if (this.state.passwordValue !== this.state.secondPasswordValue) {
@@ -56,14 +67,16 @@ class LoginSignup extends Component {
         <div className="loginComponent__container">
           <div className="loginComponent__buttonContainer">
             <button
-              className="loginComponent__button--logInTab"
-              onClick={() => this.handleTabChange(1)}
+              className="loginComponent__button loginComponent__button--logInTab activeTab"
+              id="1"
+              onClick={this.handleTabChange}
             >
               Log In
             </button>
             <button
-              className="loginComponent__button--signUpTab"
-              onClick={() => this.handleTabChange(2)}
+              className="loginComponent__button loginComponent__button--signUpTab inactiveTab"
+              id="2"
+              onClick={this.handleTabChange}
             >
               Sign Up
             </button>

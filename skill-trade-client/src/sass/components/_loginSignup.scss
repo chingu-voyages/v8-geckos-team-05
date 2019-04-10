@@ -1,7 +1,9 @@
 .loginComponent {
-
+    
     &__container {
-        
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
     }
 
     &__button {
@@ -18,4 +20,29 @@
 
         }
     }
+}
+
+.loginView {
+    display: flex;
+    flex-direction: column;
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        max-width: 200px;
+        border: 1px solid black;
+    }
+}
+
+.signupView {
+    display: flex;
+    flex-direction: column;
+}
+
+.activeTab {
+    background: red;
+}
+
+.inactiveTab {
+    background: blue;
 }
