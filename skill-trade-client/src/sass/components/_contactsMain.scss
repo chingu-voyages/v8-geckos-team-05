@@ -42,6 +42,9 @@
     height: 70px;
     display: flex;
     align-items: center;
+    &__collapseBtn {
+      display: none;
+    }
     &__search {
       all: unset;
       border: 1px solid $secondary-color;
@@ -57,31 +60,35 @@
     margin-left: 4%;
     margin-right: 4%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     grid-gap: 2%;
+    overflow: scroll;
   }
 }
 
 @media only screen and (max-width: 600px) {
   .contentBox--contacts {
-    &__resultsGrid {
-      display: block;
+    &__topBar {
+      display: none;
+    }
+    &__searchBar {
+      display: flex;
+      justify-content: space-evenly;
+      &__collapseBtn {
+        display: block;
+        color: $text-color;
+        margin-right: 10px;
+      }
     }
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 350px) {
   .contentBox--contacts {
-    &__resultsGrid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-}
-
-@media only screen and (max-width: 992px) {
-  .contentBox--contacts {
-    &__resultsGrid {
-      grid-template-columns: repeat(3, 1fr);
+    &__searchBar {
+      &__search {
+        display: none;
+      }
     }
   }
 }

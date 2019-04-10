@@ -225,6 +225,8 @@
     height: 70px;
     display: flex;
     align-items: center; }
+    .contentBox--contacts__searchBar__collapseBtn {
+      display: none; }
     .contentBox--contacts__searchBar__search {
       all: unset;
       border: 1px solid #BEB7A4;
@@ -238,20 +240,24 @@
     margin-left: 4%;
     margin-right: 4%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2%; }
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-gap: 2%;
+    overflow: scroll; }
 
 @media only screen and (max-width: 600px) {
-  .contentBox--contacts__resultsGrid {
-    display: block; } }
+  .contentBox--contacts__topBar {
+    display: none; }
+  .contentBox--contacts__searchBar {
+    display: flex;
+    justify-content: space-evenly; }
+    .contentBox--contacts__searchBar__collapseBtn {
+      display: block;
+      color: #51504e;
+      margin-right: 10px; } }
 
-@media only screen and (max-width: 768px) {
-  .contentBox--contacts__resultsGrid {
-    grid-template-columns: repeat(2, 1fr); } }
-
-@media only screen and (max-width: 992px) {
-  .contentBox--contacts__resultsGrid {
-    grid-template-columns: repeat(3, 1fr); } }
+@media only screen and (max-width: 350px) {
+  .contentBox--contacts__searchBar__search {
+    display: none; } }
 
 .mainContainerCard {
   display: inline-flex;
