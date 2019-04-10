@@ -1,11 +1,16 @@
 import React, { Component } from "react";
+import LoginView from "./LoginView";
+import SignupView from "./SignupView";
 
 class LoginSignup extends Component {
-  state = {
-    emailValue: "",
-    passwordValue: "",
-    tabNumber: 1
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      emailValue: "",
+      passwordValue: "",
+      tabNumber: 1
+    };
+  }
 
   handleInput = inputName => event => {
     if (inputName === "email") {
@@ -20,30 +25,35 @@ class LoginSignup extends Component {
   };
 
   handleTabChange = tabNumber => {
-      this.setState({ tabNumber });
-  }
-  
-  render() {
-    let formDisplayed;
+    this.setState({ tabNumber });
+  };
 
-    if (this.state.tabNumber === 1) {
-        formDisplayed = (<div>Login</div>)
-    } else formDisplayed = (<div>login</div>)
-    
+  render() {
     return (
-        <div className="login__component">
-          <div className="login__container">
-            <h2 className="login__header">Sign Up</h2>
-            <form action="" className="login__form">
-            <label htmlFor="email">Email</label>
-              <input className='login__form--emailInput' type="email" value={this.state.emailValue} onChange={this.handleChange('email')} name="email" id="" />
-              <label htmlFor="password">Password</label>
-              <input className='login__form--passwordInput' type="password" value={this.state.passwordValue} onChange={this.handleChange('password')} name="password" id=""/>
-              <input type="submit" value="Submit"/>
-            </form>
+      <div className="loginComponent">
+        <div className="loginComponent__container">
+          <div className="loginComponent__buttonContainer">
+            <button
+              className="loginComponent__button--logInTab"
+              onClick={() => this.handleTabChange(1)}
+            >
+              Log In
+            </button>
+            <button
+              className="loginComponent__button--signUpTab"
+              onClick={() => this.handleTabChange(2)}
+            >
+              Sign Up
+            </button>
           </div>
+          {this.state.tabNumber === 1 ? (
+            <LoginView handleInput={this.handleInput.bind(this)} />
+          ) : (
+            <SignupView handleInput={this.handleInput.bind(this)} />
+          )}
         </div>
-    )
+      </div>
+    );
   }
 }
 
