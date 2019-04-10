@@ -155,6 +155,9 @@
     border-radius: 5px; }
     .navbar__btn-logout:hover {
       cursor: pointer; }
+    .navbar__btn-logout__link {
+      color: unset;
+      text-decoration: unset; }
   .navbar__collapse--btn {
     display: none; }
   .navbar__collapse--items {

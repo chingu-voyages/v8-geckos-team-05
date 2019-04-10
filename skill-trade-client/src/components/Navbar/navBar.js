@@ -45,7 +45,9 @@ class NavBar extends Component {
               </li>
             </ul>
             <button className="navbar__btn-logout" type="submit">
-              <Link to="/signup">Log Out</Link>
+              <Link className="navbar__btn-logout__link" to="/signup">
+                Log Out
+              </Link>
             </button>
           </div>
         </nav>
