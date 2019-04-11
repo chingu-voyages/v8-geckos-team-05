@@ -303,7 +303,7 @@ body {
   display: flex;
   margin-bottom: 0.5rem; }
   .contactBox__imgContainer {
-    width: 5rem;
+    min-width: 5rem;
     height: 5rem;
     border: 1px dotted #beb7a4;
     border-radius: 50%;
@@ -335,7 +335,7 @@ body {
       display: flex; }
       .contentBox--meetup__section__title__circle {
         border-radius: 50%;
-        width: 3rem;
+        min-width: 3rem;
         height: 3rem;
         display: flex;
         flex-direction: column;
@@ -359,6 +359,7 @@ body {
         color: #beb7a4;
         margin-bottom: 0.5rem; }
       .contentBox--meetup__section__content__btnAddTime {
+        border: none;
         font-style: normal;
         font-weight: normal;
         font-size: 1rem;
@@ -419,13 +420,25 @@ body {
       justify-content: center; } }
 
 @media only screen and (max-width: 600px) {
-  .contentBox--meetup__section__title {
-    margin-bottom: 3%; }
+  .contentBox--meetup {
+    padding: 5vw; }
+    .contentBox--meetup__section__title {
+      margin-bottom: 5%; }
+    .contentBox--meetup__section__content {
+      margin: 0; }
+      .contentBox--meetup__section__content__lessonTime {
+        width: 100%;
+        padding: 0;
+        justify-content: center; }
+    .contentBox--meetup__submit {
+      justify-content: center; } }
+
+@media only screen and (max-width: 400px) {
+  .contentBox--meetup form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
   .contentBox--meetup__section__content {
-    margin: 0; }
-    .contentBox--meetup__section__content__lessonTime {
-      width: 100%;
-      padding: 0;
-      justify-content: center; }
-  .contentBox--meetup__submit {
-    justify-content: center; } }
+    display: flex;
+    flex-direction: column;
+    align-items: center; } }
