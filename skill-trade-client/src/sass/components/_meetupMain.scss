@@ -6,7 +6,7 @@ body {
   display: flex;
   margin-bottom: 0.5rem;
   &__imgContainer {
-    width: 5rem;
+    min-width: 5rem;
     height: 5rem;
     border: 1px dotted $secondary-color;
     border-radius: 50%;
@@ -43,7 +43,7 @@ body {
       display: flex;
       &__circle {
         border-radius: 50%;
-        width: 3rem;
+        min-width: 3rem;
         height: 3rem;
         display: flex;
         flex-direction: column;
@@ -71,6 +71,7 @@ body {
         margin-bottom: 0.5rem;
       }
       &__btnAddTime {
+        border: none;
         font-style: normal;
         font-weight: normal;
         font-size: 1rem;
@@ -172,9 +173,10 @@ body {
 }
 @media only screen and (max-width: 600px) {
   .contentBox--meetup {
+    padding: 5vw;
     &__section {
       &__title {
-        margin-bottom: 3%;
+        margin-bottom: 5%;
       }
       &__content {
         margin: 0;
@@ -187,6 +189,23 @@ body {
     }
     &__submit {
       justify-content: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .contentBox--meetup form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contentBox--meetup {
+    &__section {
+      &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
     }
   }
 }
