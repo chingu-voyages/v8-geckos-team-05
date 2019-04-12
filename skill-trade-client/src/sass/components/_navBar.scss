@@ -32,6 +32,10 @@
     &:hover {
       cursor: pointer;
     }
+    &__link {
+      color: unset;
+      text-decoration: unset;
+    }
   }
   &__collapse--btn {
     display: none;
