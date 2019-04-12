@@ -3,42 +3,39 @@ import LoginView from "./LoginView";
 import SignupView from "./SignupView";
 
 class LoginSignup extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      emailValue: "",
-      passwordValue: "",
-      secondPasswordValue: "",
-      tabNumber: 1
-    };
-  }
+  state = {
+    emailValue: "",
+    passwordValue: "",
+    secondPasswordValue: "",
+    tabNumber: 1
+  };
 
   handleInput = inputName => event => {
-    if (inputName === "email") {
-      this.setState({
-        emailValue: event.target.value
-      });
-    } else if (inputName === "password") {
-      this.setState({
-        passwordValue: event.target.value
-      });
-    } else {
-      this.setState({
-        secondPasswordValue: event.target.value
-      });
+    switch (inputName) {
+      case "email":
+        this.setState({ emailValue: event.target.value });
+        break;
+      case "password":
+        this.setState({ passwordValue: event.target.value });
+        break;
+      case "secondPassword":
+        this.setState({ secondPasswordValue: event.target.value });
+        break;
+      default:
+        console.log("Error in handling input");
     }
   };
 
   handleTabChange = e => {
     const otherTabNumber = Number(e.target.id) === 1 ? 2 : 1;
     const otherTab = document.getElementById(`${otherTabNumber}`);
-    
-    e.target.classList.add('activeTab');
-    e.target.classList.remove('inactiveTab');
 
-    otherTab.classList.add('inactiveTab');
-    otherTab.classList.remove('activeTab');
-    
+    e.target.classList.add("activeTab");
+    e.target.classList.remove("inactiveTab");
+
+    otherTab.classList.add("inactiveTab");
+    otherTab.classList.remove("activeTab");
+
     this.setState({
       emailValue: "",
       passwordValue: "",
@@ -48,15 +45,16 @@ class LoginSignup extends Component {
   };
 
   handleConfirmPassword = e => {
+    e.preventDefault();
+
+    const { passwordValue, secondPasswordValue } = this.state;
     const regex = /.*\s.*/;
-    if (
-      regex.test(this.state.passwordValue) ||
-      regex.test(this.state.secondPasswordValue)
-    ) {
+
+    if (regex.test(passwordValue) || regex.test(secondPasswordValue)) {
       alert("no spaces allowed");
     }
-    e.preventDefault();
-    if (this.state.passwordValue !== this.state.secondPasswordValue) {
+
+    if (passwordValue !== secondPasswordValue) {
       alert("passwords don't match");
     }
   };

@@ -6,18 +6,18 @@ const LoginView = ({ handleInput, passwordValue, emailValue }) => {
       <form action="" className="loginView__form">
         <label htmlFor="email">Email</label>
         <input
-          className="loginView__form--emailInput"
+          className="loginView__form__input loginView__form__input--email"
           type="email"
           value={emailValue}
-          onChange={handleInput('email')}
+          onChange={handleInput("email")}
           name="email"
         />
         <label htmlFor="password">Password</label>
         <input
-          className="loginView__form--passwordInput"
+          className="loginView__form__input loginView__form__input--password"
           type="password"
           value={passwordValue}
-          onChange={handleInput('password')}
+          onChange={handleInput("password")}
           name="password"
         />
         <input type="submit" value="Submit" />

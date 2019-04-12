@@ -16,7 +16,7 @@ const SignupView = ({
       >
         <label htmlFor="email">Email</label>
         <input
-          className="signupView__form--emailInput"
+          className="signupView__form__input signupView__form__input--email"
           type="email"
           value={emailValue}
           onChange={handleInput("email")}
@@ -24,7 +24,7 @@ const SignupView = ({
         />
         <label htmlFor="password">Password</label>
         <input
-          className="signupView__form--passwordInput"
+          className="signupView__form__input signupView__form__input--password"
           type="password"
           value={passwordValue}
           onChange={handleInput("password")}
@@ -32,7 +32,7 @@ const SignupView = ({
         />
         <label htmlFor="confirmPassword">Confirm Password</label>
         <input
-          className="signupView__form--passwordInput"
+          className="signupView__form__input signupView__form__input--password"
           type="password"
           value={secondPasswordValue}
           onChange={handleInput("secondPassword")}

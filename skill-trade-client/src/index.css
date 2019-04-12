@@ -377,39 +377,51 @@ body {
 
 .loginComponent {
   display: flex;
+  margin: 1vw 0 0 0;
   justify-content: center; }
   .loginComponent__container {
     display: flex;
-    height: 100vh;
     flex-direction: column; }
-  .loginComponent__buttonContainer {
-    display: flex;
-    justify-content: space-evenly;
-    align-content: stretch;
-    background: green;
-    width: 100%; }
-  .loginComponent__button--loginTab {
-    flex: 1; }
-  .loginComponent__button--signUpTab {
-    flex: 1; }
+  .loginComponent__button {
+    text-align: center; }
+    .loginComponent__buttonContainer {
+      display: flex;
+      justify-items: space-evenly;
+      background: green;
+      width: 100%; }
+    .loginComponent__button--logInTab {
+      flex: 1; }
+    .loginComponent__button--signUpTab {
+      flex: 1; }
 
 .loginView {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  height: 500px; }
   .loginView__form {
     display: flex;
     flex-direction: column;
-    max-width: 200px;
+    padding: 10px;
+    height: 50%;
     border: 1px solid black; }
+    .loginView__form__input {
+      margin: 5px 0px 10px 0px; }
+    .loginView__form > label {
+      margin-top: 5px; }
 
 .signupView {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  height: 500px; }
   .signupView__form {
     display: flex;
     flex-direction: column;
-    max-width: 200px;
+    padding: 10px;
     border: 1px solid black; }
+    .signupView__form__input {
+      margin: 5px 0px 10px 0px; }
+    .signupView__form > label {
+      margin-top: 5px; }
 
 .activeTab {
   background: red; }
