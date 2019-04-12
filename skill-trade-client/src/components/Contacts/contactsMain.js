@@ -29,7 +29,7 @@ class ContactsMain extends Component {
             <div className="contentBox--contacts__searchBar">
               <div className="contentBox--contacts__searchBar__collapseBtn">
                 <h2>
-                  <i class="fas fa-bars" />
+                  <i className="fas fa-bars" />
                 </h2>
               </div>
               <input
