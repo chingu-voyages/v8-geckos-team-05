@@ -52,7 +52,7 @@ class LoginSignup extends Component {
     const { passwordValue, secondPasswordValue } = this.state;
     const regex = /.*\s.*/;
 
-    if (!passwordValue.length || !secondPasswordValue.length) { 
+    if (!passwordValue.length || !secondPasswordValue.length) {
       alert("password length cannot be zero");
     }
 
