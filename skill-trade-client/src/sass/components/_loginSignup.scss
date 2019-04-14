@@ -1,7 +1,7 @@
 .loginComponent {
     display: flex;
     font-family: $chris-font;
-    margin: 1vw 0 0 0;
+    margin: 5vw 0 0 0;
     justify-content: center;
 
     &__container {
@@ -41,11 +41,14 @@
 
 .loginView {
     display: flex;
+    height: 500px;
     padding: 20px;
     flex-direction: column;
 
     &__header {
+        margin-top: 20px;
         text-align: center;
+        text-transform: uppercase;
     }
 
     &__form {
@@ -65,28 +68,32 @@
         }
 
         &>[type="submit"] {
+            font-size: 16px;
+            font-weight: bolder;
             margin: 20px 0px 0px 0px;
             outline: none;
             box-shadow: none;
+            border: none;
+            border-radius: 2.5px;
             padding: 10px;
             background: $primary-color;
-            color: $dashboard-grid-color;
+            color: white;
             transition: 0.3s;
 
-            &:hover {
-                color: white;
-            }
         }
     }
 }
 
 .signupView {
     display: flex;
+    height: 500px;
     padding: 20px;
     flex-direction: column;
 
     &__header {
+        margin-top: 20px;
         text-align: center;
+        text-transform: uppercase;
     }
 
     &__form {
@@ -106,16 +113,18 @@
         }
 
         &>[type="submit"] {
+            font-size: 16px;
+            font-weight: bolder;
+            margin: 20px 0px 0px 0px;
             outline: none;
             box-shadow: none;
+            border: none;
+            border-radius: 2.5px;
             padding: 10px;
             background: $primary-color;
-            color: $dashboard-grid-color;
+            color: white;
             transition: 0.3s;
 
-            &:hover {
-                color: white;
-            }
         }
     }
 }

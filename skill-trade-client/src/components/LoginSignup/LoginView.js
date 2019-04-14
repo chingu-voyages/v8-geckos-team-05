@@ -4,7 +4,7 @@ const LoginView = ({ handleInput, passwordValue, emailValue }) => {
   return (
     <div className="loginView">
       <h2 className='loginView__header'>Talent Trade</h2>
-      <form action="" className="loginView__form" onSubmit={(e) => e.preventDefault()}>
+      <form action="" className="loginView__form">
         <input
           className="loginView__form__input loginView__form__input--email"
           type="email"

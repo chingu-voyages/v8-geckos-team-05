@@ -379,7 +379,7 @@ body {
 .loginComponent {
   display: flex;
   font-family: "Karla", sans-serif;
-  margin: 1vw 0 0 0;
+  margin: 5vw 0 0 0;
   justify-content: center; }
   .loginComponent__container {
     display: flex;
@@ -407,10 +407,13 @@ body {
 
 .loginView {
   display: flex;
+  height: 500px;
   padding: 20px;
   flex-direction: column; }
   .loginView__header {
-    text-align: center; }
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase; }
   .loginView__form {
     display: flex;
     flex-direction: column;
@@ -423,22 +426,27 @@ body {
       .loginView__form__input:focus {
         outline: none; }
     .loginView__form > [type="submit"] {
+      font-size: 16px;
+      font-weight: bolder;
       margin: 20px 0px 0px 0px;
       outline: none;
       box-shadow: none;
+      border: none;
+      border-radius: 2.5px;
       padding: 10px;
       background: #ff3f00;
-      color: #cccccc;
+      color: white;
       transition: 0.3s; }
-      .loginView__form > [type="submit"]:hover {
-        color: white; }
 
 .signupView {
   display: flex;
+  height: 500px;
   padding: 20px;
   flex-direction: column; }
   .signupView__header {
-    text-align: center; }
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase; }
   .signupView__form {
     display: flex;
     flex-direction: column;
@@ -451,14 +459,17 @@ body {
       .signupView__form__input:focus {
         outline: none; }
     .signupView__form > [type="submit"] {
+      font-size: 16px;
+      font-weight: bolder;
+      margin: 20px 0px 0px 0px;
       outline: none;
       box-shadow: none;
+      border: none;
+      border-radius: 2.5px;
       padding: 10px;
       background: #ff3f00;
-      color: #cccccc;
+      color: white;
       transition: 0.3s; }
-      .signupView__form > [type="submit"]:hover {
-        color: white; }
 
 .activeTab {
   background: #fff; }

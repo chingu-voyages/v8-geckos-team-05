@@ -9,7 +9,7 @@ const SignupView = ({
 }) => {
   return (
     <div className="signupView">
-    <h2 className='signupView__header'>Talent Trade</h2>
+      <h2 className="signupView__header">Talent Trade</h2>
       <form
         action=""
         className="signupView__form"
