@@ -5,7 +5,6 @@ const LoginView = ({ handleInput, passwordValue, emailValue }) => {
     <div className="loginView">
       <h2 className='loginView__header'>Talent Trade</h2>
       <form action="" className="loginView__form" onSubmit={(e) => e.preventDefault()}>
-        {/* <label htmlFor="email">Email</label> */}
         <input
           className="loginView__form__input loginView__form__input--email"
           type="email"
@@ -14,7 +13,6 @@ const LoginView = ({ handleInput, passwordValue, emailValue }) => {
           onChange={handleInput("email")}
           name="email"
         />
-        {/* <label htmlFor="password">Password</label> */}
         <input
           className="loginView__form__input loginView__form__input--password"
           type="password"
