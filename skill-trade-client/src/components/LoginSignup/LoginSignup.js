@@ -10,6 +10,8 @@ class LoginSignup extends Component {
     tabNumber: 1
   };
 
+  //testing out coder.com
+
   handleInput = inputName => event => {
     switch (inputName) {
       case "email":
