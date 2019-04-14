@@ -9,31 +9,32 @@ const SignupView = ({
 }) => {
   return (
     <div className="signupView">
+    <h2 className='signupView__header'>Talent Trade</h2>
       <form
         action=""
         className="signupView__form"
         onSubmit={handleConfirmPassword}
       >
-        <label htmlFor="email">Email</label>
         <input
           className="signupView__form__input signupView__form__input--email"
           type="email"
+          placeholder="Email"
           value={emailValue}
           onChange={handleInput("email")}
           name="email"
         />
-        <label htmlFor="password">Password</label>
         <input
           className="signupView__form__input signupView__form__input--password"
           type="password"
+          placeholder="Password"
           value={passwordValue}
           onChange={handleInput("password")}
           name="password"
         />
-        <label htmlFor="confirmPassword">Confirm Password</label>
         <input
           className="signupView__form__input signupView__form__input--password"
           type="password"
+          placeholder="Confirm password"
           value={secondPasswordValue}
           onChange={handleInput("secondPassword")}
           name="confirmPassword"

@@ -3,19 +3,22 @@ import React from "react";
 const LoginView = ({ handleInput, passwordValue, emailValue }) => {
   return (
     <div className="loginView">
-      <form action="" className="loginView__form">
-        <label htmlFor="email">Email</label>
+      <h2 className='loginView__header'>Talent Trade</h2>
+      <form action="" className="loginView__form" onSubmit={(e) => e.preventDefault()}>
+        {/* <label htmlFor="email">Email</label> */}
         <input
           className="loginView__form__input loginView__form__input--email"
           type="email"
+          placeholder="Email"
           value={emailValue}
           onChange={handleInput("email")}
           name="email"
         />
-        <label htmlFor="password">Password</label>
+        {/* <label htmlFor="password">Password</label> */}
         <input
           className="loginView__form__input loginView__form__input--password"
           type="password"
+          placeholder="Password"
           value={passwordValue}
           onChange={handleInput("password")}
           name="password"

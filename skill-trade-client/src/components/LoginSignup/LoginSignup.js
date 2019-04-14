@@ -50,6 +50,10 @@ class LoginSignup extends Component {
     const { passwordValue, secondPasswordValue } = this.state;
     const regex = /.*\s.*/;
 
+    if (!passwordValue.length || !secondPasswordValue.length) { 
+      alert("password length cannot be zero");
+    }
+
     if (regex.test(passwordValue) || regex.test(secondPasswordValue)) {
       alert("no spaces allowed");
     }

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 @import url("https://fonts.googleapis.com/css?family=Karla:400,700");
+@import url("https://fonts.googleapis.com/css?family=Karla:400,700");
 * {
   margin: 0;
   padding: 0;
@@ -377,13 +378,23 @@ body {
 
 .loginComponent {
   display: flex;
+  font-family: "Karla", sans-serif;
   margin: 1vw 0 0 0;
   justify-content: center; }
   .loginComponent__container {
     display: flex;
-    flex-direction: column; }
+    width: 30vw;
+    flex-direction: column;
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52);
+    -moz-box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52);
+    box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52); }
+    @media (max-width: 512px) {
+      .loginComponent__container {
+        height: 50vh;
+        width: 90vw; } }
   .loginComponent__button {
-    text-align: center; }
+    text-align: center;
+    padding: 7px; }
     .loginComponent__buttonContainer {
       display: flex;
       justify-items: space-evenly;
@@ -396,35 +407,64 @@ body {
 
 .loginView {
   display: flex;
-  flex-direction: column;
-  height: 500px; }
+  padding: 20px;
+  flex-direction: column; }
+  .loginView__header {
+    text-align: center; }
   .loginView__form {
     display: flex;
     flex-direction: column;
-    padding: 10px;
-    height: 50%;
-    border: 1px solid black; }
+    height: 50%; }
     .loginView__form__input {
+      border: 0;
+      border-bottom: 1px solid black;
+      height: 130px;
       margin: 5px 0px 10px 0px; }
-    .loginView__form > label {
-      margin-top: 5px; }
+      .loginView__form__input:focus {
+        outline: none; }
+    .loginView__form > [type="submit"] {
+      margin: 20px 0px 0px 0px;
+      outline: none;
+      box-shadow: none;
+      padding: 10px;
+      background: #ff3f00;
+      color: #cccccc;
+      transition: 0.3s; }
+      .loginView__form > [type="submit"]:hover {
+        color: white; }
 
 .signupView {
   display: flex;
-  flex-direction: column;
-  height: 500px; }
+  padding: 20px;
+  flex-direction: column; }
+  .signupView__header {
+    text-align: center; }
   .signupView__form {
     display: flex;
     flex-direction: column;
-    padding: 10px;
-    border: 1px solid black; }
+    height: 50%; }
     .signupView__form__input {
+      border: 0;
+      border-bottom: 1px solid black;
+      height: 130px;
       margin: 5px 0px 10px 0px; }
-    .signupView__form > label {
-      margin-top: 5px; }
+      .signupView__form__input:focus {
+        outline: none; }
+    .signupView__form > [type="submit"] {
+      outline: none;
+      box-shadow: none;
+      padding: 10px;
+      background: #ff3f00;
+      color: #cccccc;
+      transition: 0.3s; }
+      .signupView__form > [type="submit"]:hover {
+        color: white; }
 
 .activeTab {
-  background: red; }
+  background: #fff; }
 
 .inactiveTab {
-  background: blue; }
+  background: #cccccc;
+  -webkit-box-shadow: inset 10px 11px 33px -18px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: inset 10px 11px 33px -18px rgba(0, 0, 0, 0.12);
+  box-shadow: inset 10px 11px 33px -18px rgba(0, 0, 0, 0.12); }
