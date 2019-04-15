@@ -74,7 +74,7 @@ class NavBar extends Component {
                 <button className="listedItems__item__btnLogout" type="submit">
                   <Link
                     className="listedItems__item__btnLogout__link"
-                    to="/signup"
+                    to="/login"
                   >
                     Log Out
                   </Link>
