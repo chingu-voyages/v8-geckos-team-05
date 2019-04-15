@@ -11,19 +11,46 @@ import teacherSearch from "../Teacher/teacherSch";
 class NavBar extends Component {
   state = {};
   render() {
+    const handleDropdown = () => {
+      const navbar = document.querySelector(".navbar");
+      navbar.classList.toggle("navbar--responsive");
+
+      const listedItems = document.querySelector(".listedItems");
+      listedItems.classList.toggle("listedItems--responsive");
+
+      const listedItems__item__link = Array.from(
+        document.querySelectorAll(".listedItems__item__link")
+      );
+      listedItems__item__link.map(e =>
+        e.classList.toggle("listedItems__item__link--responsive")
+      );
+
+      const listedItems__item__btnLogout = document.querySelector(
+        ".listedItems__item__btnLogout"
+      );
+      listedItems__item__btnLogout.classList.toggle(
+        "listedItems__item__btnLogout--responsive"
+      );
+    };
+
     return (
       <>
         <nav className="navbar">
-          <a className="navbar__banner" href="#">
-            TALENT TRADE
-          </a>
-          <div className="navbar__collapse--btn">
-            <span>
-              <i class="fas fa-bars" />
-            </span>
+          <div className="navbar__banner">
+            <a className="navbar__banner__link" href="#">
+              TALENT TRADE
+            </a>
           </div>
-          <div className="navbar__collapse--items show">
+          <div className="navbar__collapse--items">
             <ul className="listedItems">
+              <li className="listedItems__item">
+                <button
+                  className="listedItems__item__btnCollapse"
+                  onClick={() => handleDropdown()}
+                >
+                  <i className="fas fa-bars" />
+                </button>
+              </li>
               <li className="listedItems__item">
                 <Link to="/home" className="listedItems__item__link" href="#">
                   Home
@@ -39,16 +66,21 @@ class NavBar extends Component {
                 </Link>
               </li>
               <li className="listedItems__item">
-                <Link className="listedItems__item__link" href="#">
+                <Link to="/search" className="listedItems__item__link" href="#">
                   Search
                 </Link>
               </li>
+              <li className="listedItems__item">
+                <button className="listedItems__item__btnLogout" type="submit">
+                  <Link
+                    className="listedItems__item__btnLogout__link"
+                    to="/signup"
+                  >
+                    Log Out
+                  </Link>
+                </button>
+              </li>
             </ul>
-            <button className="navbar__btn-logout" type="submit">
-              <Link className="navbar__btn-logout__link" to="/signup">
-                Log Out
-              </Link>
-            </button>
           </div>
         </nav>
       </>
