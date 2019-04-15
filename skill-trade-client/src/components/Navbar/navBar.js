@@ -37,9 +37,9 @@ class NavBar extends Component {
       <>
         <nav className="navbar">
           <div className="navbar__banner">
-            <a className="navbar__banner__link" href="#">
+            <Link to="/dashboard" className="navbar__banner__link" href="#">
               TALENT TRADE
-            </a>
+            </Link>
           </div>
           <div className="navbar__collapse--items">
             <ul className="listedItems">
