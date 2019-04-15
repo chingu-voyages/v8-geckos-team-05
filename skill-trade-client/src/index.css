@@ -247,8 +247,10 @@
     height: 70px;
     display: flex;
     align-items: center; }
-    .contentBox--contacts__searchBar__collapseBtn {
-      display: none; }
+    .contentBox--contacts__searchBar__btnCollapse {
+      all: unset;
+      display: none;
+      font-size: 1.5rem; }
     .contentBox--contacts__searchBar__search {
       all: unset;
       border: 1px solid #beb7a4;
@@ -268,11 +270,33 @@
 
 @media only screen and (max-width: 600px) {
   .contentBox--contacts__topBar {
-    display: none; }
+    display: none;
+    border: none;
+    height: unset;
+    padding: 0;
+    padding-top: 2rem; }
+    .contentBox--contacts__topBar__myMentors {
+      border: none;
+      border-bottom: 1px solid #beb7a4;
+      margin-bottom: 1rem; }
+    .contentBox--contacts__topBar__myMentees {
+      border: none;
+      border-bottom: 1px solid #beb7a4;
+      margin-bottom: 1rem; }
+    .contentBox--contacts__topBar__myClassmates {
+      border: none;
+      border-bottom: 1px solid #beb7a4;
+      margin-bottom: 1rem; }
+    .contentBox--contacts__topBar__showAll {
+      border-bottom: 1px solid #beb7a4;
+      margin-bottom: 1rem; }
+    .contentBox--contacts__topBar--responsive {
+      display: flex;
+      flex-direction: column; }
   .contentBox--contacts__searchBar {
     display: flex;
     justify-content: space-evenly; }
-    .contentBox--contacts__searchBar__collapseBtn {
+    .contentBox--contacts__searchBar__btnCollapse {
       display: block;
       color: #51504e;
       margin-right: 10px; } }

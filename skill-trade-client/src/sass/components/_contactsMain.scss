@@ -42,8 +42,10 @@
     height: 70px;
     display: flex;
     align-items: center;
-    &__collapseBtn {
+    &__btnCollapse {
+      all: unset;
       display: none;
+      font-size: 1.5rem;
     }
     &__search {
       all: unset;
@@ -70,11 +72,38 @@
   .contentBox--contacts {
     &__topBar {
       display: none;
+      border: none;
+      height: unset;
+      padding: 0;
+      padding-top: 2rem;
+      &__myMentors {
+        border: none;
+        border-bottom: 1px solid #beb7a4;
+        margin-bottom: 1rem;
+      }
+      &__myMentees {
+        border: none;
+        border-bottom: 1px solid #beb7a4;
+        margin-bottom: 1rem;
+      }
+      &__myClassmates {
+        border: none;
+        border-bottom: 1px solid #beb7a4;
+        margin-bottom: 1rem;
+      }
+      &__showAll {
+        border-bottom: 1px solid #beb7a4;
+        margin-bottom: 1rem;
+      }
+      &--responsive {
+        display: flex;
+        flex-direction: column;
+      }
     }
     &__searchBar {
       display: flex;
       justify-content: space-evenly;
-      &__collapseBtn {
+      &__btnCollapse {
         display: block;
         color: $text-color;
         margin-right: 10px;
