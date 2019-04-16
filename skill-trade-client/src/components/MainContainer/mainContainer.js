@@ -4,7 +4,7 @@ class MainContainer extends Component {
   state = {};
   render() {
     return (
-      <div className="mainContainer">{this.props.children.map(c => c)}</div>
+      <div className="mainContainer">{this.props.children}</div>
     );
   }
 }
