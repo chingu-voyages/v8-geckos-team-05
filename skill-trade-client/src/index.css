@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 @import url("https://fonts.googleapis.com/css?family=Karla:400,700");
+@import url("https://fonts.googleapis.com/css?family=Karla:400,700");
 * {
   margin: 0;
   padding: 0;
@@ -50,7 +51,7 @@
     width: 100vw;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-    grid-template-areas: "column1 column2 column3"; }
+    grid-template-areas: "column1 column2"; }
     .homepage__info--column {
       margin-top: 10px; }
       .homepage__info--column--header {
@@ -62,7 +63,7 @@
       height: 400px;
       grid-template-columns: 100vw;
       grid-template-rows: 75vh 75vh;
-      grid-template-areas: "column1" "column2" "column3"; }
+      grid-template-areas: "column1" "column2"; }
     .homepage__intro {
       border-bottom: 1px solid black; } }
 
@@ -71,9 +72,6 @@
 
 #homepage__info--column2 {
   grid-area: column2; }
-
-#homepage__info--column3 {
-  grid-area: column3; }
 
 .teacher {
   height: 100vh;
@@ -202,18 +200,6 @@ a {
 
 h6 {
   all: unset; }
-
-.mainContainerContacts {
-  padding: 50px 137px 115px 137px;
-  background: linear-gradient(180deg, #fbfaf9 0%, #beb7a4 100%), #beb7a4; }
-  .mainContainerContacts__title {
-    color: #ff3f00;
-    margin: 0;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 48px;
-    line-height: normal; }
 
 .contentBox {
   background: #fafaf6;
@@ -357,3 +343,357 @@ h6 {
     @media screen and (max-width: 465px) {
       .teacherSearch .searchResults .resultsBoxes {
         display: inline; } }
+.dashboard {
+  display: flex;
+  justify-content: center; }
+  .dashboard__container {
+    display: grid;
+    grid-gap: 15px;
+    margin: 25px 0px 15px 25px;
+    width: 60vw;
+    height: 60vw;
+    font-family: "Karla", sans-serif;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas: "user user nextlesson nextlesson nextlesson" "balance balance nextlesson nextlesson nextlesson" "friends friends upcoming upcoming upcoming" "friends friends upcoming upcoming upcoming" "friends friends upcoming upcoming upcoming" "friends friends upcoming upcoming upcoming" "friends friends upcoming upcoming upcoming"; }
+  .dashboard__userComponent {
+    display: flex;
+    padding: 5px;
+    background: #cccccc;
+    justify-content: flex-start;
+    align-items: center;
+    grid-area: user; }
+    .dashboard__userComponent--image {
+      max-height: 150px;
+      max-width: 150px; }
+  .dashboard__balanceComponent {
+    display: flex;
+    padding: 10px;
+    background: #cccccc;
+    justify-content: center;
+    align-items: center;
+    grid-area: balance; }
+    .dashboard__balanceComponent__text {
+      display: flex;
+      font-size: 20px;
+      justify-content: center; }
+      .dashboard__balanceComponent__text--number {
+        font-weight: bold;
+        font-size: 1.5rem; }
+      .dashboard__balanceComponent__text--remaining {
+        font-weight: 400;
+        font-size: 1.3rem;
+        color: black; }
+  .dashboard__friendsComponent {
+    display: flex;
+    overflow-y: auto;
+    scrollbar-width: none;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-area: friends;
+    background: #cccccc; }
+    .dashboard__friendsComponent__friend {
+      display: flex;
+      padding: 10px;
+      justify-content: flex-start;
+      align-items: center; }
+      .dashboard__friendsComponent__friend--image {
+        max-height: 100px;
+        max-width: 100px; }
+      .dashboard__friendsComponent__friend--name {
+        font-weight: bold;
+        margin-left: 20px; }
+      .dashboard__friendsComponent__friend:last-child {
+        border: 0; }
+    .dashboard__friendsComponent__header {
+      text-align: center;
+      padding: 10px; }
+    .dashboard__friendsComponent::-webkit-scrollbar {
+      display: none; }
+  .dashboard__nextLessonComponent {
+    display: flex;
+    background: #cccccc;
+    padding: 10px;
+    align-items: center;
+    grid-area: nextlesson; }
+    .dashboard__nextLessonComponent__header {
+      font-weight: bold; }
+    .dashboard__nextLessonComponent__infoContainer {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center; }
+    .dashboard__nextLessonComponent__image {
+      max-height: 200px;
+      max-width: 200px; }
+    .dashboard__nextLessonComponent__textContainer {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%; }
+  .dashboard__upcomingLessonsComponent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-area: upcoming;
+    background: #cccccc;
+    overflow-y: auto;
+    scrollbar-width: none; }
+    .dashboard__upcomingLessonsComponent__lesson {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 10px; }
+      .dashboard__upcomingLessonsComponent__lesson__image {
+        max-height: 125px;
+        max-width: 125px; }
+      .dashboard__upcomingLessonsComponent__lesson__teacherName {
+        font-weight: 700; }
+      .dashboard__upcomingLessonsComponent__lesson:last-child {
+        border: 0; }
+    .dashboard__upcomingLessonsComponent__header {
+      text-align: center;
+      padding: 10px; }
+    .dashboard__upcomingLessonsComponent::-webkit-scrollbar {
+      display: none; }
+  @media (max-width: 900px) {
+    .dashboard__container {
+      width: 95%;
+      height: 175vw;
+      grid-template-columns: auto auto;
+      grid-template-rows: repeat(9, 1fr);
+      grid-gap: 10px;
+      margin: 10px 0px 5px 0px;
+      grid-template-areas: "user balance" "nextlesson friends" "nextlesson friends" "upcoming friends" "upcoming friends" "upcoming friends" "upcoming friends" "upcoming friends" "upcoming friends"; }
+    .dashboard__friendsComponent__friend {
+      text-align: center;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .dashboard__friendsComponent__friend--name {
+        margin-left: 0; } }
+  @media (max-width: 512px) {
+    .dashboard__container {
+      height: 275vw;
+      padding: 0;
+      grid-template-areas: "user balance" "nextlesson nextlesson" "nextlesson nextlesson" "upcoming upcoming" "upcoming upcoming" "upcoming upcoming" "friends friends" "friends friends" "friends friends"; }
+    .dashboard__nextLessonComponent__image {
+      max-height: 125px;
+      max-width: 125px; }
+    .dashboard__friendsComponent__friend {
+      flex-direction: row;
+      justify-content: flex-start; } }
+
+.mainContainer {
+  padding: 50px 137px 115px 137px;
+  background: linear-gradient(180deg, #fbfaf9 0%, #beb7a4 100%), #beb7a4; }
+  .mainContainer__title {
+    color: #ff3f00;
+    margin: 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: normal; }
+
+body {
+  font-family: Roboto; }
+
+.contactBox {
+  display: flex;
+  margin-bottom: 0.5rem; }
+  .contactBox__imgContainer {
+    width: 5rem;
+    height: 5rem;
+    border: 1px dotted #beb7a4;
+    border-radius: 50%;
+    margin-right: 1rem; }
+  .contactBox__textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-style: normal;
+    line-height: normal; }
+    .contactBox__textContainer__mentor {
+      margin-bottom: 0.125rem;
+      color: #ff3f00;
+      font-weight: bold;
+      font-size: 1rem; }
+    .contactBox__textContainer__name {
+      margin-top: 0.125rem;
+      font-weight: normal;
+      color: #51504e;
+      font-size: 0.8rem; }
+
+.contentBox {
+  padding: 2rem; }
+  .contentBox__section {
+    margin-bottom: 3rem; }
+    .contentBox__section__title {
+      display: flex; }
+      .contentBox__section__title__circle {
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(190, 183, 164, 0.3);
+        margin-right: 0.5rem; }
+      .contentBox__section__title__text {
+        color: #51504e;
+        margin-top: 0.25rem; }
+    .contentBox__section__content {
+      margin-left: 3.8rem; }
+      .contentBox__section__content__lessonTime {
+        width: 30%;
+        height: 2.25rem;
+        border: 1px solid rgba(255, 63, 0, 0.38);
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        padding-left: 1rem;
+        color: #beb7a4;
+        margin-bottom: 0.5rem; }
+      .contentBox__section__content__btnAddTime {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 24px;
+        text-align: center;
+        color: #fffffc;
+        background: #ff3f00;
+        width: 140px;
+        height: 35px;
+        border-radius: 5px; }
+      .contentBox__section__content__dropdown {
+        height: 35px;
+        border: 1px solid rgba(255, 63, 0, 0.38);
+        border-radius: 5px;
+        color: #51504e; }
+        .contentBox__section__content__dropdown:focus {
+          outline: none;
+          box-shadow: 0px 0px 11px -2px #ff3f00; }
+      .contentBox__section__content__textarea {
+        border: 1px solid rgba(255, 63, 0, 0.38);
+        border-radius: 5px; }
+  .contentBox__submit {
+    display: flex;
+    justify-content: flex-end; }
+    .contentBox__submit__btn {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1rem;
+      line-height: 24px;
+      text-align: center;
+      color: #fffffc;
+      background: #ff3f00;
+      width: 140px;
+      height: 35px;
+      border-radius: 5px;
+      border: none; }
+
+.loginComponent {
+  display: flex;
+  font-family: "Karla", sans-serif;
+  margin: 5vw 0 0 0;
+  justify-content: center; }
+  .loginComponent__container {
+    display: flex;
+    width: 30vw;
+    flex-direction: column;
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52);
+    -moz-box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52);
+    box-shadow: 0px 10px 20px 0px rgba(50, 50, 50, 0.52); }
+    @media (max-width: 512px) {
+      .loginComponent__container {
+        height: 50vh;
+        width: 90vw; } }
+  .loginComponent__button {
+    text-align: center;
+    padding: 7px; }
+    .loginComponent__buttonContainer {
+      display: flex;
+      justify-items: space-evenly;
+      background: green;
+      width: 100%; }
+    .loginComponent__button--logInTab {
+      flex: 1; }
+    .loginComponent__button--signUpTab {
+      flex: 1; }
+
+.loginView {
+  display: flex;
+  height: 500px;
+  padding: 20px;
+  flex-direction: column; }
+  .loginView__header {
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase; }
+  .loginView__form {
+    display: flex;
+    flex-direction: column;
+    height: 50%; }
+    .loginView__form__input {
+      border: 0;
+      border-bottom: 1px solid black;
+      height: 130px;
+      margin: 5px 0px 10px 0px; }
+      .loginView__form__input:focus {
+        outline: none; }
+    .loginView__form > [type="submit"] {
+      font-size: 16px;
+      font-weight: bolder;
+      margin: 20px 0px 0px 0px;
+      outline: none;
+      box-shadow: none;
+      border: none;
+      border-radius: 2.5px;
+      padding: 10px;
+      background: #ff3f00;
+      color: white;
+      transition: 0.3s; }
+
+.signupView {
+  display: flex;
+  height: 500px;
+  padding: 20px;
+  flex-direction: column; }
+  .signupView__header {
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase; }
+  .signupView__form {
+    display: flex;
+    flex-direction: column;
+    height: 50%; }
+    .signupView__form__input {
+      border: 0;
+      border-bottom: 1px solid black;
+      height: 130px;
+      margin: 5px 0px 10px 0px; }
+      .signupView__form__input:focus {
+        outline: none; }
+    .signupView__form > [type="submit"] {
+      font-size: 16px;
+      font-weight: bolder;
+      margin: 20px 0px 0px 0px;
+      outline: none;
+      box-shadow: none;
+      border: none;
+      border-radius: 2.5px;
+      padding: 10px;
+      background: #ff3f00;
+      color: white;
+      transition: 0.3s; }
+
+.activeTab {
+  background: #fff; }
+
+.inactiveTab {
+  background: #cccccc;
+  -webkit-box-shadow: inset 10px 11px 33px -18px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: inset 10px 11px 33px -18px rgba(0, 0, 0, 0.12);
+  box-shadow: inset 10px 11px 33px -18px rgba(0, 0, 0, 0.12); }
