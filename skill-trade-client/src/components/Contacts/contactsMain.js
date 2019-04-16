@@ -46,16 +46,24 @@ class ContactsMain extends Component {
           <div className="contentBox--contacts">
             <div className="contentBox--contacts__topBar">
               <div className="contentBox--contacts__topBar__myMentors">
-                <h6>My Mentors</h6>
+                <button className="contentBox--contacts__topBar__myMentors__btn">
+                  My Mentors
+                </button>
               </div>
               <div className="contentBox--contacts__topBar__myMentees">
-                <h6>My Mentees</h6>
+                <button className="contentBox--contacts__topBar__myMentees__btn">
+                  My Mentees
+                </button>
               </div>
               <div className="contentBox--contacts__topBar__myClassmates">
-                <h6>My classmates</h6>
+                <button className="contentBox--contacts__topBar__myClassmates__btn">
+                  My classmates
+                </button>
               </div>
               <div className="contentBox--contacts__topBar__showAll">
-                <h6>Show all</h6>
+                <button className="contentBox--contacts__topBar__showAll__btn">
+                  Show all
+                </button>
               </div>
             </div>
             <div className="contentBox--contacts__searchBar">

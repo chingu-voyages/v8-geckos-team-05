@@ -233,14 +233,30 @@
     .contentBox--contacts__topBar__myMentors {
       width: 181px;
       border-right: 1px solid #beb7a4; }
+      .contentBox--contacts__topBar__myMentors:hover {
+        cursor: pointer; }
+      .contentBox--contacts__topBar__myMentors__btn {
+        all: unset; }
     .contentBox--contacts__topBar__myMentees {
       width: 181px;
       border-right: 1px solid #beb7a4; }
+      .contentBox--contacts__topBar__myMentees:hover {
+        cursor: pointer; }
+      .contentBox--contacts__topBar__myMentees__btn {
+        all: unset; }
     .contentBox--contacts__topBar__myClassmates {
       width: 181px;
       border-right: 1px solid #beb7a4; }
+      .contentBox--contacts__topBar__myClassmates:hover {
+        cursor: pointer; }
+      .contentBox--contacts__topBar__myClassmates__btn {
+        all: unset; }
     .contentBox--contacts__topBar__showAll {
       width: 181px; }
+      .contentBox--contacts__topBar__showAll:hover {
+        cursor: pointer; }
+      .contentBox--contacts__topBar__showAll__btn {
+        all: unset; }
   .contentBox--contacts__searchBar {
     margin-left: 40px;
     margin-right: 40px;

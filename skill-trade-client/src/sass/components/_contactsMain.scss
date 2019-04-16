@@ -23,17 +23,41 @@
     &__myMentors {
       width: 181px;
       border-right: 1px solid $secondary-color;
+      &:hover {
+        cursor: pointer;
+      }
+      &__btn {
+        all: unset;
+      }
     }
     &__myMentees {
       width: 181px;
       border-right: 1px solid $secondary-color;
+      &:hover {
+        cursor: pointer;
+      }
+      &__btn {
+        all: unset;
+      }
     }
     &__myClassmates {
       width: 181px;
       border-right: 1px solid $secondary-color;
+      &:hover {
+        cursor: pointer;
+      }
+      &__btn {
+        all: unset;
+      }
     }
     &__showAll {
       width: 181px;
+      &:hover {
+        cursor: pointer;
+      }
+      &__btn {
+        all: unset;
+      }
     }
   }
   &__searchBar {
