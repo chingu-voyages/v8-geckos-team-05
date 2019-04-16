@@ -316,8 +316,13 @@
     min-width: 5rem;
     height: 5rem;
     border-radius: 50%;
-    border: 1px #beb7a4 dotted;
-    margin-right: 1rem; }
+    margin-right: 1rem;
+    background-image: url(https://images.unsplash.com/photo-1503185912284-5271ff81b9a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-clip: padding-box;
+    background-size: cover;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75); }
   .mainContainerCard__textContainer {
     display: flex;
     flex-direction: column;
