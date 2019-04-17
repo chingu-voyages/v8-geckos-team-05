@@ -11,8 +11,8 @@ const userSchema = new mongoose.Schema({
     type:String,
     require:true
   },
-  friend:[
-    friendSchema
+  friends:[
+    {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
   ]
   ,
   online:{
