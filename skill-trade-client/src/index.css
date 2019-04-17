@@ -76,6 +76,9 @@
 .teacher {
   height: 100vh;
   background: rgba(185, 185, 185, 0.15); }
+  @media all and (max-width: 426px) {
+    .teacher {
+      height: auto; } }
   .teacher .profile {
     display: flex;
     flex-flow: row wrap;
@@ -92,11 +95,15 @@
     flex-direction: column;
     float: right;
     width: 300px;
+    max-height: 120px;
     padding: 10px;
     border: 1px solid white;
     background: white;
     border-radius: 10px;
     margin-top: 5px; }
+    @media all and (max-width: 426px) {
+      .teacher .priceInfo {
+        margin: 5px auto; } }
     .teacher .priceInfo__btn {
       background: #b5e4e6;
       border: none;
@@ -105,24 +112,38 @@
       color: white;
       width: 100px;
       margin: 0 auto;
-      transition: all 0.9s; }
+      transition: all 0.9s;
+      text-align: center; }
       .teacher .priceInfo__btn:hover {
         background: #43babf;
         cursor: pointer; }
   .teacher .intro {
     background: white;
-    text-align: right;
-    max-width: 75%;
+    text-align: left;
+    width: 75%;
     height: auto;
     margin: 30px;
     padding-bottom: 10px;
     border-radius: 5px; }
+    @media all and (max-width: 426px) {
+      .teacher .intro {
+        margin: 5px auto;
+        width: 300px; } }
     .teacher .intro__banner {
       text-align: center; }
     .teacher .intro__descripition {
       font-weight: bold;
       margin: 50px;
       height: auto; }
+
+.extras {
+  display: flex;
+  flex-basis: 20%;
+  flex-wrap: nowrap;
+  flex-direction: row-reverse; }
+  @media all and (max-width: 426px) {
+    .extras {
+      flex-direction: column; } }
 
 button {
   all: unset; }
@@ -263,6 +284,65 @@ h6 {
       color: #51504e;
       font-size: 0.8rem; }
 
+.mainContainer {
+  padding: 50px 137px 115px 137px;
+  background: linear-gradient(180deg, #fbfaf9 0%, #beb7a4 100%), #beb7a4; }
+
+.teacherSearch {
+  height: 100vh;
+  background: rgba(224, 221, 213, 0.2); }
+  .teacherSearch .search {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px; }
+    .teacherSearch .search__input {
+      border-radius: 2.5px;
+      border: 1px solid #8989c8;
+      height: 40px;
+      width: 500px;
+      font-size: 18px; }
+      .teacherSearch .search__input:hover {
+        outline: none; }
+      .teacherSearch .search__input:placeholder {
+        color: grey; }
+      .teacherSearch .search__input:after {
+        content: " "; }
+    .teacherSearch .search__btn {
+      color: green;
+      background: white;
+      border-radius: 5px;
+      margin-left: 5px;
+      padding: 5px;
+      font-size: 18px;
+      transition: all 1s; }
+      .teacherSearch .search__btn:hover {
+        border: none;
+        background: #88d488;
+        color: white; }
+    .teacherSearch .search__btn--img {
+      width: 40px;
+      max-width: 100%;
+      height: 25px; }
+  .teacherSearch .searchResults__number {
+    margin-left: 20px;
+    margin-right: auto;
+    text-decoration: underline;
+    text-decoration-color: rgba(151, 139, 139, 0.35); }
+  .teacherSearch .searchResults .resultsBoxes {
+    display: flex;
+    margin-top: 5px;
+    justify-content: space-around; }
+    .teacherSearch .searchResults .resultsBoxes .teacherInfo {
+      border: 1px solid black;
+      border-radius: 5px;
+      background: white;
+      padding: 20px; }
+      @media screen and (max-width: 465px) {
+        .teacherSearch .searchResults .resultsBoxes .teacherInfo {
+          margin: 10px; } }
+    @media screen and (max-width: 465px) {
+      .teacherSearch .searchResults .resultsBoxes {
+        display: inline; } }
 .dashboard {
   display: flex;
   justify-content: center; }
