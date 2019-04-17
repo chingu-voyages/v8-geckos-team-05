@@ -8,8 +8,9 @@ import {
 import contactsMain from "../Contacts/contactsMain";
 import teacherProfile from "../Teacher/teacherProfile";
 import teacherSearch from "../Teacher/teacherSch";
-import Homepage from '../Homepage/Homepage';
-import DashboardPage from '../Dashboard/DashboardPage';
+import Homepage from "../Homepage/Homepage";
+import SignUp from "../SignUp/SignUp";
+import DashboardPage from "../Dashboard/DashboardPage";
 import MeetupMain from "../Meetup/meetupMain";
 import LoginSignup from "../LoginSignup/LoginSignup";
 
