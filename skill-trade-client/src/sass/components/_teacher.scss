@@ -1,6 +1,10 @@
 .teacher {
 	height: 100vh;
    background: $profile-bg;
+   @media all and (max-width:426px){
+          
+   height: auto;
+  }
       .profile{
           display: flex;
           flex-flow: row wrap;
@@ -19,12 +23,16 @@
           flex-direction: column;
           float: right;
           width: 300px;
+          max-height: 120px;
           padding: 10px;
           border: 1px solid white;
           background: white;
           border-radius: 10px;
           margin-top: 5px;
+          @media all and (max-width:426px){
           
+          margin: 5px auto;
+        }
           &__btn{
               background: $profile-color-btn;
               border: none;
@@ -34,6 +42,7 @@
               width: 100px;
               margin: 0 auto;
               transition: all 0.9s;
+              text-align: center;
               &:hover{
               background: darken($profile-color-btn,30%);
               cursor: pointer;
@@ -43,12 +52,17 @@
       }
       .intro{
            background: white;
-          text-align: right;
-          max-width: 75%;
+          text-align: left;
+          width: 75%;
           height: auto;
           margin: 30px;
           padding-bottom: 10px;
           border-radius: 5px;
+          @media all and (max-width:426px){
+           
+            margin: 5px auto;
+            width: 300px;
+          }
               &__banner{
                   text-align: center;
               }
@@ -59,4 +73,13 @@
             
           }
           }
+}
+.extras{
+    display: flex;
+    flex-basis: 20%;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    @media all and (max-width:426px){
+        flex-direction: column;
+    }
 }
