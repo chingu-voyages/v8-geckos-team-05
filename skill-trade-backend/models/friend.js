@@ -18,4 +18,4 @@ const friendSchema = new mongoose.Schema({
 })
 Friends = mongoose.model('Friend', friendSchema)
 
-module.expots = Friends;
+module.exports = Friends;
