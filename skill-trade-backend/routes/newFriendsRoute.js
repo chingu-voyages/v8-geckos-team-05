@@ -23,8 +23,8 @@ router.post('/friend_request/:id', async (req, res, next) => {
     }
 
     try {
-        const friendDocument = await Friend.create(newFriend);
-        const friendRequestId = friendDocument.id;
+        const friendRequest = await Friend.create(newFriend);
+        const friendRequestId = friendRequest.id;
 
         const userWithAddedFriend = await User
         .findByIdAndUpdate(
