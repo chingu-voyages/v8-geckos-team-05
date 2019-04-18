@@ -23,36 +23,41 @@ router.post('/friend_request/:id', async (req, res, next) => {
     }
 
     try {
-        const userWithAddedFriend = await User
-            .findByIdAndUpdate(
-                requesterId, {
-                    $push: {
-                        friends: recipientId
-                    }
-                }, {
-                    new: true
-                }
-            )
-            .populate('friends', 'username')
-            .exec();
+        const friendDocument = await Friend.create(newFriend);
+        const friendRequestId = friendDocument.id;
 
-        const newFriendOfUser = await User
-            .findByIdAndUpdate(
-                recipientId, {
-                    $push: {
-                        friends: requesterId
-                    }
-                }, {
-                    new: true
+        const userWithAddedFriend = await User
+        .findByIdAndUpdate(
+            requesterId, {
+                $push: {
+                    friends: friendRequestId
                 }
-            )
-            .populate('friends', 'username')
-            .exec()
+            }, {
+                new: true,
+                fields: 'username friends'
+            }
+        )
+        .populate('friends')
+        .exec();
+
+        const addedFriend = await User
+        .findByIdAndUpdate(
+            recipientId, {
+                $push: {
+                    friends: friendRequestId
+                }
+            }, {
+                new: true,
+                fields: 'username friends'
+            }
+        )
+        .populate('friends')
+        .exec();
 
         return res.status(201).json({
-            msg: 'Success: friend added',
+            msg: 'Success: friend request sent',
             updatedUser: userWithAddedFriend,
-            newFriend: newFriendOfUser
+            newFriend: addedFriend
         })
     } catch (err) {
         return res.status(500).json({
