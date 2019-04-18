@@ -8,7 +8,7 @@ const { dbConnect } = require('./db-mongoose');
 // const jwtStrategy = require('./passport/jwt');
 const userRouter = require('./routes/newUserRoute');
 const authRouter = require('./routes/auth');
-const friendRouter = require('./routes/friends');
+const friendRouter = require('./routes/newFriendsRoute.js');
 const app = express();
 
 // console.log(JWT_SECRET);
@@ -27,7 +27,7 @@ app.use('/api',userRouter);
 // app.use('/api',authRouter);
 // This passport authenticate is used to protect our urls
 // app.use(passport.authenticate('jwt', { session: false, failWithError: true }));
-// app.use('/api',friendRouter);
+app.use('/api',friendRouter);
 // The Listen of this
 function runServer(port = PORT) {
     const server = app

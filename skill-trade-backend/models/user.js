@@ -12,7 +12,7 @@ const userSchema = new mongoose.Schema({
     require:true
   },
   friends:[
-    {type: mongoose.Schema.Types.ObjectId, ref: 'Friend'}
+    {type: mongoose.Schema.Types.ObjectId, ref: 'User'}
   ]
   ,
   online:{
