@@ -1,10 +1,18 @@
 const express = require("express");
 const router = express.Router();
 const User = require("../models/user");
+const {
+    hasWhiteSpace,
+    isNotString,
+    usernameExistsInDb
+} = require('./functions/users');
 
-router.post("/register", async (req, res, next) => {
+router.post("/register", async (req, res) => {
     let {
-        username,
+        username
+    } = req.body;
+    
+    const {
         password
     } = req.body;
 
@@ -17,20 +25,6 @@ router.post("/register", async (req, res, next) => {
                 err: "Please enter a username and password"
             });
     }
-
-    const hasWhiteSpace = str => /.*\s.*/.test(str);
-
-    const isNotString = str => typeof str !== "string";
-
-    const usernameExistsInDb = async username => {
-        const existingUser = await User.findOne({
-            username
-        }).exec();
-
-        if (existingUser) {
-            return true;
-        } else return false;
-    };
 
     try {
         if ([username, password].some(el => hasWhiteSpace(el))) {
@@ -68,7 +62,7 @@ router.post("/register", async (req, res, next) => {
             .json(savedUser);
     } catch (err) {
         return res.status(400).json({
-            err: err
+            err
         });
     }
 });
