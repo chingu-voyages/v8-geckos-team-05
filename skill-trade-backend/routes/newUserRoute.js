@@ -3,7 +3,9 @@ const router = express.Router();
 const User = require("../models/user");
 
 router.post("/register", async (req, res, next) => {
-  const { username, password } = req.body;
+  let { username, password } = req.body;
+
+  username = username.toLowerCase();
 
   if (!username || !password) {
     return res
