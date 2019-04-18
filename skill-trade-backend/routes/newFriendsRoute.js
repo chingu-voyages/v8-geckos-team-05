@@ -37,7 +37,7 @@ router.post('/friend_request/:id', async (req, res, next) => {
                 fields: 'username friends'
             }
         )
-        .populate('friends')
+        .populate('friends', 'requester recipient status')
         .exec();
 
         const addedFriend = await User
@@ -51,7 +51,7 @@ router.post('/friend_request/:id', async (req, res, next) => {
                 fields: 'username friends'
             }
         )
-        .populate('friends')
+        .populate('friends', 'requester recipient status')
         .exec();
 
         return res.status(201).json({
