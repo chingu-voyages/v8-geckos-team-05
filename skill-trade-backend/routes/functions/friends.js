@@ -1,13 +1,12 @@
-const Friend = require('../../models/friend')
 const User = require('../../models/user')
 
 const checkIfRequestAlreadySent = async (requesterId, recipientId) => {
-    const usersFriendIds = await User
+    const userDoc = await User
         .findById(recipientId, 'friendRequests')
         .populate('friendRequests', 'requester')
         .exec();
 
-    return usersFriendIds.friendRequests.some(request => request.requester.toString() === requesterId)
+    return userDoc.friendRequests.some(({ requester }) => requester.toString() === requesterId)
 }
 
 const sendFriendRequestToUser = async (userId, reqId) => {
