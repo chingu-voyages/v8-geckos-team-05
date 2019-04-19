@@ -5,7 +5,8 @@ const Friend = require('../models/friend');
 const User = require('../models/user');
 
 const {
-    checkIfUserHasFriend
+    checkIfUserHasFriend,
+    sendFriendRequestToUser
 } = require('./functions/friends')
 
 router.post('/friend_request/:id', async (req, res, next) => {
@@ -26,33 +27,10 @@ router.post('/friend_request/:id', async (req, res, next) => {
         const friendRequest = await Friend.create(newFriend);
         const friendRequestId = friendRequest.id;
 
-        const userWithAddedFriend = await User
-        .findByIdAndUpdate(
-            requesterId, {
-                $push: {
-                    friends: friendRequestId
-                }
-            }, {
-                new: true,
-                fields: 'username friends'
-            }
-        )
-        .populate('friends', 'requester recipient status')
-        .exec();
-
-        const addedFriend = await User
-        .findByIdAndUpdate(
-            recipientId, {
-                $push: {
-                    friends: friendRequestId
-                }
-            }, {
-                new: true,
-                fields: 'username friends'
-            }
-        )
-        .populate('friends', 'requester recipient status')
-        .exec();
+        const [userWithAddedFriend, addedFriend] = await Promise.all([
+            sendFriendRequestToUser(requesterId, friendRequestId),
+            sendFriendRequestToUser(recipientId, friendRequestId)
+        ]);
 
         return res.status(201).json({
             msg: 'Success: friend request sent',
