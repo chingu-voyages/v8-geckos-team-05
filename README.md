@@ -45,7 +45,3 @@ Enjoy using Talent Trade!
 
 * **Eliezer Valenzuela** - [View commits](https://github.com/chingu-voyages/v8-geckos-team-05/commits?author=vzla0094)
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
