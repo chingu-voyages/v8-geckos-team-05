@@ -17,9 +17,13 @@ Using a terminal, clone the repository like so (make sure you have git installed
 git clone https://github.com/chingu-voyages/v8-geckos-team-05.git
 ```
 
+Run `npm install` to install any dependencies.
+
 Then, navigate into the `skill-trade-client` folder like this (assuming you're on a unix system):
 
 `cd skill-trade-client`
+
+Run `npm install` again.
 
 Then, run `npm run start`.
 
