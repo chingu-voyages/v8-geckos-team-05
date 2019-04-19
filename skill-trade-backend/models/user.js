@@ -13,9 +13,13 @@ const userSchema = new mongoose.Schema({
     type: String,
     require: true
   },
-  friends: [{
+  friendRequests: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Friend'
+  }],
+  friends: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
   }],
   online: {
     type: Boolean,

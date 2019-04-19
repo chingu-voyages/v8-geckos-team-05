@@ -1,12 +1,13 @@
 const Friend = require('../../models/friend')
 const User = require('../../models/user')
 
-const checkIfUserHasFriend = async (userId, friendId) => {
+const checkIfRequestAlreadySent = async (requesterId, recipientId) => {
     const usersFriendIds = await User
-        .findById(userId, 'friends')
+        .findById(recipientId, 'friendRequests')
+        .populate('friendRequests', 'requester')
         .exec();
 
-    return usersFriendIds.friends.some(id => id.toString() === friendId)
+    return usersFriendIds.friendRequests.some(request => request.requester.toString() === requesterId)
 }
 
 const sendFriendRequestToUser = async (userId, reqId) => {
@@ -14,20 +15,20 @@ const sendFriendRequestToUser = async (userId, reqId) => {
         .findByIdAndUpdate(
             userId, {
                 $push: {
-                    friends: reqId
+                    friendRequests: reqId
                 }
             }, {
                 new: true,
-                fields: 'username friends'
+                fields: 'username friendRequests friends'
             }
         )
-        .populate('friends', 'requester recipient status')
+        .populate('friendRequests', 'requester recipient status')
         .exec();
 
     return updatedUser
 }
 
 module.exports = {
-    checkIfUserHasFriend,
+    checkIfRequestAlreadySent,
     sendFriendRequestToUser
 }

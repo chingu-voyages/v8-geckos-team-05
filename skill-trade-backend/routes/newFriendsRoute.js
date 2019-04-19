@@ -5,7 +5,7 @@ const Friend = require('../models/friend');
 const User = require('../models/user');
 
 const {
-    checkIfUserHasFriend,
+    checkIfRequestAlreadySent,
     sendFriendRequestToUser
 } = require('./functions/friends')
 
@@ -19,7 +19,7 @@ router.post('/friend_request/:id', async (req, res, next) => {
         status: null
     }
 
-    if (await checkIfUserHasFriend(requesterId, recipientId)) {
+    if (await checkIfRequestAlreadySent(requesterId, recipientId)) {
         return res.status(400).send('User already has friend');
     }
 
@@ -27,14 +27,10 @@ router.post('/friend_request/:id', async (req, res, next) => {
         const friendRequest = await Friend.create(newFriend);
         const friendRequestId = friendRequest.id;
 
-        const [userWithAddedFriend, addedFriend] = await Promise.all([
-            sendFriendRequestToUser(requesterId, friendRequestId),
-            sendFriendRequestToUser(recipientId, friendRequestId)
-        ]);
+        const addedFriend = await sendFriendRequestToUser(recipientId, friendRequestId);
 
         return res.status(201).json({
             msg: 'Success: friend request sent',
-            updatedUser: userWithAddedFriend,
             newFriend: addedFriend
         })
     } catch (err) {
