@@ -18,7 +18,6 @@ router.post("/friend_request/send/:id", async (req, res) => {
   const newFriend = {
     requester: requesterId,
     recipient: recipientId,
-    status: null
   };
 
   if (await checkIfRequestAlreadySent(requesterId, recipientId)) {
@@ -49,6 +48,8 @@ router.post("/friend_request/send/:id", async (req, res) => {
 router.post("/friend_request/respond", async (req, res) => {
   const { id: friendRequestId, accept: userResponse } = req.query;
 
+  if (!friendRequestId) return res.status(400).json('ID query parameter not included');
+
   if (userResponse === 'true') {
     const { updatedRequester, updatedRecipient } = await acceptFriendRequest(friendRequestId);
     
@@ -57,13 +58,15 @@ router.post("/friend_request/respond", async (req, res) => {
         updatedRequester,
         updatedRecipient
     })
-  } else {
-    const { updatedRecipient } = await denyFriendRequest({friendRequestId});
+  } else if (userResponse === 'false') {
+    const updatedRecipient = await denyFriendRequest(friendRequestId);
     
     return res.status(200).json({
         msg: "Success: Friend request denied, request deleted from recipient's document",
         updatedRecipient
     })
+  } else {
+      return res.status(400).json('User response query parameter not included');
   }
 });
 

@@ -16,8 +16,6 @@ router.post("/register", async (req, res) => {
         password
     } = req.body;
 
-    username = username.toLowerCase();
-
     if (!username || !password) {
         return res
             .status(400)

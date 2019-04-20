@@ -7,23 +7,23 @@ const checkIfRequestAlreadySent = async (requesterId, recipientId) => {
         .populate('friendRequests', 'requester')
         .exec();
 
-    return userDoc.friendRequests.some(({
-        requester
-    }) => requester.toString() === requesterId)
+    return userDoc.friendRequests.some(({ requester }) => requester.toString() === requesterId)
 }
 
 const sendFriendRequestToUser = async (userId, reqId) => {
+    const update = {
+        $push: {
+            friendRequests: reqId
+        }
+    }
+
+    const options = {
+        new: true,
+        fields: 'username friendRequests friends'
+    }
+    
     const updatedUser = await User
-        .findByIdAndUpdate(
-            userId, {
-                $push: {
-                    friendRequests: reqId
-                }
-            }, {
-                new: true,
-                fields: 'username friendRequests friends'
-            }
-        )
+        .findByIdAndUpdate(userId, update, options)
         .populate('friendRequests', 'requester recipient status')
         .exec();
 
@@ -66,17 +66,19 @@ const denyFriendRequest = async friendRequestId => {
 }
 
 const pushFriendToUser = async (userId, friendId) => {
+    const update = {
+        $push: {
+            friends: friendId
+        }
+    }
+
+    const options = {
+        new: true,
+        select: 'username friends friendRequests'
+    }
+
     const userWithAddedFriend = await User
-        .findByIdAndUpdate(
-            userId, {
-                $push: {
-                    friends: friendId
-                }
-            }, {
-                new: true,
-                select: 'username friends friendRequests'
-            }
-        )
+        .findByIdAndUpdate(userId, update, options)
         .populate('friends', 'username')
         .exec();
 
@@ -84,13 +86,18 @@ const pushFriendToUser = async (userId, friendId) => {
 }
 
 const deleteFriendRequest = async (userId, requestId) => {
-    const updatedUser = await User.findByIdAndUpdate(
-        userId, {
-            $pull: {
-                friendRequests: requestId
-            }
+    const update = {
+        $pull: {
+            friendRequests: requestId
         }
-    ).exec();
+    }
+
+    const options = {
+        new: true,
+        select: 'username friendRequests'
+    }
+
+    const updatedUser = await User.findByIdAndUpdate(userId, update, options).exec();
 
     return updatedUser;
 }

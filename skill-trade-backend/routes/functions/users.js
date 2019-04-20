@@ -5,9 +5,10 @@ const hasWhiteSpace = str => /.*\s.*/.test(str);
 const isNotString = str => typeof str !== "string";
 
 const usernameExistsInDb = async username => {
-    const existingUser = await User.findOne({
-        username
-    }).exec();
+    const query = {
+        'username': { $regex: new RegExp(username, 'i')}
+    }
+    const existingUser = await User.findOne(query).exec();
 
     if (existingUser) {
         return true;
