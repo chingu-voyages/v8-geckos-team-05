@@ -212,7 +212,8 @@
 .contentBox--contacts {
   background: #fafaf6;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-  padding-bottom: 2.5rem; }
+  padding-bottom: 2.5rem;
+  min-height: 70vh; }
   .contentBox--contacts__topBar {
     box-sizing: border-box;
     display: flex;
