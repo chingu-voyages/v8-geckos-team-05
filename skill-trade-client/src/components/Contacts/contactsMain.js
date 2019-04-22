@@ -4,7 +4,12 @@ import FriendCard from "./friendCard";
 import MainContainer from "../MainContainer/mainContainer";
 
 class ContactsMain extends Component {
-  state = {};
+  state = {
+    mentors: [],
+    mentees: [],
+    classmates: [],
+    all: []
+  };
   render() {
     const handleDropdown = () => {
       const topBar = document.querySelector(".contentBox--contacts__topBar");
@@ -39,12 +44,14 @@ class ContactsMain extends Component {
       );
     };
     const handleShowAll = () => {
+      let results = 30; //to be modified according to this.state.all.length
       fetch(
-        "https://api.unsplash.com/photos/random/?query=beautiful+girl&featured&count=30&client_id=1de021314b1360d29ebe9ac43c8388233b18f1aadd026e729e84a9fb355b6b46"
+        `https://api.unsplash.com/photos/random/?query=girl&featured&count=${results}&client_id=1de021314b1360d29ebe9ac43c8388233b18f1aadd026e729e84a9fb355b6b46`
       )
         .then(res => res.json())
         .then(data => {
-          console.log(data);
+          this.setState({ all: data });
+          console.log(this.state);
         });
     };
     return (
@@ -93,16 +100,9 @@ class ContactsMain extends Component {
               />
             </div>
             <div className="contentBox--contacts__resultsGrid">
-              <FriendCard />
-              <FriendCard />
-              <FriendCard />
-              <FriendCard />
-              <FriendCard />
-              <FriendCard />
-              <FriendCard />
-              <FriendCard />
-              <FriendCard />
-              <FriendCard />
+              {this.state.all.map(friend => (
+                <FriendCard key={friend.id} imgUrl={friend.urls.thumb} /> //The key is just dummy information from the unsplash api response. To be modified when using real info.
+              ))}
             </div>
           </div>
         </MainContainer>
