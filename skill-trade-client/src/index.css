@@ -281,8 +281,7 @@
     margin-right: 4%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    grid-gap: 2%;
-    overflow: scroll; }
+    grid-column-gap: 2%; }
 
 @media only screen and (max-width: 600px) {
   .contentBox--contacts__topBar {
@@ -327,7 +326,8 @@
   padding: 1rem;
   height: 118px;
   border: 1px solid #beb7a4;
-  border-radius: 15px; }
+  border-radius: 15px;
+  margin-bottom: 7%; }
   .mainContainerCard__imgContainer {
     min-width: 5rem;
     height: 5rem;

@@ -87,8 +87,7 @@
     margin-right: 4%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    grid-gap: 2%;
-    overflow: scroll;
+    grid-column-gap: 2%;
   }
 }
 
