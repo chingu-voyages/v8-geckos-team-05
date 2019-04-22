@@ -38,6 +38,15 @@ class ContactsMain extends Component {
         "contentBox--contacts__topBar__showAll--responsive"
       );
     };
+    const handleShowAll = () => {
+      fetch(
+        "https://api.unsplash.com/photos/random/?query=beautiful+girl&featured&count=30&client_id=1de021314b1360d29ebe9ac43c8388233b18f1aadd026e729e84a9fb355b6b46"
+      )
+        .then(res => res.json())
+        .then(data => {
+          console.log(data);
+        });
+    };
     return (
       <>
         <NavBar />
@@ -46,16 +55,27 @@ class ContactsMain extends Component {
           <div className="contentBox--contacts">
             <div className="contentBox--contacts__topBar">
               <div className="contentBox--contacts__topBar__myMentors">
-                <h6>My Mentors</h6>
+                <button className="contentBox--contacts__topBar__myMentors__btn">
+                  My Mentors
+                </button>
               </div>
               <div className="contentBox--contacts__topBar__myMentees">
-                <h6>My Mentees</h6>
+                <button className="contentBox--contacts__topBar__myMentees__btn">
+                  My Mentees
+                </button>
               </div>
               <div className="contentBox--contacts__topBar__myClassmates">
-                <h6>My classmates</h6>
+                <button className="contentBox--contacts__topBar__myClassmates__btn">
+                  My classmates
+                </button>
               </div>
               <div className="contentBox--contacts__topBar__showAll">
-                <h6>Show all</h6>
+                <button
+                  onClick={handleShowAll}
+                  className="contentBox--contacts__topBar__showAll__btn"
+                >
+                  Show all
+                </button>
               </div>
             </div>
             <div className="contentBox--contacts__searchBar">

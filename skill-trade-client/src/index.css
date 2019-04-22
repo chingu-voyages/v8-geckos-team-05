@@ -367,6 +367,77 @@ a {
   grid-gap: 2%;
   overflow: scroll;
 }
+  padding-bottom: 2.5rem; }
+  .contentBox--contacts__topBar {
+    box-sizing: border-box;
+    display: flex;
+    height: 68px;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 1rem;
+    text-align: center;
+    color: #51504e;
+    border-bottom: 1px solid #beb7a4; }
+    .contentBox--contacts__topBar h6 {
+      all: unset; }
+    .contentBox--contacts__topBar__myMentors {
+      width: 181px;
+      border-right: 1px solid #beb7a4; }
+      .contentBox--contacts__topBar__myMentors:hover {
+        cursor: pointer; }
+      .contentBox--contacts__topBar__myMentors__btn {
+        all: unset; }
+    .contentBox--contacts__topBar__myMentees {
+      width: 181px;
+      border-right: 1px solid #beb7a4; }
+      .contentBox--contacts__topBar__myMentees:hover {
+        cursor: pointer; }
+      .contentBox--contacts__topBar__myMentees__btn {
+        all: unset; }
+    .contentBox--contacts__topBar__myClassmates {
+      width: 181px;
+      border-right: 1px solid #beb7a4; }
+      .contentBox--contacts__topBar__myClassmates:hover {
+        cursor: pointer; }
+      .contentBox--contacts__topBar__myClassmates__btn {
+        all: unset; }
+    .contentBox--contacts__topBar__showAll {
+      width: 181px; }
+      .contentBox--contacts__topBar__showAll:hover {
+        cursor: pointer; }
+      .contentBox--contacts__topBar__showAll__btn {
+        all: unset; }
+  .contentBox--contacts__searchBar {
+    margin-left: 40px;
+    margin-right: 40px;
+    height: 70px;
+    display: flex;
+    align-items: center; }
+    .contentBox--contacts__searchBar__btnCollapse {
+      all: unset;
+      display: none;
+      font-size: 1.5rem; }
+    .contentBox--contacts__searchBar__search {
+      all: unset;
+      border: 1px solid #beb7a4;
+      background: #fffffc;
+      border-radius: 3px;
+      width: 233px;
+      height: 36px;
+      padding-left: 18px;
+      line-height: 100px; }
+  .contentBox--contacts__resultsGrid {
+    margin-left: 4%;
+    margin-right: 4%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-gap: 2%;
+    overflow: scroll; }
 
 @media only screen and (max-width: 600px) {
   .contentBox--contacts__topBar {
