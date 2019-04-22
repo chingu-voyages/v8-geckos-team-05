@@ -46,7 +46,7 @@ class ContactsMain extends Component {
     const handleShowAll = () => {
       let results = 30; //to be modified according to this.state.all.length
       fetch(
-        `https://api.unsplash.com/photos/random/?query=beautiful+girl&featured&count=${results}&client_id=1de021314b1360d29ebe9ac43c8388233b18f1aadd026e729e84a9fb355b6b46`
+        `https://api.unsplash.com/photos/random/?query=hot+girl&featured&count=${results}&client_id=1de021314b1360d29ebe9ac43c8388233b18f1aadd026e729e84a9fb355b6b46`
       )
         .then(res => res.json())
         .then(data => {
@@ -101,10 +101,7 @@ class ContactsMain extends Component {
             </div>
             <div className="contentBox--contacts__resultsGrid">
               {this.state.all.map(friend => (
-                <FriendCard
-                  key={friend.id}
-                  style={{ backgroundImage: `url(${friend.urls.thumb})` }}
-                /> //The key is just dummy information from the unsplash api response. To be modified when using real info.
+                <FriendCard key={friend.id} imgUrl={friend.urls.thumb} /> //The key is just dummy information from the unsplash api response. To be modified when using real info.
               ))}
             </div>
           </div>

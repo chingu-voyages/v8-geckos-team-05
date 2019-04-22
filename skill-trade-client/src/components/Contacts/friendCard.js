@@ -7,9 +7,7 @@ class FriendCard extends Component {
         <div
           className="mainContainerCard__imgContainer"
           style={{
-            backgroundImage: `url(
-              "https://images.unsplash.com/photo-1503185912284-5271ff81b9a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
-            )`
+            backgroundImage: `url(${this.props.imgUrl})`
           }}
         />
         <div className="mainContainerCard__textContainer">
