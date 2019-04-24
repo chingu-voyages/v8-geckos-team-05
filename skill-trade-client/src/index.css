@@ -879,9 +879,7 @@ body {
     display: flex;
     height: 68px;
     align-items: center;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 2rem;
+    padding: 1rem 2rem;
     margin-bottom: 2rem;
     font-family: Roboto;
     font-style: normal;
@@ -891,8 +889,6 @@ body {
     text-align: center;
     color: #51504e;
     border-bottom: 1px solid #beb7a4; }
-    .contentBox--teacherSearch__searchBar h6 {
-      all: unset; }
     .contentBox--teacherSearch__searchBar__dropdown {
       outline: none;
       margin-right: 1rem;
@@ -922,13 +918,14 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     grid-column-gap: 2%; }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 525px) {
   .contentBox--teacherSearch__searchBar {
-    display: none;
-    border: none;
-    height: unset;
-    padding: 0;
-    padding-top: 2rem; }
-    .contentBox--teacherSearch__searchBar--responsive {
-      display: flex;
-      flex-direction: column; } }
+    flex-direction: column;
+    height: unset; }
+    .contentBox--teacherSearch__searchBar form {
+      width: 100%; }
+    .contentBox--teacherSearch__searchBar__dropdown {
+      width: 100%;
+      display: block;
+      margin: 0;
+      margin-bottom: 0.5rem; } }
