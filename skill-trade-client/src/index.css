@@ -342,7 +342,7 @@
   .contentBox--contacts__searchBar__search {
     display: none; } }
 
-.mainContainerCard {
+.mainContainer--friendCard {
   display: inline-flex;
   justify-content: start;
   padding: 1rem;
@@ -350,7 +350,7 @@
   border: 1px solid #beb7a4;
   border-radius: 15px;
   margin-bottom: 7%; }
-  .mainContainerCard__imgContainer {
+  .mainContainer--friendCard__imgContainer {
     min-width: 5rem;
     height: 5rem;
     border-radius: 50%;
@@ -360,19 +360,19 @@
     background-clip: padding-box;
     background-size: cover;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75); }
-  .mainContainerCard__textContainer {
+  .mainContainer--friendCard__textContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-family: Roboto;
     font-style: normal;
     line-height: normal; }
-    .mainContainerCard__textContainer__name {
+    .mainContainer--friendCard__textContainer__name {
       margin-bottom: 0.125rem;
       color: #ff3f00;
       font-weight: bold;
       font-size: 1rem; }
-    .mainContainerCard__textContainer__teachingProgram {
+    .mainContainer--friendCard__textContainer__teachingProgram {
       margin-top: 0.125rem;
       font-weight: normal;
       color: #51504e;
@@ -764,6 +764,62 @@ body {
     margin: 10px 0px 10px 0px; }
   .signUp__form--passwordInput {
     margin: 10px 0px 10px 0px; }
+
+.teacherSearch {
+  height: 100vh;
+  background: rgba(224, 221, 213, 0.2); }
+  .teacherSearch .search {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px; }
+    .teacherSearch .search__input {
+      border-radius: 2.5px;
+      border: 1px solid #8989c8;
+      height: 40px;
+      width: 500px;
+      font-size: 18px; }
+      .teacherSearch .search__input:hover {
+        outline: none; }
+      .teacherSearch .search__input:placeholder {
+        color: grey; }
+      .teacherSearch .search__input:after {
+        content: " "; }
+    .teacherSearch .search__btn {
+      color: green;
+      background: white;
+      border-radius: 5px;
+      margin-left: 5px;
+      padding: 5px;
+      font-size: 18px;
+      transition: all 1s; }
+      .teacherSearch .search__btn:hover {
+        border: none;
+        background: #88d488;
+        color: white; }
+    .teacherSearch .search__btn--img {
+      width: 40px;
+      max-width: 100%;
+      height: 25px; }
+  .teacherSearch .searchResults__number {
+    margin-left: 20px;
+    margin-right: auto;
+    text-decoration: underline;
+    text-decoration-color: rgba(151, 139, 139, 0.35); }
+  .teacherSearch .searchResults .resultsBoxes {
+    display: flex;
+    margin-top: 5px;
+    justify-content: space-around; }
+    .teacherSearch .searchResults .resultsBoxes .teacherInfo {
+      border: 1px solid black;
+      border-radius: 5px;
+      background: white;
+      padding: 20px; }
+      @media screen and (max-width: 465px) {
+        .teacherSearch .searchResults .resultsBoxes .teacherInfo {
+          margin: 10px; } }
+    @media screen and (max-width: 465px) {
+      .teacherSearch .searchResults .resultsBoxes {
+        display: inline; } }
 
 .loginComponent {
   display: flex;
