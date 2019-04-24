@@ -1,14 +1,12 @@
-@import "../abstracts/color";
-
-h6 {
-  all: unset;
-}
-
-.contentBox {
+.contentBox--contacts {
   background: #fafaf6;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   padding-bottom: 2.5rem;
+  min-height: 70vh;
   &__topBar {
+    h6 {
+      all: unset;
+    }
     box-sizing: border-box;
     display: flex;
     height: 68px;
@@ -26,17 +24,41 @@ h6 {
     &__myMentors {
       width: 181px;
       border-right: 1px solid $secondary-color;
+      &:hover {
+        cursor: pointer;
+      }
+      &__btn {
+        all: unset;
+      }
     }
     &__myMentees {
       width: 181px;
       border-right: 1px solid $secondary-color;
+      &:hover {
+        cursor: pointer;
+      }
+      &__btn {
+        all: unset;
+      }
     }
     &__myClassmates {
       width: 181px;
       border-right: 1px solid $secondary-color;
+      &:hover {
+        cursor: pointer;
+      }
+      &__btn {
+        all: unset;
+      }
     }
     &__showAll {
       width: 181px;
+      &:hover {
+        cursor: pointer;
+      }
+      &__btn {
+        all: unset;
+      }
     }
   }
   &__searchBar {
@@ -45,6 +67,11 @@ h6 {
     height: 70px;
     display: flex;
     align-items: center;
+    &__btnCollapse {
+      all: unset;
+      display: none;
+      font-size: 1.5rem;
+    }
     &__search {
       all: unset;
       border: 1px solid $secondary-color;
@@ -57,10 +84,64 @@ h6 {
     }
   }
   &__resultsGrid {
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
+    margin-left: 4%;
+    margin-right: 4%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-column-gap: 2%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .contentBox--contacts {
+    &__topBar {
+      display: none;
+      border: none;
+      height: unset;
+      padding: 0;
+      padding-top: 2rem;
+      &__myMentors {
+        border: none;
+        border-bottom: 1px solid #beb7a4;
+        margin-bottom: 1rem;
+      }
+      &__myMentees {
+        border: none;
+        border-bottom: 1px solid #beb7a4;
+        margin-bottom: 1rem;
+      }
+      &__myClassmates {
+        border: none;
+        border-bottom: 1px solid #beb7a4;
+        margin-bottom: 1rem;
+      }
+      &__showAll {
+        border-bottom: 1px solid #beb7a4;
+        margin-bottom: 1rem;
+      }
+      &--responsive {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    &__searchBar {
+      display: flex;
+      justify-content: space-evenly;
+      &__btnCollapse {
+        display: block;
+        color: $text-color;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .contentBox--contacts {
+    &__searchBar {
+      &__search {
+        display: none;
+      }
+    }
   }
 }

@@ -1,0 +1,36 @@
+.signUp {
+    &__component {
+        display: flex;
+        justify-content: center;
+        font-family: $chris-font;
+    }
+    &__container {
+        margin-top: 5vh;
+        display: flex;
+        flex-direction: column;
+        height: 50vh;
+        width: 30vw;
+        background: $tertiary-color;
+        padding: 20px;
+
+        @media (max-width: 786px) {
+            width: 85vw;
+        }
+    }
+    &__header {
+        text-align: center;
+        color: $primary-color;
+    }
+    &__form {
+        display: flex;
+        margin-top: 10px;
+        height: 100%;
+        flex-direction: column;
+        &--emailInput {
+            margin: 10px 0px 10px 0px;
+        }
+        &--passwordInput {
+            margin: 10px 0px 10px 0px;
+        }
+    }
+}
