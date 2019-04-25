@@ -15,42 +15,42 @@ class MeetupMain extends Component {
               <h5 className="contactBox__textContainer__name">Name</h5>
             </div>
           </div>
-          <div className="contentBox">
+          <div className="contentBox--meetup">
             <form>
               {/* Lesson Schedule */}
-              <div className="contentBox__section">
-                <div className="contentBox__section__title">
-                  <div className="contentBox__section__title__circle">
+              <div className="contentBox--meetup__section">
+                <div className="contentBox--meetup__section__title">
+                  <div className="contentBox--meetup__section__title__circle">
                     <h3>1</h3>
                   </div>
-                  <h3 className="contentBox__section__title__text">
+                  <h3 className="contentBox--meetup__section__title__text">
                     Lesson Schedule
                   </h3>
                 </div>
-                <div className="contentBox__section__content">
-                  <div className="contentBox__section__content__lessonTime">
+                <div className="contentBox--meetup__section__content">
+                  <div className="contentBox--meetup__section__content__lessonTime">
                     <p>Lesson time will appear here</p>
                   </div>
-                  <button className="contentBox__section__content__btnAddTime">
+                  <button className="contentBox--meetup__section__content__btnAddTime">
                     Add date / time
                   </button>
                 </div>
               </div>
 
               {/* Communication tool */}
-              <div className="contentBox__section">
-                <div className="contentBox__section__title">
-                  <div className="contentBox__section__title__circle">
+              <div className="contentBox--meetup__section">
+                <div className="contentBox--meetup__section__title">
+                  <div className="contentBox--meetup__section__title__circle">
                     <h3>2</h3>
                   </div>
-                  <h3 className="contentBox__section__title__text">
+                  <h3 className="contentBox--meetup__section__title__text">
                     Communication tool
                   </h3>
                 </div>
-                <div className="contentBox__section__content">
+                <div className="contentBox--meetup__section__content">
                   <select
                     required
-                    className="contentBox__section__content__dropdown"
+                    className="contentBox--meetup__section__content__dropdown"
                   >
                     <option value="0">Please select an option</option>
                     <option value="skype">Skype</option>
@@ -61,20 +61,22 @@ class MeetupMain extends Component {
               </div>
 
               {/* Comments */}
-              <div className="contentBox__section">
-                <div className="contentBox__section__title">
-                  <div className="contentBox__section__title__circle">
+              <div className="contentBox--meetup__section">
+                <div className="contentBox--meetup__section__title">
+                  <div className="contentBox--meetup__section__title__circle">
                     <h3>3</h3>
                   </div>
-                  <h3 className="contentBox__section__title__text">Comments</h3>
+                  <h3 className="contentBox--meetup__section__title__text">
+                    Comments
+                  </h3>
                 </div>
-                <div className="contentBox__section__content">
-                  <textarea className="contentBox__section__content__textarea" />
+                <div className="contentBox--meetup__section__content">
+                  <textarea className="contentBox--meetup__section__content__textarea" />
                 </div>
               </div>
-              <div className="contentBox__submit">
+              <div className="contentBox--meetup__submit">
                 <input
-                  className="contentBox__submit__btn"
+                  className="contentBox--meetup__submit__btn"
                   type="submit"
                   value="Submit"
                 />

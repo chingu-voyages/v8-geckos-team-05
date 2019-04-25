@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 @import url("https://fonts.googleapis.com/css?family=Karla:400,700");
-@import url("https://fonts.googleapis.com/css?family=Karla:400,700");
 * {
   margin: 0;
   padding: 0;
@@ -25,10 +24,10 @@
       flex-direction: column;
       justify-content: center; }
     .homepage__intro--mainText {
-      color: #FF3F00;
+      color: #ff3f00;
       text-align: center; }
     .homepage__intro--subtext {
-      color: #BEB7A4;
+      color: #beb7a4;
       text-align: center; }
     .homepage__intro--button {
       font-family: "Karla", sans-serif;
@@ -43,8 +42,8 @@
         justify-content: center;
         align-items: center; }
       .homepage__intro--button:hover {
-        background: #FF3F00;
-        color: white; }
+        background: #ff3f00;
+        color: #fffffc; }
   .homepage__info {
     display: grid;
     height: 400px;
@@ -63,7 +62,7 @@
       height: 400px;
       grid-template-columns: 100vw;
       grid-template-rows: 75vh 75vh;
-      grid-template-areas: "column1" "column2"; }
+      grid-template-areas: "column1" "column2"; }
     .homepage__intro {
       border-bottom: 1px solid black; } }
 
@@ -145,25 +144,15 @@
     .extras {
       flex-direction: column; } }
 
-button {
-  all: unset; }
-
-button:hover {
-  cursor: pointer; }
-
-a {
-  color: unset;
-  text-decoration: unset; }
-
 .navbar {
   height: 64px;
   position: relative;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem; }
-  .navbar__banner {
+  .navbar__banner__link {
+    text-decoration: unset;
     color: black;
     font-family: Roboto;
     font-style: normal;
@@ -171,41 +160,82 @@ a {
     font-size: 24px;
     line-height: normal;
     text-transform: uppercase; }
-  .navbar__btn-logout {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 24px;
-    text-align: center;
-    color: #fffffc;
-    background: #ff3f00;
-    width: 140px;
-    height: 40px;
-    border-radius: 5px; }
+  .navbar__collapse--items {
+    display: inline; }
 
 .listedItems {
   margin: 0;
   display: inline; }
   .listedItems__item {
-    display: inline;
-    margin: 16px; }
+    display: inline; }
+    .listedItems__item__btnCollapse {
+      all: unset;
+      display: none;
+      font-size: 1.5rem;
+      color: #ff3f00;
+      margin-right: 1rem; }
     .listedItems__item__link {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      color: unset;
+      text-decoration: unset;
       font-family: Roboto;
       font-style: normal;
       font-weight: normal;
       font-size: 18px;
       line-height: normal;
       color: #ff3f00; }
+    .listedItems__item__btnLogout {
+      display: inline;
+      all: unset;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 24px;
+      text-align: center;
+      color: #fffffc;
+      background: #ff3f00;
+      width: 140px;
+      height: 40px;
+      border-radius: 5px; }
+      .listedItems__item__btnLogout:hover {
+        cursor: pointer; }
+      .listedItems__item__btnLogout__link {
+        color: unset;
+        text-decoration: unset; }
 
-h6 {
-  all: unset; }
+@media only screen and (max-width: 768px) {
+  .navbar--responsive {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: unset; }
+  .listedItems__item__btnCollapse {
+    display: inline;
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+  .listedItems__item__link {
+    display: none; }
+    .listedItems__item__link--responsive {
+      display: block;
+      margin: 0;
+      margin-bottom: 1rem; }
+  .listedItems__item__btnLogout {
+    display: none; }
+    .listedItems__item__btnLogout--responsive {
+      display: block; }
+  .listedItems--responsive {
+    display: flex;
+    flex-direction: column; } }
 
-.contentBox {
+.contentBox--contacts {
   background: #fafaf6;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-  padding-bottom: 2.5rem; }
-  .contentBox__topBar {
+  padding-bottom: 2.5rem;
+  min-height: 70vh; }
+  .contentBox--contacts__topBar {
     box-sizing: border-box;
     display: flex;
     height: 68px;
@@ -220,24 +250,46 @@ h6 {
     text-align: center;
     color: #51504e;
     border-bottom: 1px solid #beb7a4; }
-    .contentBox__topBar__myMentors {
+    .contentBox--contacts__topBar h6 {
+      all: unset; }
+    .contentBox--contacts__topBar__myMentors {
       width: 181px;
       border-right: 1px solid #beb7a4; }
-    .contentBox__topBar__myMentees {
+      .contentBox--contacts__topBar__myMentors:hover {
+        cursor: pointer; }
+      .contentBox--contacts__topBar__myMentors__btn {
+        all: unset; }
+    .contentBox--contacts__topBar__myMentees {
       width: 181px;
       border-right: 1px solid #beb7a4; }
-    .contentBox__topBar__myClassmates {
+      .contentBox--contacts__topBar__myMentees:hover {
+        cursor: pointer; }
+      .contentBox--contacts__topBar__myMentees__btn {
+        all: unset; }
+    .contentBox--contacts__topBar__myClassmates {
       width: 181px;
       border-right: 1px solid #beb7a4; }
-    .contentBox__topBar__showAll {
+      .contentBox--contacts__topBar__myClassmates:hover {
+        cursor: pointer; }
+      .contentBox--contacts__topBar__myClassmates__btn {
+        all: unset; }
+    .contentBox--contacts__topBar__showAll {
       width: 181px; }
-  .contentBox__searchBar {
+      .contentBox--contacts__topBar__showAll:hover {
+        cursor: pointer; }
+      .contentBox--contacts__topBar__showAll__btn {
+        all: unset; }
+  .contentBox--contacts__searchBar {
     margin-left: 40px;
     margin-right: 40px;
     height: 70px;
     display: flex;
     align-items: center; }
-    .contentBox__searchBar__search {
+    .contentBox--contacts__searchBar__btnCollapse {
+      all: unset;
+      display: none;
+      font-size: 1.5rem; }
+    .contentBox--contacts__searchBar__search {
       all: unset;
       border: 1px solid #beb7a4;
       background: #fffffc;
@@ -246,103 +298,86 @@ h6 {
       height: 36px;
       padding-left: 18px;
       line-height: 100px; }
-  .contentBox__resultsGrid {
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
+  .contentBox--contacts__resultsGrid {
+    margin-left: 4%;
+    margin-right: 4%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1rem; }
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-column-gap: 2%; }
 
-.mainContainerCard {
+@media only screen and (max-width: 600px) {
+  .contentBox--contacts__topBar {
+    display: none;
+    border: none;
+    height: unset;
+    padding: 0;
+    padding-top: 2rem; }
+    .contentBox--contacts__topBar__myMentors {
+      border: none;
+      border-bottom: 1px solid #beb7a4;
+      margin-bottom: 1rem; }
+    .contentBox--contacts__topBar__myMentees {
+      border: none;
+      border-bottom: 1px solid #beb7a4;
+      margin-bottom: 1rem; }
+    .contentBox--contacts__topBar__myClassmates {
+      border: none;
+      border-bottom: 1px solid #beb7a4;
+      margin-bottom: 1rem; }
+    .contentBox--contacts__topBar__showAll {
+      border-bottom: 1px solid #beb7a4;
+      margin-bottom: 1rem; }
+    .contentBox--contacts__topBar--responsive {
+      display: flex;
+      flex-direction: column; }
+  .contentBox--contacts__searchBar {
+    display: flex;
+    justify-content: space-evenly; }
+    .contentBox--contacts__searchBar__btnCollapse {
+      display: block;
+      color: #51504e;
+      margin-right: 10px; } }
+
+@media only screen and (max-width: 350px) {
+  .contentBox--contacts__searchBar__search {
+    display: none; } }
+
+.mainContainer--friendCard {
   display: inline-flex;
   justify-content: start;
   padding: 1rem;
   height: 118px;
   border: 1px solid #beb7a4;
-  border-radius: 15px; }
-  .mainContainerCard__imgContainer {
-    width: 5rem;
+  border-radius: 15px;
+  margin-bottom: 7%; }
+  .mainContainer--friendCard__imgContainer {
+    min-width: 5rem;
     height: 5rem;
     border-radius: 50%;
-    border: 1px #beb7a4 dotted;
-    margin-right: 1rem; }
-  .mainContainerCard__textContainer {
+    margin-right: 1rem;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-clip: padding-box;
+    background-size: cover;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75); }
+  .mainContainer--friendCard__textContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-family: Roboto;
     font-style: normal;
     line-height: normal; }
-    .mainContainerCard__textContainer__name {
+    .mainContainer--friendCard__textContainer__name {
       margin-bottom: 0.125rem;
       color: #ff3f00;
       font-weight: bold;
       font-size: 1rem; }
-    .mainContainerCard__textContainer__teachingProgram {
+    .mainContainer--friendCard__textContainer__teachingProgram {
       margin-top: 0.125rem;
       font-weight: normal;
       color: #51504e;
       font-size: 0.8rem; }
 
-.mainContainer {
-  padding: 50px 137px 115px 137px;
-  background: linear-gradient(180deg, #fbfaf9 0%, #beb7a4 100%), #beb7a4; }
-
-.teacherSearch {
-  height: 100vh;
-  background: rgba(224, 221, 213, 0.2); }
-  .teacherSearch .search {
-    display: flex;
-    justify-content: center;
-    padding-top: 10px; }
-    .teacherSearch .search__input {
-      border-radius: 2.5px;
-      border: 1px solid #8989c8;
-      height: 40px;
-      width: 500px;
-      font-size: 18px; }
-      .teacherSearch .search__input:hover {
-        outline: none; }
-      .teacherSearch .search__input:placeholder {
-        color: grey; }
-      .teacherSearch .search__input:after {
-        content: " "; }
-    .teacherSearch .search__btn {
-      color: green;
-      background: white;
-      border-radius: 5px;
-      margin-left: 5px;
-      padding: 5px;
-      font-size: 18px;
-      transition: all 1s; }
-      .teacherSearch .search__btn:hover {
-        border: none;
-        background: #88d488;
-        color: white; }
-    .teacherSearch .search__btn--img {
-      width: 40px;
-      max-width: 100%;
-      height: 25px; }
-  .teacherSearch .searchResults__number {
-    margin-left: 20px;
-    margin-right: auto;
-    text-decoration: underline;
-    text-decoration-color: rgba(151, 139, 139, 0.35); }
-  .teacherSearch .searchResults .resultsBoxes {
-    display: flex;
-    margin-top: 5px;
-    justify-content: space-around; }
-    .teacherSearch .searchResults .resultsBoxes .teacherInfo {
-      border: 1px solid black;
-      border-radius: 5px;
-      background: white;
-      padding: 20px; }
-      @media screen and (max-width: 465px) {
-        .teacherSearch .searchResults .resultsBoxes .teacherInfo {
-          margin: 10px; } }
-    @media screen and (max-width: 465px) {
-      .teacherSearch .searchResults .resultsBoxes {
-        display: inline; } }
 .dashboard {
   display: flex;
   justify-content: center; }
@@ -355,7 +390,7 @@ h6 {
     font-family: "Karla", sans-serif;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(7, 1fr);
-    grid-template-areas: "user user nextlesson nextlesson nextlesson" "balance balance nextlesson nextlesson nextlesson" "friends friends upcoming upcoming upcoming" "friends friends upcoming upcoming upcoming" "friends friends upcoming upcoming upcoming" "friends friends upcoming upcoming upcoming" "friends friends upcoming upcoming upcoming"; }
+    grid-template-areas: "user user nextlesson nextlesson nextlesson" "balance balance nextlesson nextlesson nextlesson" "friends friends upcoming upcoming upcoming" "friends friends upcoming upcoming upcoming" "friends friends upcoming upcoming upcoming" "friends friends upcoming upcoming upcoming" "friends friends upcoming upcoming upcoming"; }
   .dashboard__userComponent {
     display: flex;
     padding: 5px;
@@ -464,7 +499,7 @@ h6 {
       grid-template-rows: repeat(9, 1fr);
       grid-gap: 10px;
       margin: 10px 0px 5px 0px;
-      grid-template-areas: "user balance" "nextlesson friends" "nextlesson friends" "upcoming friends" "upcoming friends" "upcoming friends" "upcoming friends" "upcoming friends" "upcoming friends"; }
+      grid-template-areas: "user balance" "nextlesson friends" "nextlesson friends" "upcoming friends" "upcoming friends" "upcoming friends" "upcoming friends" "upcoming friends" "upcoming friends"; }
     .dashboard__friendsComponent__friend {
       text-align: center;
       flex-direction: column;
@@ -476,7 +511,7 @@ h6 {
     .dashboard__container {
       height: 275vw;
       padding: 0;
-      grid-template-areas: "user balance" "nextlesson nextlesson" "nextlesson nextlesson" "upcoming upcoming" "upcoming upcoming" "upcoming upcoming" "friends friends" "friends friends" "friends friends"; }
+      grid-template-areas: "user balance" "nextlesson nextlesson" "nextlesson nextlesson" "upcoming upcoming" "upcoming upcoming" "upcoming upcoming" "friends friends" "friends friends" "friends friends"; }
     .dashboard__nextLessonComponent__image {
       max-height: 125px;
       max-width: 125px; }
@@ -485,7 +520,7 @@ h6 {
       justify-content: flex-start; } }
 
 .mainContainer {
-  padding: 50px 137px 115px 137px;
+  padding: 2rem 10% 5rem 10%;
   background: linear-gradient(180deg, #fbfaf9 0%, #beb7a4 100%), #beb7a4; }
   .mainContainer__title {
     color: #ff3f00;
@@ -503,7 +538,7 @@ body {
   display: flex;
   margin-bottom: 0.5rem; }
   .contactBox__imgContainer {
-    width: 5rem;
+    min-width: 5rem;
     height: 5rem;
     border: 1px dotted #beb7a4;
     border-radius: 50%;
@@ -525,15 +560,17 @@ body {
       color: #51504e;
       font-size: 0.8rem; }
 
-.contentBox {
+.contentBox--meetup {
+  background: #fafaf6;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   padding: 2rem; }
-  .contentBox__section {
+  .contentBox--meetup__section {
     margin-bottom: 3rem; }
-    .contentBox__section__title {
+    .contentBox--meetup__section__title {
       display: flex; }
-      .contentBox__section__title__circle {
+      .contentBox--meetup__section__title__circle {
         border-radius: 50%;
-        width: 3rem;
+        min-width: 3rem;
         height: 3rem;
         display: flex;
         flex-direction: column;
@@ -541,12 +578,12 @@ body {
         align-items: center;
         background: rgba(190, 183, 164, 0.3);
         margin-right: 0.5rem; }
-      .contentBox__section__title__text {
+      .contentBox--meetup__section__title__text {
         color: #51504e;
         margin-top: 0.25rem; }
-    .contentBox__section__content {
+    .contentBox--meetup__section__content {
       margin-left: 3.8rem; }
-      .contentBox__section__content__lessonTime {
+      .contentBox--meetup__section__content__lessonTime {
         width: 30%;
         height: 2.25rem;
         border: 1px solid rgba(255, 63, 0, 0.38);
@@ -556,7 +593,8 @@ body {
         padding-left: 1rem;
         color: #beb7a4;
         margin-bottom: 0.5rem; }
-      .contentBox__section__content__btnAddTime {
+      .contentBox--meetup__section__content__btnAddTime {
+        border: none;
         font-style: normal;
         font-weight: normal;
         font-size: 1rem;
@@ -567,21 +605,21 @@ body {
         width: 140px;
         height: 35px;
         border-radius: 5px; }
-      .contentBox__section__content__dropdown {
+      .contentBox--meetup__section__content__dropdown {
         height: 35px;
         border: 1px solid rgba(255, 63, 0, 0.38);
         border-radius: 5px;
         color: #51504e; }
-        .contentBox__section__content__dropdown:focus {
+        .contentBox--meetup__section__content__dropdown:focus {
           outline: none;
           box-shadow: 0px 0px 11px -2px #ff3f00; }
-      .contentBox__section__content__textarea {
+      .contentBox--meetup__section__content__textarea {
         border: 1px solid rgba(255, 63, 0, 0.38);
         border-radius: 5px; }
-  .contentBox__submit {
+  .contentBox--meetup__submit {
     display: flex;
     justify-content: flex-end; }
-    .contentBox__submit__btn {
+    .contentBox--meetup__submit__btn {
       font-style: normal;
       font-weight: normal;
       font-size: 1rem;
@@ -593,6 +631,139 @@ body {
       height: 35px;
       border-radius: 5px;
       border: none; }
+
+@media only screen and (max-width: 1200px) {
+  .contentBox--meetup__section__content__lessonTime {
+    width: 40%;
+    padding: 0;
+    justify-content: center; } }
+
+@media only screen and (max-width: 992px) {
+  .contentBox--meetup__section__content__lessonTime {
+    width: 50%;
+    padding: 0;
+    justify-content: center; } }
+
+@media only screen and (max-width: 750px) {
+  .contentBox--meetup__section__title {
+    margin-bottom: 3%; }
+  .contentBox--meetup__section__content {
+    margin: 0; }
+    .contentBox--meetup__section__content__lessonTime {
+      width: 100%;
+      padding: 0;
+      justify-content: center; } }
+
+@media only screen and (max-width: 600px) {
+  .contentBox--meetup {
+    padding: 5vw; }
+    .contentBox--meetup__section__title {
+      margin-bottom: 5%; }
+    .contentBox--meetup__section__content {
+      margin: 0; }
+      .contentBox--meetup__section__content__lessonTime {
+        width: 100%;
+        padding: 0;
+        justify-content: center; }
+    .contentBox--meetup__submit {
+      justify-content: center; } }
+
+@media only screen and (max-width: 400px) {
+  .contentBox--meetup form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .contentBox--meetup__section__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; } }
+
+.teacherSearch {
+  height: 100vh;
+  background: rgba(224, 221, 213, 0.2); }
+  .teacherSearch .search {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px; }
+    .teacherSearch .search__input {
+      border-radius: 2.5px;
+      border: 1px solid #8989c8;
+      height: 40px;
+      width: 500px;
+      font-size: 18px; }
+      .teacherSearch .search__input:hover {
+        outline: none; }
+      .teacherSearch .search__input:placeholder {
+        color: grey; }
+      .teacherSearch .search__input:after {
+        content: " "; }
+    .teacherSearch .search__btn {
+      color: green;
+      background: white;
+      border-radius: 5px;
+      margin-left: 5px;
+      padding: 5px;
+      font-size: 18px;
+      transition: all 1s; }
+      .teacherSearch .search__btn:hover {
+        border: none;
+        background: #88d488;
+        color: white; }
+    .teacherSearch .search__btn--img {
+      width: 40px;
+      max-width: 100%;
+      height: 25px; }
+  .teacherSearch .searchResults__number {
+    margin-left: 20px;
+    margin-right: auto;
+    text-decoration: underline;
+    text-decoration-color: rgba(151, 139, 139, 0.35); }
+  .teacherSearch .searchResults .resultsBoxes {
+    display: flex;
+    margin-top: 5px;
+    justify-content: space-around; }
+    .teacherSearch .searchResults .resultsBoxes .teacherInfo {
+      border: 1px solid black;
+      border-radius: 5px;
+      background: white;
+      padding: 20px; }
+      @media screen and (max-width: 465px) {
+        .teacherSearch .searchResults .resultsBoxes .teacherInfo {
+          margin: 10px; } }
+    @media screen and (max-width: 465px) {
+      .teacherSearch .searchResults .resultsBoxes {
+        display: inline; } }
+
+.signUp__component {
+  display: flex;
+  justify-content: center;
+  font-family: "Karla", sans-serif; }
+
+.signUp__container {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  width: 30vw;
+  background: #fffffc;
+  padding: 20px; }
+  @media (max-width: 786px) {
+    .signUp__container {
+      width: 85vw; } }
+
+.signUp__header {
+  text-align: center;
+  color: #ff3f00; }
+
+.signUp__form {
+  display: flex;
+  margin-top: 10px;
+  height: 100%;
+  flex-direction: column; }
+  .signUp__form--emailInput {
+    margin: 10px 0px 10px 0px; }
+  .signUp__form--passwordInput {
+    margin: 10px 0px 10px 0px; }
 
 .loginComponent {
   display: flex;
@@ -697,3 +868,105 @@ body {
   -webkit-box-shadow: inset 10px 11px 33px -18px rgba(0, 0, 0, 0.12);
   -moz-box-shadow: inset 10px 11px 33px -18px rgba(0, 0, 0, 0.12);
   box-shadow: inset 10px 11px 33px -18px rgba(0, 0, 0, 0.12); }
+
+.contentBox--teacherSearch {
+  background: #fafaf6;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  padding-bottom: 2.5rem;
+  min-height: 70vh; }
+  .contentBox--teacherSearch__searchBar {
+    box-sizing: border-box;
+    display: flex;
+    height: 68px;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 1rem;
+    text-align: center;
+    color: #51504e;
+    border-bottom: 1px solid #beb7a4; }
+    .contentBox--teacherSearch__searchBar__dropdown {
+      outline: none;
+      margin-right: 1rem;
+      height: 40px;
+      border: 1px solid #beb7a4;
+      border-radius: 0.5rem;
+      color: #51504e; }
+    .contentBox--teacherSearch__searchBar__btnSearch {
+      all: unset;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 24px;
+      text-align: center;
+      color: #fffffc;
+      background: #ff3f00;
+      width: 140px;
+      height: 40px;
+      border-radius: 5px; }
+      .contentBox--teacherSearch__searchBar__btnSearch:hover {
+        cursor: pointer; }
+  .contentBox--teacherSearch__resultsGrid {
+    margin-left: 4%;
+    margin-right: 4%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-column-gap: 2%; }
+
+@media only screen and (max-width: 525px) {
+  .contentBox--teacherSearch__searchBar {
+    flex-direction: column;
+    height: unset; }
+    .contentBox--teacherSearch__searchBar form {
+      width: 100%; }
+    .contentBox--teacherSearch__searchBar__dropdown {
+      width: 100%;
+      display: block;
+      margin: 0;
+      margin-bottom: 0.5rem; } }
+
+.mainContainer--teacherCard {
+  display: inline-flex;
+  justify-content: start;
+  padding: 1rem;
+  height: 118px;
+  border: 1px solid #beb7a4;
+  border-radius: 15px;
+  margin-bottom: 7%; }
+  .mainContainer--teacherCard__imgContainer {
+    min-width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-clip: padding-box;
+    background-size: cover;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75); }
+  .mainContainer--teacherCard__textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Roboto;
+    font-style: normal;
+    line-height: normal; }
+    .mainContainer--teacherCard__textContainer__name {
+      margin-bottom: 0.125rem;
+      color: #ff3f00;
+      font-weight: bold;
+      font-size: 1rem; }
+    .mainContainer--teacherCard__textContainer__profession {
+      margin-top: 0.125rem;
+      font-weight: normal;
+      color: #51504e;
+      font-size: 0.8rem; }
+    .mainContainer--teacherCard__textContainer__hourlyRate {
+      margin-top: 0.125rem;
+      font-weight: normal;
+      color: #51504e;
+      font-size: 0.8rem; }

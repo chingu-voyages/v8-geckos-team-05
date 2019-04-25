@@ -8,8 +8,10 @@ import {
 import contactsMain from "../Contacts/contactsMain";
 import teacherProfile from "../Teacher/teacherProfile";
 import teacherSearch from "../Teacher/teacherSch";
-import Homepage from '../Homepage/Homepage';
-import DashboardPage from '../Dashboard/DashboardPage';
+import teacherSearch2 from "../Teacher/teacherSch2";
+import Homepage from "../Homepage/Homepage";
+import SignUp from "../SignUp/SignUp";
+import DashboardPage from "../Dashboard/DashboardPage";
 import MeetupMain from "../Meetup/meetupMain";
 import LoginSignup from "../LoginSignup/LoginSignup";
 
@@ -24,6 +26,7 @@ export default function Index() {
           <Route exact path="/meetup" component={MeetupMain} />
           <Route exact path="/teacherProfile" component={teacherProfile} />
           <Route exact path="/teacherSearch" component={teacherSearch} />
+          <Route exact path="/teacherSearch2" component={teacherSearch2} />
           <Route exact path="/dashboard" component={DashboardPage} />
           <Route exact path="/login" component={LoginSignup} />
         </Switch>

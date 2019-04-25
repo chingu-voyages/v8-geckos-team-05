@@ -1,4 +1,4 @@
-.mainContainer--friendCard {
+.mainContainer--teacherCard {
   display: inline-flex;
   justify-content: start;
   padding: 1rem;
@@ -30,7 +30,13 @@
       font-weight: bold;
       font-size: 1rem;
     }
-    &__teachingProgram {
+    &__profession {
+      margin-top: 0.125rem;
+      font-weight: normal;
+      color: $text-color;
+      font-size: 0.8rem;
+    }
+    &__hourlyRate {
       margin-top: 0.125rem;
       font-weight: normal;
       color: $text-color;
