@@ -74,75 +74,66 @@
 
 .teacher {
   height: 100vh;
-  background: rgba(185, 185, 185, 0.15); }
-  @media all and (max-width: 426px) {
-    .teacher {
-      height: auto; } }
+  overflow-x: hidden; }
+  .teacher .bg-color {
+    background: #992600;
+    height: 200px;
+    position: relative; }
+  .teacher .extras {
+    float: right;
+    transform: translate(-20px, -14.5pc);
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between; }
+    .teacher .extras button {
+      width: 200px;
+      font-size: 18px;
+      padding: 10px;
+      margin: 10px;
+      text-transform: uppercase;
+      border-radius: 10pc;
+      border: 1px solid grey;
+      background: white;
+      outline: none;
+      font-weight: 400;
+      transition: all 0.3s; }
+      .teacher .extras button:hover {
+        background: #fdc63b;
+        color: white;
+        cursor: pointer; }
   .teacher .profile {
     display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-around;
-    height: 150px;
-    width: 100%;
-    background: #fcfcfc;
-    border-bottom: 2px solid rgba(156, 149, 149, 0.35); }
+    flex-direction: row;
+    transform: translate(100px, -150px);
+    width: 800px; }
     .teacher .profile__img {
-      width: 100px; }
-  .teacher .priceInfo {
-    display: flex;
-    flex-direction: column;
-    float: right;
-    width: 300px;
-    max-height: 120px;
-    padding: 10px;
-    border: 1px solid white;
-    background: white;
-    border-radius: 10px;
-    margin-top: 5px; }
-    @media all and (max-width: 426px) {
-      .teacher .priceInfo {
-        margin: 5px auto; } }
-    .teacher .priceInfo__btn {
-      background: #b5e4e6;
-      border: none;
-      border-radius: 2.5px;
-      font-size: 20px;
-      color: white;
-      width: 100px;
-      margin: 0 auto;
-      transition: all 0.9s;
-      text-align: center; }
-      .teacher .priceInfo__btn:hover {
-        background: #43babf;
-        cursor: pointer; }
+      width: auto;
+      max-height: 200px;
+      transform: translateY(20px); }
+    .teacher .profile__extras {
+      align-self: center;
+      justify-self: center;
+      padding-left: 100px;
+      color: white; }
+    .teacher .profile .__nameContainer--bannerName {
+      font-size: 45px; }
   .teacher .intro {
-    background: white;
-    text-align: left;
-    width: 75%;
-    height: auto;
-    margin: 30px;
-    padding-bottom: 10px;
-    border-radius: 5px; }
-    @media all and (max-width: 426px) {
-      .teacher .intro {
-        margin: 5px auto;
-        width: 300px; } }
+    transform: translateY(-100px);
+    max-width: 500px;
+    margin-left: 30px; }
     .teacher .intro__banner {
-      text-align: center; }
+      font-size: 30px;
+      text-align: left;
+      color: grey;
+      border-bottom: 2px solid goldenrod;
+      margin: 0;
+      padding: 0; }
+      .teacher .intro__banner::after {
+        content: ""; }
     .teacher .intro__descripition {
-      font-weight: bold;
-      margin: 50px;
-      height: auto; }
-
-.extras {
-  display: flex;
-  flex-basis: 20%;
-  flex-wrap: nowrap;
-  flex-direction: row-reverse; }
-  @media all and (max-width: 426px) {
-    .extras {
-      flex-direction: column; } }
+      display: flex;
+      flex-flow: wrap-reverse;
+      justify-content: space-evenly; }
 
 .navbar {
   height: 64px;
