@@ -21,7 +21,7 @@ router.post("/friend_request/send/:id", async (req, res) => {
   };
 
   if (await checkIfRequestAlreadySent(requesterId, recipientId)) {
-    return res.status(400).send("User already has friend");
+    return res.status(400).send("Friend request already sent");
   }
 
   try {
