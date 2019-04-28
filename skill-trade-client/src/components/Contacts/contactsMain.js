@@ -4,7 +4,12 @@ import FriendCard from "./friendCard";
 import MainContainer from "../MainContainer/mainContainer";
 
 class ContactsMain extends Component {
-  state = {};
+  state = {
+    mentors: [],
+    mentees: [],
+    classmates: [],
+    all: []
+  };
   render() {
     const handleDropdown = () => {
       const topBar = document.querySelector(".contentBox--contacts__topBar");
@@ -38,6 +43,17 @@ class ContactsMain extends Component {
         "contentBox--contacts__topBar__showAll--responsive"
       );
     };
+    const handleShowAll = () => {
+      let results = 30; //to be modified according to this.state.all.length
+      fetch(
+        `https://api.unsplash.com/photos/random/?query=girl&featured&count=${results}&client_id=1de021314b1360d29ebe9ac43c8388233b18f1aadd026e729e84a9fb355b6b46`
+      )
+        .then(res => res.json())
+        .then(data => {
+          this.setState({ all: data });
+          console.log(this.state);
+        });
+    };
     return (
       <>
         <NavBar />
@@ -46,16 +62,27 @@ class ContactsMain extends Component {
           <div className="contentBox--contacts">
             <div className="contentBox--contacts__topBar">
               <div className="contentBox--contacts__topBar__myMentors">
-                <h6>My Mentors</h6>
+                <button className="contentBox--contacts__topBar__myMentors__btn">
+                  My Mentors
+                </button>
               </div>
               <div className="contentBox--contacts__topBar__myMentees">
-                <h6>My Mentees</h6>
+                <button className="contentBox--contacts__topBar__myMentees__btn">
+                  My Mentees
+                </button>
               </div>
               <div className="contentBox--contacts__topBar__myClassmates">
-                <h6>My classmates</h6>
+                <button className="contentBox--contacts__topBar__myClassmates__btn">
+                  My classmates
+                </button>
               </div>
               <div className="contentBox--contacts__topBar__showAll">
-                <h6>Show all</h6>
+                <button
+                  onClick={handleShowAll}
+                  className="contentBox--contacts__topBar__showAll__btn"
+                >
+                  Show all
+                </button>
               </div>
             </div>
             <div className="contentBox--contacts__searchBar">
@@ -73,16 +100,9 @@ class ContactsMain extends Component {
               />
             </div>
             <div className="contentBox--contacts__resultsGrid">
-              <FriendCard />
-              <FriendCard />
-              <FriendCard />
-              <FriendCard />
-              <FriendCard />
-              <FriendCard />
-              <FriendCard />
-              <FriendCard />
-              <FriendCard />
-              <FriendCard />
+              {this.state.all.map(friend => (
+                <FriendCard key={friend.id} imgUrl={friend.urls.thumb} /> //The key is just dummy information from the unsplash api response. To be modified when using real info.
+              ))}
             </div>
           </div>
         </MainContainer>

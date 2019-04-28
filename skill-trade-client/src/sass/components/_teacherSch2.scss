@@ -1,0 +1,72 @@
+.contentBox--teacherSearch {
+  background: #fafaf6;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  padding-bottom: 2.5rem;
+  min-height: 70vh;
+  &__searchBar {
+    box-sizing: border-box;
+    display: flex;
+    height: 68px;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 1rem;
+    text-align: center;
+    color: $text-color;
+    border-bottom: 1px solid $secondary-color;
+    &__dropdown {
+      outline: none;
+      margin-right: 1rem;
+      height: 40px;
+      border: 1px solid $secondary-color;
+      border-radius: 0.5rem;
+      color: $text-color;
+    }
+    &__btnSearch {
+      all: unset;
+      font-family: $font-family-main;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 24px;
+      text-align: center;
+      color: $tertiary-color;
+      background: $primary-color;
+      width: 140px;
+      height: 40px;
+      border-radius: 5px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  &__resultsGrid {
+    margin-left: 4%;
+    margin-right: 4%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-column-gap: 2%;
+  }
+}
+
+@media only screen and (max-width: 525px) {
+  .contentBox--teacherSearch {
+    &__searchBar {
+      form {
+        width: 100%;
+      }
+      flex-direction: column;
+      height: unset;
+      &__dropdown {
+        width: 100%;
+        display: block;
+        margin: 0;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}

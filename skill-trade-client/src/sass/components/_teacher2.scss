@@ -1,0 +1,84 @@
+.teacher{
+    height: 100vh;
+    overflow-x: hidden;
+
+    .bg-color{
+        background: darken( $primary-color, 20% );
+        height: 200px;
+        position: relative;
+    }
+    .extras{
+        float: right;
+        transform:translate(-20px,-14.5pc);
+        max-width: 500px;
+        display: flex;
+        justify-content: space-between;
+        
+
+        & button{
+            width:200px;
+            font-size: 18px;
+            padding: 10px;
+            margin: 10px;
+            text-transform: uppercase;
+            border-radius: 10pc;
+            border:1px solid grey;
+            background: white;
+            outline: none;
+            font-weight: 400;
+            transition: all 0.3s;
+            &:hover{
+                background: rgb(253, 198, 59);
+                color: white;
+                cursor: pointer;
+            }
+        }
+        
+    }
+    .profile{
+        display: flex;
+        flex-direction:row;
+        transform: translate(100px,-150px);
+        width: 800px;
+        &__img{
+            width: auto;
+            max-height: 200px;
+            transform: translateY(20px);
+        }
+       &__extras{
+           align-self: center;
+           justify-self: center;
+           padding-left: 100px;
+           color: white;
+   
+    } 
+        .__nameContainer{
+            &--bannerName{
+                font-size: 45px;
+            }
+    }
+
+}
+.intro{
+   
+   transform: translateY(-100px);
+   max-width: 500px;
+   margin-left: 30px;
+   &__banner{
+    font-size: 30px;
+    text-align: left;
+    color:grey;
+    border-bottom: 2px solid goldenrod;
+    margin: 0;
+    padding: 0;
+    &::after{
+        content:"";
+    }
+}
+&__descripition{
+    display: flex;
+    flex-flow: wrap-reverse;
+    justify-content: space-evenly;
+}
+}
+}
