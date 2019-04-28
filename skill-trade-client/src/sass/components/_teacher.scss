@@ -34,7 +34,7 @@
           margin: 5px auto;
         }
           &__btn{
-              background: $profile-color-btn;
+              background: $primary-color;
               border: none;
               border-radius: 2.5px;
               font-size: 20px;
@@ -44,7 +44,7 @@
               transition: all 0.9s;
               text-align: center;
               &:hover{
-              background: darken($profile-color-btn,30%);
+              background: darken($primary-color,30%);
               cursor: pointer;
           }
           }
