@@ -7,7 +7,6 @@ import {
 } from "react-router-dom";
 import contactsMain from "../Contacts/contactsMain";
 import teacherProfile from "../Teacher/teacherProfile";
-import teacherSearch from "../Teacher/teacherSch";
 import teacherSearch2 from "../Teacher/teacherSch2";
 import Homepage from "../Homepage/Homepage";
 import SignUp from "../SignUp/SignUp";
@@ -24,9 +23,8 @@ export default function Index() {
           <Route exact path="/home" component={Homepage} />
           <Route exact path="/contacts" component={contactsMain} />
           <Route exact path="/meetup" component={MeetupMain} />
-          <Route exact path="/teacherProfile" component={teacherProfile} />
-          <Route exact path="/teacherSearch" component={teacherSearch} />
-          <Route exact path="/teacherSearch2" component={teacherSearch2} />
+          <Route exact path="/teacher-profile" component={teacherProfile} />
+          <Route exact path="/teacher-search" component={teacherSearch2} />
           <Route exact path="/dashboard" component={DashboardPage} />
           <Route exact path="/login" component={LoginSignup} />
         </Switch>
