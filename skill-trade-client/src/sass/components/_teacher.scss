@@ -1,0 +1,85 @@
+.teacher {
+	height: 100vh;
+   background: $profile-bg;
+   @media all and (max-width:426px){
+          
+   height: auto;
+  }
+      .profile{
+          display: flex;
+          flex-flow: row wrap;
+          align-items: center;
+          justify-content:space-around;
+          height: 150px;
+          width: 100%;
+          background: $profile-bg-header;
+          border-bottom:2px solid rgba(156,149,149,0.35);
+          &__img{
+              width: 100px;
+          }
+      }
+      .priceInfo{
+          display: flex;
+          flex-direction: column;
+          float: right;
+          width: 300px;
+          max-height: 120px;
+          padding: 10px;
+          border: 1px solid white;
+          background: white;
+          border-radius: 10px;
+          margin-top: 5px;
+          @media all and (max-width:426px){
+          
+          margin: 5px auto;
+        }
+          &__btn{
+              background: $primary-color;
+              border: none;
+              border-radius: 2.5px;
+              font-size: 20px;
+              color:white;
+              width: 100px;
+              margin: 0 auto;
+              transition: all 0.9s;
+              text-align: center;
+              &:hover{
+              background: darken($primary-color,30%);
+              cursor: pointer;
+          }
+          }
+          
+      }
+      .intro{
+           background: white;
+          text-align: left;
+          width: 75%;
+          height: auto;
+          margin: 30px;
+          padding-bottom: 10px;
+          border-radius: 5px;
+          @media all and (max-width:426px){
+           
+            margin: 5px auto;
+            width: 300px;
+          }
+              &__banner{
+                  text-align: center;
+              }
+          &__descripition{
+              font-weight: bold;
+              margin: 50px;
+              height: auto;
+            
+          }
+          }
+}
+.extras{
+    display: flex;
+    flex-basis: 20%;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    @media all and (max-width:426px){
+        flex-direction: column;
+    }
+}

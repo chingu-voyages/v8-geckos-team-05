@@ -1,0 +1,121 @@
+.navbar {
+  height: 64px;
+  position: relative;
+  display: flex;
+  // flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  // background: $tertiary-color;
+  &__banner {
+    &__link {
+      text-decoration: unset;
+      color: black;
+      font-family: $font-family-main;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+  }
+  // &__collapse--btn {
+  //   display: none;
+  // }
+  &__collapse--items {
+    display: inline;
+  }
+}
+
+.listedItems {
+  margin: 0;
+  display: inline;
+  &__item {
+    display: inline;
+    &__btnCollapse {
+      all: unset;
+      display: none;
+      font-size: 1.5rem;
+      color: $primary-color;
+      margin-right: 1rem;
+    }
+    &__link {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      color: unset;
+      text-decoration: unset;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: normal;
+      color: $primary-color;
+    }
+    &__btnLogout {
+      display: inline;
+      all: unset;
+      font-family: $font-family-main;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 24px;
+      text-align: center;
+      color: $tertiary-color;
+      background: $primary-color;
+      width: 140px;
+      height: 40px;
+      border-radius: 5px;
+      &:hover {
+        cursor: pointer;
+      }
+      &__link {
+        color: unset;
+        text-decoration: unset;
+      }
+    }
+  }
+  // &__item-btn {
+  //   display: inline;
+  // }
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    &--responsive {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 10%; //same as mainContainer
+      padding-right: 10%; //same as mainContainer
+      height: unset;
+    }
+  }
+
+  .listedItems {
+    &__item {
+      &__btnCollapse {
+        display: inline;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+      &__link {
+        display: none;
+        &--responsive {
+          display: block;
+          margin: 0;
+          margin-bottom: 1rem;
+        }
+      }
+      &__btnLogout {
+        display: none;
+        &--responsive {
+          display: block;
+        }
+      }
+    }
+    &--responsive {
+      display: flex;
+      flex-direction: column;
+      // align-items: center;
+    }
+  }
+}

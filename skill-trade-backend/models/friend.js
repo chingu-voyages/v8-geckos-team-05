@@ -4,9 +4,6 @@ const mongoose = require('mongoose')
 const friendSchema = new mongoose.Schema({
     requester: { type: mongoose.Schema.Types.ObjectId, ref: 'User'},
     recipient: { type: mongoose.Schema.Types.ObjectId, ref: 'User'},
-    status: {
-         type: Boolean
-    }
   }, {timestamps: true})
 
   friendSchema.set('toObject',{
@@ -18,4 +15,4 @@ const friendSchema = new mongoose.Schema({
 })
 Friends = mongoose.model('Friend', friendSchema)
 
-module.expots = Friends;
+module.exports = Friends;

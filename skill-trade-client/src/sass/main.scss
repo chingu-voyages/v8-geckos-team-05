@@ -1,3 +1,21 @@
-div{
-    position: relative;
-}
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Karla:400,700");
+
+@import "base/base";
+@import "base/responsive";
+
+@import "abstracts/color";
+
+@import "components/homePg";
+@import "components/teacher2";
+@import "components/navBar";
+@import "components/contactsMain";
+@import "components/friendCard";
+@import "components/dashboard";
+@import "components/mainContainer";
+@import "components/meetupMain";
+@import "components/teacherSearch";
+@import "components/signUp";
+@import "components/loginSignup";
+@import "components/teacherSch2";
+@import "components/teacherCard";

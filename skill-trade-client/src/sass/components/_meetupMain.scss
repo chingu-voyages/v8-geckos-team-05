@@ -1,0 +1,211 @@
+body {
+  font-family: $font-family-main;
+}
+
+.contactBox {
+  display: flex;
+  margin-bottom: 0.5rem;
+  &__imgContainer {
+    min-width: 5rem;
+    height: 5rem;
+    border: 1px dotted $secondary-color;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+  &__textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-style: normal;
+    line-height: normal;
+    &__mentor {
+      margin-bottom: 0.125rem;
+      color: $primary-color;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+    &__name {
+      margin-top: 0.125rem;
+      font-weight: normal;
+      color: $text-color;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.contentBox--meetup {
+  background: #fafaf6;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  padding: 2rem;
+  &__section {
+    margin-bottom: 3rem;
+    &__title {
+      display: flex;
+      &__circle {
+        border-radius: 50%;
+        min-width: 3rem;
+        height: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(190, 183, 164, 0.3);
+        margin-right: 0.5rem;
+      }
+      &__text {
+        color: $text-color;
+        margin-top: 0.25rem;
+      }
+    }
+    &__content {
+      margin-left: 3.8rem;
+      &__lessonTime {
+        width: 30%;
+        height: 2.25rem;
+        border: 1px solid rgba(255, 63, 0, 0.38);
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        padding-left: 1rem;
+        color: $secondary-color;
+        margin-bottom: 0.5rem;
+      }
+      &__btnAddTime {
+        border: none;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 24px;
+        text-align: center;
+        color: $tertiary-color;
+        background: $primary-color;
+        width: 140px;
+        height: 35px;
+        border-radius: 5px;
+      }
+      &__dropdown {
+        height: 35px;
+        border: 1px solid rgba(255, 63, 0, 0.38);
+        border-radius: 5px;
+        color: $text-color;
+        &:focus {
+          outline: none;
+          box-shadow: 0px 0px 11px -2px $primary-color;
+        }
+      }
+      &__textarea {
+        border: 1px solid rgba(255, 63, 0, 0.38);
+        border-radius: 5px;
+      }
+    }
+  }
+  &__submit {
+    display: flex;
+    justify-content: flex-end;
+    &__btn {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1rem;
+      line-height: 24px;
+      text-align: center;
+      color: $tertiary-color;
+      background: $primary-color;
+      width: 140px;
+      height: 35px;
+      border-radius: 5px;
+      border: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .contentBox--meetup {
+    &__section {
+      &__title {
+        // margin-bottom: 3%;
+      }
+      &__content {
+        // margin: 0;
+        &__lessonTime {
+          width: 40%;
+          padding: 0;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .contentBox--meetup {
+    &__section {
+      &__title {
+        // margin-bottom: 3%;
+      }
+      &__content {
+        // margin: 0;
+        &__lessonTime {
+          width: 50%;
+          padding: 0;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .contentBox--meetup {
+    &__section {
+      &__title {
+        margin-bottom: 3%;
+      }
+      &__content {
+        margin: 0;
+        &__lessonTime {
+          width: 100%;
+          padding: 0;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .contentBox--meetup {
+    padding: 5vw;
+    &__section {
+      &__title {
+        margin-bottom: 5%;
+      }
+      &__content {
+        margin: 0;
+        &__lessonTime {
+          width: 100%;
+          padding: 0;
+          justify-content: center;
+        }
+      }
+    }
+    &__submit {
+      justify-content: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .contentBox--meetup form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contentBox--meetup {
+    &__section {
+      &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}
