@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const LoginView = ({ handleInput, passwordValue, emailValue }) => {
   return (
     <div className="loginView">
-      <h2 className='loginView__header'>Talent Trade</h2>
+      <h2 className="loginView__header">Talent Trade</h2>
       <form action="" className="loginView__form">
         <input
           className="loginView__form__input loginView__form__input--email"
@@ -21,7 +22,9 @@ const LoginView = ({ handleInput, passwordValue, emailValue }) => {
           onChange={handleInput("password")}
           name="password"
         />
-        <input type="submit" value="Submit" />
+        <Link to="/contacts">
+          <input type="submit" value="Submit" />
+        </Link>
       </form>
     </div>
   );
