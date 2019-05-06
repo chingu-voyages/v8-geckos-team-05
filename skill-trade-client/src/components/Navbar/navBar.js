@@ -1,11 +1,5 @@
 import React, { Component } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Redirect,
-  Switch,
-  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Homepage from "../Homepage/Homepage";
 import teacherSearch from "../Teacher/teacherSch";
 class NavBar extends Component {
@@ -58,7 +52,7 @@ class NavBar extends Component {
               </li>
               <li className="listedItems__item">
                 <Link
-                  to="/teachersearch"
+                  to="/teacher-search"
                   className="listedItems__item__link"
                   href="#"
                 >
@@ -74,7 +68,7 @@ class NavBar extends Component {
                 <button className="listedItems__item__btnLogout" type="submit">
                   <Link
                     className="listedItems__item__btnLogout__link"
-                    to="/login"
+                    to="/home"
                   >
                     Log Out
                   </Link>
