@@ -15,7 +15,7 @@ class Dashboard extends Component {
   render() {
     return (
       <>
-        {/* <Navbar /> */}
+        <Navbar />
         <div className="dashboard">
           <div className="dashboard__container">
             <DashUserComponent />
