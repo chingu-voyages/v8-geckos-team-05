@@ -805,7 +805,8 @@ body {
       margin: 5px 0px 10px 0px; }
       .loginView__form__input:focus {
         outline: none; }
-    .loginView__form > [type="submit"] {
+    .loginView__form [type="submit"] {
+      width: 100%;
       font-size: 16px;
       font-weight: bolder;
       margin: 20px 0px 0px 0px;
