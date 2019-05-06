@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Homepage = () => {
   return (
@@ -12,9 +13,11 @@ const Homepage = () => {
             </h2>
           </div>
           <div className="homepage__intro--button--container">
-            <button className="homepage__intro--button rounded-button">
-              Log In or Sign Up
-            </button>
+            <Link to="/login">
+              <button className="homepage__intro--button rounded-button">
+                Log In or Sign Up
+              </button>
+            </Link>
           </div>
         </div>
         <div className="homepage__info">
