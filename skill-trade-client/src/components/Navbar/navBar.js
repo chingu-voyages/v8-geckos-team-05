@@ -31,9 +31,9 @@ class NavBar extends Component {
       <>
         <nav className="navbar">
           <div className="navbar__banner">
-            <Link to="/dashboard" className="navbar__banner__link" href="#">
+            <a to="/dashboard" className="navbar__banner__link" href="#">
               TALENT TRADE
-            </Link>
+            </a>
           </div>
           <div className="navbar__collapse--items">
             <ul className="listedItems">
@@ -46,8 +46,12 @@ class NavBar extends Component {
                 </button>
               </li>
               <li className="listedItems__item">
-                <Link to="/home" className="listedItems__item__link" href="#">
-                  Home
+                <Link
+                  to="/dashboard"
+                  className="listedItems__item__link"
+                  href="#"
+                >
+                  Dashboard
                 </Link>
               </li>
               <li className="listedItems__item">
@@ -60,8 +64,12 @@ class NavBar extends Component {
                 </Link>
               </li>
               <li className="listedItems__item">
-                <Link to="/search" className="listedItems__item__link" href="#">
-                  Search
+                <Link
+                  to="/contacts"
+                  className="listedItems__item__link"
+                  href="#"
+                >
+                  Contacts
                 </Link>
               </li>
               <li className="listedItems__item">
