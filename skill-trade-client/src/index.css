@@ -135,6 +135,10 @@
       flex-flow: wrap-reverse;
       justify-content: space-evenly; }
 
+@media only screen and (max-width: 426px) {
+  .profile {
+    width: 100px; } }
+
 .navbar {
   height: 64px;
   position: relative;
