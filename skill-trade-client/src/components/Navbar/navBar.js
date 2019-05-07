@@ -1,11 +1,5 @@
 import React, { Component } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Redirect,
-  Switch,
-  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Homepage from "../Homepage/Homepage";
 import teacherSearch from "../Teacher/teacherSch";
 class NavBar extends Component {
@@ -37,9 +31,9 @@ class NavBar extends Component {
       <>
         <nav className="navbar">
           <div className="navbar__banner">
-            <Link to="/dashboard" className="navbar__banner__link" href="#">
+            <a to="/dashboard" className="navbar__banner__link" href="#">
               TALENT TRADE
-            </Link>
+            </a>
           </div>
           <div className="navbar__collapse--items">
             <ul className="listedItems">
@@ -52,13 +46,17 @@ class NavBar extends Component {
                 </button>
               </li>
               <li className="listedItems__item">
-                <Link to="/home" className="listedItems__item__link" href="#">
-                  Home
+                <Link
+                  to="/dashboard"
+                  className="listedItems__item__link"
+                  href="#"
+                >
+                  Dashboard
                 </Link>
               </li>
               <li className="listedItems__item">
                 <Link
-                  to="/teachersearch"
+                  to="/teacher-search"
                   className="listedItems__item__link"
                   href="#"
                 >
@@ -66,15 +64,19 @@ class NavBar extends Component {
                 </Link>
               </li>
               <li className="listedItems__item">
-                <Link to="/search" className="listedItems__item__link" href="#">
-                  Search
+                <Link
+                  to="/contacts"
+                  className="listedItems__item__link"
+                  href="#"
+                >
+                  Contacts
                 </Link>
               </li>
               <li className="listedItems__item">
                 <button className="listedItems__item__btnLogout" type="submit">
                   <Link
                     className="listedItems__item__btnLogout__link"
-                    to="/login"
+                    to="/home"
                   >
                     Log Out
                   </Link>

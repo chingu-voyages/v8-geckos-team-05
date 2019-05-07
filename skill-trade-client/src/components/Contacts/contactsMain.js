@@ -44,7 +44,44 @@ class ContactsMain extends Component {
       );
     };
     const handleShowAll = () => {
-      let results = 30; //to be modified according to this.state.all.length
+      this.setState({ all: [] });
+      let results = 30; //to be modified according to this.state.all.length when receiving data from database
+      fetch(
+        `https://api.unsplash.com/photos/random/?query=girl&featured&count=${results}&client_id=1de021314b1360d29ebe9ac43c8388233b18f1aadd026e729e84a9fb355b6b46`
+      )
+        .then(res => res.json())
+        .then(data => {
+          this.setState({ all: data });
+          console.log(this.state);
+        });
+    };
+    const handleMyClassmates = () => {
+      this.setState({ all: [] });
+      let results = 10; //to be modified according to this.state.all.length
+      fetch(
+        `https://api.unsplash.com/photos/random/?query=girl&featured&count=${results}&client_id=1de021314b1360d29ebe9ac43c8388233b18f1aadd026e729e84a9fb355b6b46`
+      )
+        .then(res => res.json())
+        .then(data => {
+          this.setState({ all: data });
+          console.log(this.state);
+        });
+    };
+    const handleMyMentees = () => {
+      this.setState({ all: [] });
+      let results = 10; //to be modified according to this.state.all.length
+      fetch(
+        `https://api.unsplash.com/photos/random/?query=girl&featured&count=${results}&client_id=1de021314b1360d29ebe9ac43c8388233b18f1aadd026e729e84a9fb355b6b46`
+      )
+        .then(res => res.json())
+        .then(data => {
+          this.setState({ all: data });
+          console.log(this.state);
+        });
+    };
+    const handleMyMentors = () => {
+      this.setState({ all: [] });
+      let results = 10; //to be modified according to this.state.all.length
       fetch(
         `https://api.unsplash.com/photos/random/?query=girl&featured&count=${results}&client_id=1de021314b1360d29ebe9ac43c8388233b18f1aadd026e729e84a9fb355b6b46`
       )
@@ -62,17 +99,26 @@ class ContactsMain extends Component {
           <div className="contentBox--contacts">
             <div className="contentBox--contacts__topBar">
               <div className="contentBox--contacts__topBar__myMentors">
-                <button className="contentBox--contacts__topBar__myMentors__btn">
+                <button
+                  onClick={handleMyMentors}
+                  className="contentBox--contacts__topBar__myMentors__btn"
+                >
                   My Mentors
                 </button>
               </div>
               <div className="contentBox--contacts__topBar__myMentees">
-                <button className="contentBox--contacts__topBar__myMentees__btn">
+                <button
+                  onClick={handleMyMentees}
+                  className="contentBox--contacts__topBar__myMentees__btn"
+                >
                   My Mentees
                 </button>
               </div>
               <div className="contentBox--contacts__topBar__myClassmates">
-                <button className="contentBox--contacts__topBar__myClassmates__btn">
+                <button
+                  onClick={handleMyClassmates}
+                  className="contentBox--contacts__topBar__myClassmates__btn"
+                >
                   My classmates
                 </button>
               </div>
