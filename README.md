@@ -1,6 +1,6 @@
 # Talent Trade - Chingu Voyage-8, team Geckos-5
 
-Talent Trade is the front end of a web application that allows users to sign up and learn new skills or share their own. There is backend code in this repository, however it wasn't implemented into the application itself. Talent Trade was built over the course of 8 weeks as a project for the [Chingu](https://chingu.io/) collaboration network. The remote team responsible for development was comprised of 3 people: [Chris Fotso](https://github.com/chrisfotso), [Jeff Vega](https://github.com/jeffvega), and [Eliezer Valenzuela](https://github.com/vzla0094).
+Talent Trade is the front end of a web application that allows users to sign up and learn new skills or share their own. There is backend code in this repository, however it wasn't implemented into the application itself — it was only written for practice purposes. Talent Trade was built over the course of 8 weeks as a project for the [Chingu](https://chingu.io/) collaboration network. The remote team responsible for development was comprised of 3 people: [Chris Fotso](https://github.com/chrisfotso), [Jeff Vega](https://github.com/jeffvega), and [Eliezer Valenzuela](https://github.com/vzla0094).
 
 Live link: https://talent-trade.netlify.com
 
